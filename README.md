@@ -10,7 +10,7 @@ team
 
 ## Retro-planning
 
-###  Week 1 - 08/11/21
+###  Week 1 - 03/01/22
 
 - [x] Explanation of the project by Sébastien Drouin
 - [x] Creation of a Trello
