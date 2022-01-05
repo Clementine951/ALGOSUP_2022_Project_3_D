@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aoU0RJYi/YoLr+AZOA5S+VZTaWa9M1bFHCfaWGuMqjyl68EY0jRDjQUL/eqLimNel2n52GAgeCQfzXOnU4MeSw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\AudioSynth\\AudioSynth.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

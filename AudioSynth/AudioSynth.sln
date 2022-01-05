@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AudioSynth", "AudioSynth.fsproj", "{1454083C-122C-4562-8D01-F2EDE5311D11}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SynthAudioTest", "..\SynthAudioTest\SynthAudioTest.fsproj", "{4A1FF116-17FE-43EA-A966-F6939FA71557}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1454083C-122C-4562-8D01-F2EDE5311D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1454083C-122C-4562-8D01-F2EDE5311D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1454083C-122C-4562-8D01-F2EDE5311D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1454083C-122C-4562-8D01-F2EDE5311D11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A1FF116-17FE-43EA-A966-F6939FA71557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1FF116-17FE-43EA-A966-F6939FA71557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1FF116-17FE-43EA-A966-F6939FA71557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1FF116-17FE-43EA-A966-F6939FA71557}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6D624D1-C0B4-4FD1-A5C3-7220E5EAF40B}
+	EndGlobalSection
+EndGlobal
