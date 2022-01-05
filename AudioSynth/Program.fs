@@ -9,7 +9,7 @@ open System
 // Define a function to construct a message to print
 let calcSin y m a = // Y = prescision, a = amplitude, m = period multiplier
     // a sin ( m x ) 
-    let pointsList = [(0.,0.)]
+    let pointsList = new System.Collections.Generic.List<'T>()
     let pointsNumbers = m / y
 
     let y = (float y)
@@ -19,15 +19,17 @@ let calcSin y m a = // Y = prescision, a = amplitude, m = period multiplier
     
     for i = 0 to pointsNumbers do
         let pointsNumbers = (float pointsNumbers)
-        let xCoord = (float i) * (pointsNumbers /(2./y))
-        let yCoord =  (float a) * sin((float m) * (float i))
-        let point = [xCoord,yCoord]
-        let pointsList = pointsList :: point
-        0
-    printfn ""
+        let i = (float i)
+        let xCoord = i * (pointsNumbers /(2./y))
+        let yCoord =  a * sin m * i
+        let point = (xCoord , yCoord)
+        pointsList.Add(point) 
+        pointsList
+    pointsList
     
 
 [<EntryPoint>]
 let main argv =
-    let test = calcSin 0.001 2 2
+    let test = calcSin 1 2 2
+    printfn "%A" test
     0 // return an integer exit code
