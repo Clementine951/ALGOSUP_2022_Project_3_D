@@ -17,4 +17,5 @@ team
 - [x] Creation of a Slack server
 - [ ] Division of tasks
 - [x] Choice of project manager and team leader
+- [ ] Generate waves
 
