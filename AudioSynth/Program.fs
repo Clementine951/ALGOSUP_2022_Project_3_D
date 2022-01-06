@@ -26,24 +26,40 @@ let calcSin y m a = // Y = prescision, a = amplitude, m = period multiplier
         let m = float(m)
         let i = (float i)
 
-        
-
         let xCoord = (i * (2.*y)) /pointsNumbers
-
-        printfn "X : %O" xCoord
+        // printfn "X : %O" xCoord
 
         let yCoord =  a * sin (m * xCoord)
-
-        printfn "Y : %O" yCoord
+        // printfn "Y : %O" yCoord
 
         let point = (xCoord , yCoord)
         pointsList.Add(point) 
         pointsList
     pointsList
+
+let calcSquare y m a = // Y = prescision, a = amplitude, m = period multiplier
+    // a sin ( m x ) 
+
+    let pointsList = calcSin y m a
+    for i in pointsList do
+        let y = snd(i)
+
+        let result =
+            if y > 0 then a
+            else -a
+
+        let snd(i) = result
+        pointsList
+    pointsList
+        //printfn "%O" i
+
+    pointsList
     
 
 [<EntryPoint>]
 let main argv =
-    let test = calcSin 0.1 2. 2.
-    printfn "%A" test
+    let normalWave = calcSin 0.1 2. 2.
+
+    let squareWave = calcSquare 0.1 2. 2.
+    //printfn "%A" normalWave
     0 // return an integer exit code
