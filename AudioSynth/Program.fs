@@ -5,61 +5,100 @@
 // Period = g x 2 pi
 
 open System
+open System.IO
 
 // Define a function to construct a message to print
-let calcSin y m a = // Y = prescision, a = amplitude, m = period multiplier
+let calcSin y m a xMultiplier = // Y = prescision, a = amplitude, m = period multiplier
     // a sin ( m x ) 
-    let pointsList = new System.Collections.Generic.List<'T>()
+    let mutable pointsList = []
+    // System.IEnumerable
     //let m = float(m)
     let pointsNumbers = (m / y)
 
     let pointsNumbers =  int (pointsNumbers)
 
     let m = int(m)
-    // let y = (float y)
-    // let m = (float m)
-    // let a = (float a)
-
+    let xMultiplier = int (xMultiplier)
     
-    for i = 0 to ((314/2) * m) do
-        let pointsNumbers = (float pointsNumbers)
-        let m = float(m)
-        let i = (float i)
+    for j = 0 to xMultiplier do
+        let j = float j
+        for i = 0 to ((314/2) * m) do
+            let pointsNumbers = (float pointsNumbers)
+            let m = float(m)
+            let i = (float i)
 
-        let xCoord = (i * (2.*y)) /pointsNumbers
-        // printfn "X : %O" xCoord
+            let xCoord = ((i * (2.*y)) /pointsNumbers) + (j * 3.14)
 
-        let yCoord =  a * sin (m * xCoord)
-        // printfn "Y : %O" yCoord
+            printfn "X : %O" xCoord
 
-        let point = (xCoord , yCoord)
-        pointsList.Add(point) 
-        pointsList
+            let yCoord =  a * sin (m * xCoord)
+            printfn "Y : %O" yCoord
+
+            let point = (xCoord , yCoord)
+
+            let yCoord = (yCoord + 1.)/2. * 255.
+            let byteX = byte(xCoord)
+            let byteY = byte(yCoord)
+            let bytePoint = (byteX , byteY)
+
+
+            let pointsList = pointsList
+                            |> List.append [byteY]
+            pointsList
+
+        
+    // let bytePoints = pointsList |> List.toArray()
+    let pointsList = pointsList
+                    |> List.rev
     pointsList
 
-let calcSquare y m a = // Y = prescision, a = amplitude, m = period multiplier
-    // a sin ( m x ) 
+// let calcSquare y m a = // Y = prescision, a = amplitude, m = period multiplier
+//     // a sin ( m x ) 
 
-    let pointsList = calcSin y m a
-    for i in pointsList do
-        let y = snd(i)
+//     let pointsList = calcSin y m a
+//     for i in pointsList do
+//         let y = snd(i)
 
-        let result =
-            if y > 0 then a
-            else -a
+//         let snd(i) = if y > 0 then a else -a
+//         pointsList
+//     pointsList
+//         //printfn "%O" i
 
-        let snd(i) = result
-        pointsList
-    pointsList
-        //printfn "%O" i
-
-    pointsList
+//     pointsList
     
 
 [<EntryPoint>]
 let main argv =
-    let normalWave = calcSin 0.1 2. 2.
+    let normalWave = calcSin 0.1 1. 2. 1000.
 
-    let squareWave = calcSquare 0.1 2. 2.
-    //printfn "%A" normalWave
+    //let squareWave = calcSquare 0.1 2. 2.
+    
+    printfn "%A" normalWave
+
+    /// Write WAVE PCM soundfile (8KHz Mono 8-bit)
+    let write stream (data:byte[]) =
+        use writer = new BinaryWriter(stream)
+        // RIFF
+        writer.Write("RIFF"B)
+        let size = 36 + data.Length in writer.Write(size)
+        writer.Write("WAVE"B)
+        // fmt
+        writer.Write("fmt "B)
+        let headerSize = 16 in writer.Write(headerSize)
+        let pcmFormat = 1s in writer.Write(pcmFormat)
+        let mono = 1s in writer.Write(mono)
+        let sampleRate = 8000 in writer.Write(sampleRate)
+        let byteRate = sampleRate in writer.Write(byteRate)
+        let blockAlign = 1s in writer.Write(blockAlign)
+        let bitsPerSample = 8s in writer.Write(bitsPerSample)
+        // data
+        writer.Write("data"B)
+        writer.Write(data.Length)
+        writer.Write(data)
+    let sample x = (x + 1.)/2. * 255. |> byte
+    let data = 
+                normalWave
+                |> Microsoft.FSharp.Collections.List.toArray //|> byte
+    let stream = File.Create(@"test.Wav")
+    write stream data
     0 // return an integer exit code
