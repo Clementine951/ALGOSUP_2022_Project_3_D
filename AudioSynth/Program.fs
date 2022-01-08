@@ -7,10 +7,11 @@
 open System
 open System.IO
 
+
 // Define a function to construct a message to print
 let calcSin y m a xMultiplier = // Y = prescision, a = amplitude, m = period multiplier
     // a sin ( m x ) 
-    let mutable pointsList = []
+    
     // System.IEnumerable
     //let m = float(m)
     let pointsNumbers = (m / y)
@@ -19,37 +20,35 @@ let calcSin y m a xMultiplier = // Y = prescision, a = amplitude, m = period mul
 
     let m = int(m)
     let xMultiplier = int (xMultiplier)
+
     
+    let mutable pointsList = [
     for j = 0 to xMultiplier do
-        let j = float j
         for i = 0 to ((314/2) * m) do
+
             let pointsNumbers = (float pointsNumbers)
             let m = float(m)
             let i = (float i)
 
-            let xCoord = ((i * (2.*y)) /pointsNumbers) + (j * 3.14)
+            let xCoord = ((i * (2.*y)) /pointsNumbers) + (float j * 3.14)
 
-            printfn "X : %O" xCoord
+            // printfn "X : %O" xCoord
 
             let yCoord =  a * sin (m * xCoord)
-            printfn "Y : %O" yCoord
+            // printfn "Y : %O" yCoord
 
-            let point = (xCoord , yCoord)
 
             let yCoord = (yCoord + 1.)/2. * 255.
-            let byteX = byte(xCoord)
             let byteY = byte(yCoord)
-            let bytePoint = (byteX , byteY)
+            // printfn "%A" byteY
 
 
-            let pointsList = pointsList
-                            |> List.append [byteY]
-            pointsList
+            // let pointsList = pointsList 
+            //                |> List.append yCoord
+            // printfn "%A" pointsList
+            yield yCoord
+    ]
 
-        
-    // let bytePoints = pointsList |> List.toArray()
-    let pointsList = pointsList
-                    |> List.rev
     pointsList
 
 // let calcSquare y m a = // Y = prescision, a = amplitude, m = period multiplier
@@ -69,11 +68,11 @@ let calcSin y m a xMultiplier = // Y = prescision, a = amplitude, m = period mul
 
 [<EntryPoint>]
 let main argv =
-    let normalWave = calcSin 0.1 1. 2. 1000.
+    let normalWave = calcSin 0.1 1. 8. 1000.
 
     //let squareWave = calcSquare 0.1 2. 2.
     
-    printfn "%A" normalWave
+    // printfn "Normal Wave : %A" normalWave
 
     /// Write WAVE PCM soundfile (8KHz Mono 8-bit)
     let write stream (data:byte[]) =
@@ -96,9 +95,9 @@ let main argv =
         writer.Write(data.Length)
         writer.Write(data)
     let sample x = (x + 1.)/2. * 255. |> byte
-    let data = 
-                normalWave
-                |> Microsoft.FSharp.Collections.List.toArray //|> byte
+    let data = normalWave |> List.map (fun x -> byte x)
+    let data =  Microsoft.FSharp.Collections.List.toArray data
+    // printfn "Data: %A" data
     let stream = File.Create(@"test.Wav")
     write stream data
     0 // return an integer exit code
