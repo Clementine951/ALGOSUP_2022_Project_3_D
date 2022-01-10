@@ -10,10 +10,6 @@ open System.IO
 
 // Define a function to construct a message to print
 let calcSin y m a xMultiplier = // Y = prescision, a = amplitude, m = period multiplier
-    // a sin ( m x ) 
-    
-    // System.IEnumerable
-    //let m = float(m)
     let pointsNumbers = (m / y)
 
     let pointsNumbers =  int (pointsNumbers)
@@ -23,30 +19,27 @@ let calcSin y m a xMultiplier = // Y = prescision, a = amplitude, m = period mul
 
     
     let mutable pointsList = [
-    for j = 0 to xMultiplier do
-        for i = 0 to ((314/2) * m) do
+        for j = 0 to xMultiplier do
+            for i = 0 to m do
 
-            let pointsNumbers = (float pointsNumbers)
-            let m = float(m)
-            let i = (float i)
+                let pointsNumbers = (float pointsNumbers)
+                let m = float(m)
+                let i = (float i)
 
-            let xCoord = ((i * (2.*y)) /pointsNumbers) + (float j * 3.14)
+                let xCoord = ((i * (2.*y)) /pointsNumbers) + (float j * 3.14)
 
-            // printfn "X : %O" xCoord
+                // printfn "X : %O" xCoord
 
-            let yCoord =  a * sin (m * xCoord)
-            // printfn "Y : %O" yCoord
+                // let yCoord =  a * sin (m * xCoord)
+                let yCoord = sin( 10.* (m * xCoord))
+                // printfn "Y : %O" yCoord
 
+                let yCoord = (yCoord + 1.)/2. * 255.
+                let byteY = byte(yCoord)
+                // printfn "%A" byteY
 
-            let yCoord = (yCoord + 1.)/2. * 255.
-            let byteY = byte(yCoord)
-            // printfn "%A" byteY
-
-
-            // let pointsList = pointsList 
-            //                |> List.append yCoord
-            // printfn "%A" pointsList
-            yield yCoord
+                // printfn "%A" pointsList
+                yield yCoord
     ]
 
     pointsList
@@ -68,7 +61,7 @@ let calcSin y m a xMultiplier = // Y = prescision, a = amplitude, m = period mul
 
 [<EntryPoint>]
 let main argv =
-    let normalWave = calcSin 0.1 1. 8. 1000.
+    let normalWave = calcSin 0.1 1. 8. 4410.
 
     //let squareWave = calcSquare 0.1 2. 2.
     
