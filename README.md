@@ -18,9 +18,6 @@ We chose Clémentine Curel as Project Manager for this project, and Laura-Lee Ho
 
 - [x] Creation of a Trello
 - [x] Creation of a Slack server
-- [ ] Creation of the Fonctionnal specification
-- [ ] Creation of the Software architecture design choices
-- [ ] Creation of the Technical specification
 - [x] Division of tasks
 - [x] Choice of project manager and team leader
 - [x] Generate sin wave
@@ -34,6 +31,9 @@ We chose Clémentine Curel as Project Manager for this project, and Laura-Lee Ho
 - [ ] Generate triangle wave
 - [ ] Generate sawtooth wave
 - [ ] End of the first part + meeting with Robert Pickering
+- [ ] Creation of the Fonctionnal specification
+- [ ] Creation of the Software architecture design choices
+- [ ] Creation of the Technical specification
 
 ### Week 3 - 01/17/2022
 
