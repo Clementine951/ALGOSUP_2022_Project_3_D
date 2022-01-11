@@ -587,7 +587,8 @@
           },
           "SFML.Net": {
             "target": "Package",
-            "version": "[2.5.0, )"
+            "version": "[2.5.0, )",
+            "generatePathProperty": true
           }
         },
         "imports": [

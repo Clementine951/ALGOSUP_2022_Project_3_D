@@ -13,6 +13,7 @@
     <SourceRoot Include="C:\Users\GuillaumeRIVIERE\.nuget\packages\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgSFML_Net Condition=" '$(PkgSFML_Net)' == '' ">C:\Users\GuillaumeRIVIERE\.nuget\packages\sfml.net\2.5.0</PkgSFML_Net>
     <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">C:\Users\GuillaumeRIVIERE\.nuget\packages\fsharp.core\6.0.1</PkgFSharp_Core>
   </PropertyGroup>
 </Project>

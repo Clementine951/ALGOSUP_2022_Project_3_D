@@ -3,9 +3,12 @@
 // y = amplitude height of the function
 // g = Multiplier of Period
 // Period = g x 2 pi
+namespace test
 
 open System
 open System.IO
+open SFML.Audio
+open System.Threading
 
 
 // Define a function to construct a message to print
@@ -22,40 +25,40 @@ open System.IO
 // let time = 2.
 // let freq = 12000.
 
+module waveGen =
+    let calcSin sampleRate time freq amp =
 
-let calcSin sampleRate time freq =
-
-    let t = 1. + (1./sampleRate)
-    let N = sampleRate * time
-    let omega = 2. * System.Math.PI * freq
-
-
-    let points = [(0.)..t..N]
-    let points = points |> List.map(fun x -> sin(omega*x) )
-    // printfn "%O" testpoint.Length
-
-    points
+        let t = 1. + (1./sampleRate)
+        let N = sampleRate * time
+        let omega = 2. * System.Math.PI * freq
 
 
+        let points = [(0.)..t..N]
+        let points = points |> List.map(fun x -> amp * sin(omega*x) )
+        // printfn "%O" testpoint.Length
+
+        points
 
 
-// // let calcSquare y m a = // Y = prescision, a = amplitude, m = period multiplier
-// //     // a sin ( m x ) 
 
-// //     let pointsList = calcSin y m a
-// //     for i in pointsList do
-// //         let y = snd(i)
 
-// //         let snd(i) = if y > 0 then a else -a
-// //         pointsList
-// //     pointsList
-// //         //printfn "%O" i
+    // // let calcSquare y m a = // Y = prescision, a = amplitude, m = period multiplier
+    // //     // a sin ( m x ) 
 
-// //     pointsList
-    
-    
-[<EntryPoint>]
-let main argv =
+    // //     let pointsList = calcSin y m a
+    // //     for i in pointsList do
+    // //         let y = snd(i)
+
+    // //         let snd(i) = if y > 0 then a else -a
+    // //         pointsList
+    // //     pointsList
+    // //         //printfn "%O" i
+
+    // //     pointsList
+        
+        
+// [<EntryPoint>]
+// let main argv =
     //let normalWave = calcSin 0.1 0.5 44.
 
     //let squareWave = calcSquare 0.1 2. 2.
@@ -95,9 +98,9 @@ let main argv =
         writer.Write(data.Length)
         writer.Write(data)
     let sample x = (x + 1.)/2. * 255. |> byte
-    let data = calcSin 44100. 2. 440. |> List.map sample
-    let data =  Microsoft.FSharp.Collections.List.toArray data
+    let data = calcSin 44100. 2. 440. 0.1 |> List.map sample
+    let data2 =  Microsoft.FSharp.Collections.List.toArray data
     // printfn "Data: %A" data
     let stream = File.Create(@"test.wav")
-    write stream data
-    0 // return an integer exit code
+    write stream data2
+     // return an integer exit code
