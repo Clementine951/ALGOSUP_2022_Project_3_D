@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\AudioSynth\\AudioSynth.fsproj": {}
+    "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\audiosynth\\AudioSynth.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\AudioSynth\\AudioSynth.fsproj": {
+    "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\audiosynth\\AudioSynth.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\AudioSynth\\AudioSynth.fsproj",
+        "projectUniqueName": "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\audiosynth\\AudioSynth.fsproj",
         "projectName": "AudioSynth",
-        "projectPath": "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\AudioSynth\\AudioSynth.fsproj",
+        "projectPath": "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\audiosynth\\AudioSynth.fsproj",
         "packagesPath": "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\AudioSynth\\obj\\",
+        "outputPath": "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\audiosynth\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GuillaumeRIVIERE\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
               "target": "Package",
               "version": "[6.0.1, )",
               "generatePathProperty": true
+            },
+            "SFML.Net": {
+              "target": "Package",
+              "version": "[2.5.0, )"
             }
           },
           "imports": [
