@@ -7,8 +7,10 @@ namespace test
 
 open System
 open System.IO
-open SFML.Audio
 open System.Threading
+
+
+
 
 
 // Define a function to construct a message to print
@@ -25,19 +27,19 @@ open System.Threading
 // let time = 2.
 // let freq = 12000.
 
-module waveGen =
-    let calcSin sampleRate time freq amp =
+// module waveGen =
+//     let calcSin sampleRate time freq amp =
 
-        let t = 1. + (1./sampleRate)
-        let N = sampleRate * time
-        let omega = 2. * System.Math.PI * freq
+//         let t = 1. + (1./sampleRate)
+//         let N = sampleRate * time
+//         let omega = 2. * System.Math.PI * freq
 
 
-        let points = [(0.)..t..N]
-        let points = points |> List.map(fun x -> amp * sin(omega*x) )
-        // printfn "%O" testpoint.Length
+//         let points = [(0.)..t..N]
+//         let points = points |> List.map(fun x -> amp * sin(omega*x) )
+//         // printfn "%O" testpoint.Length
 
-        points
+//         points
 
 
 
@@ -59,8 +61,9 @@ module waveGen =
         
 // [<EntryPoint>]
 // let main argv =
-    //let normalWave = calcSin 0.1 0.5 44.
+module main =
 
+    let normalWave = calcSin( 44100. 2. 440. 0.1)
     //let squareWave = calcSquare 0.1 2. 2.
     
     // printfn "Normal Wave : %A" normalWave
@@ -82,25 +85,14 @@ module waveGen =
         let blockAlign = 1s in writer.Write(blockAlign)
         let bitsPerSample = 8s in writer.Write(bitsPerSample)
 
-
-
-        // // fmt
-        // writer.Write("fmt "B)
-        // writer.Write(16) // Header size
-        // writer.Write(pcmFormat)
-        // writer.Write(nbChannels)
-        // writer.Write(sampleRate)
-        // writer.Write(byteRate)
-        // writer.Write(blockAlign)
-        // writer.Write(bitsPerSample)
-        // data
         writer.Write("data"B)
         writer.Write(data.Length)
         writer.Write(data)
     let sample x = (x + 1.)/2. * 255. |> byte
-    let data = calcSin 44100. 2. 440. 0.1 |> List.map sample
-    let data2 =  Microsoft.FSharp.Collections.List.toArray data
+    let data = normalWave 
+                |> List.map sample 
+                |> Microsoft.FSharp.Collections.List.toArray
     // printfn "Data: %A" data
     let stream = File.Create(@"test.wav")
-    write stream data2
+    write stream data
      // return an integer exit code

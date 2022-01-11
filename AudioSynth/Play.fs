@@ -1,4 +1,4 @@
-namespace AudioSynth
+namespace test
 
 
 open System
