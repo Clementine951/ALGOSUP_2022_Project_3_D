@@ -1,8 +1,9 @@
-Functionnal specification of ALGOSUP_2022_Project_3_D
+## Project scope 
 
-### Project scope 
--- the goals, features, tasks, deliverables, costs and deadlines of the project.
-#### Deliverable
+#### Goals
+
+
+#### Deliverable and tasks.
 
 | Ref       | Description     | Required By Date | Dependency |
 | --------- | ----------------|------------------|----------- |
@@ -20,23 +21,31 @@ Functionnal specification of ALGOSUP_2022_Project_3_D
 
 
 
-### Risks and assumptions 
--- the considerations that could affect the functional design of the product.
+## Risks and assumptions 
 
-### Product overview 
+| Ref | Description | Likelihood | Impact | Mitigation Strategy|
+|-|-|-|-|-|
+|1|Delay| 25% | Delay on the other parts. | More work at home, ask some advices to other teams or Robert Pickering| 
+|2 |Technology risk | 30% | Restart the project, waste of time  | More search. |
+|3| Communication risk | 5% | Bad atmosphere, no productivity | More meeting, motivation, encouragement |
+
+## Product overview 
 -- the explanation of how the application will solve a specific problem for the target audience.
 
-### Use cases 
+
+
+## Use cases 
 -- the functional requirements are placed in the context of a user action. This shows what happens from the user perspective.
 
-### Requirements 
+
+
+## Requirements 
 -- essential features of the product that explain what it does.
 
-### Configuration 
--- steps needed to configure a product, such as user account setup.
 
-### Non-functional requirements 
--- the non-essential features that aren’t at the core of the product.
+## Non-functional requirements 
 
-### Error reporting 
--- an explanation of how the product will handle errors or exceptions.
+We can make a user interface if we have time.
+
+## Error reporting 
+This programme will have Unit Tests to avoid errors or exceptions. 
