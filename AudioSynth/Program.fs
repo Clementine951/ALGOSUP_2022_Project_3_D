@@ -11,62 +11,19 @@ open System.Threading
 open WaveGen
 
 
-
-
-
-// Define a function to construct a message to print
-// let calcSin y a xMultiplier = // Y = prescision, a = amplitude, m = period multiplier
-    // let pointsNumbers = (xMultiplier / y)
-
-    // let pointsNumbers =  int (pointsNumbers)
-    // let m = int(xMultiplier)
-    // let xMultiplier = int (xMultiplier)
-
-
-
-// let sampleRate = 44100. 
-// let time = 2.
-// let freq = 12000.
-
-// module waveGen =
-//     let calcSin sampleRate time freq amp =
-
-//         let t = 1. + (1./sampleRate)
-//         let N = sampleRate * time
-//         let omega = 2. * System.Math.PI * freq
-
-
-//         let points = [(0.)..t..N]
-//         let points = points |> List.map(fun x -> amp * sin(omega*x) )
-//         // printfn "%O" testpoint.Length
-
-//         points
-
-
-
-
-    // // let calcSquare y m a = // Y = prescision, a = amplitude, m = period multiplier
-    // //     // a sin ( m x ) 
-
-    // //     let pointsList = calcSin y m a
-    // //     for i in pointsList do
-    // //         let y = snd(i)
-
-    // //         let snd(i) = if y > 0 then a else -a
-    // //         pointsList
-    // //     pointsList
-    // //         //printfn "%O" i
-
-    // //     pointsList
         
         
 // [<EntryPoint>]
 // let main argv =
 module main =
-    // let normalWave = WaveGen.calcSin( 44100. 2. 440. 0.1)
+    // let normalWave = WaveGen.calcSin SampleRate Time Frequency Amplitude
+    //                                     Float   Float   Float   Float
+
+    // let normalWave = WaveGen.calcSin 44100. 2. 440. 1.
+    // let normalWave = WaveGen.calcSaw 44100. 2. 440. 1.
+    // let normalWave = WaveGen.calcTri 44100. 2. 440. 1.
     
-    let normalWave = WaveGen.calcSaw 44100. 2. 440. 1.
-    //let squareWave = calcSquare 0.1 2. 2.
+    let normalWave = WaveGen.calcSquare 44100. 2. 440. 1.
     
     // printfn "Normal Wave : %A" normalWave
 
