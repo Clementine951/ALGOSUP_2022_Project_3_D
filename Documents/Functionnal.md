@@ -3,7 +3,19 @@
 #### Goals
 
 
-#### Deliverable and tasks.
+#### Deliverables
+
+| Ref       | Description     | Required By Date | 
+| --------- | ---------|------------------| 
+| 1 | Function specification | 20 January 2022 | 
+| 2 | Technical specification | 20 January 2022
+| 3 | Software architecture design choices | 20 January 2022
+| 4 | Project execution plan | 20 January 2022
+| 5 | Unit tests that will automatically show that the logic implemented by the API works correctly | 11 February 2022 
+
+
+#### Tasks
+
 
 | Ref       | Description     | Required By Date | Dependency |
 | --------- | ----------------|------------------|----------- |
