@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "RJ8G1DvcQ+BECI7PPr153eI6f7eghu8h1WhevZan7D0CjnV26K1ydsZfVOXkamebstI4ulrS5c5ZrdrOD1myMw==",
+  "dgSpecHash": "gLw9iGHLpmzXtT8vUX60yRXUt9stjDQEC4q9kPrE7vVGd747TP6ouc9NJ2gbh96f6eATXVf13WEEbE+aLAzV8g==",
   "success": true,
   "projectFilePath": "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\SynthAudioTest\\SynthAudioTest.fsproj",
   "expectedPackageFiles": [
     "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
-    "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512",
+    "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\fsharp.core\\6.0.1\\fsharp.core.6.0.1.nupkg.sha512",
     "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
     "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\microsoft.dotnet.internalabstractions\\1.0.0\\microsoft.dotnet.internalabstractions.1.0.0.nupkg.sha512",
