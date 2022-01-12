@@ -65,7 +65,7 @@ open WaveGen
 module main =
     // let normalWave = WaveGen.calcSin( 44100. 2. 440. 0.1)
     
-    let normalWave = WaveGen.calcSin 44100. 2. 440. 1.
+    let normalWave = WaveGen.calcSaw 44100. 2. 440. 1.
     //let squareWave = calcSquare 0.1 2. 2.
     
     // printfn "Normal Wave : %A" normalWave
