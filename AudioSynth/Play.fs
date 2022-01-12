@@ -14,4 +14,4 @@ module playSynth =
         while sound.Status = SoundStatus.Playing do
             Thread.Sleep(100)
 
-    let play = PlaySound "test.wav" //Play the file you choose
+    //let play = PlaySound "test.wav" //Play the file you choose

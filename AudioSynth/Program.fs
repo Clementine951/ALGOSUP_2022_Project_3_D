@@ -8,13 +8,10 @@ namespace test
 open System
 open System.IO
 open System.Threading
+
 open WaveGen
+open playSynth
 
-
-        
-        
-// [<EntryPoint>]
-// let main argv =
 module main =
     // let normalWave = WaveGen.calcSin SampleRate Time Frequency Amplitude
     //                                     Float   Float   Float   Float
@@ -22,10 +19,27 @@ module main =
     // let normalWave = WaveGen.calcSin 44100. 2. 440. 1.
     // let normalWave = WaveGen.calcSaw 44100. 2. 440. 1.
     // let normalWave = WaveGen.calcTri 44100. 2. 440. 1.
+
+    //---------------------------------
+    // Sound like 'Au clair de la lune'
+    //---------------------------------
+    // let normalWave = WaveGen.calcSin 44100. 0.0 523.3 0.
+    //                 // |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 587. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 659. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.6 659. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.4 587. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
     
-    let normalWave = WaveGen.calcSquare 44100. 2. 440. 1.
-    
-    // printfn "Normal Wave : %A" normalWave
+    let normalWave = WaveGen.calcSin 44100. 1. 523.3 0.6
 
     /// Write WAVE PCM soundfile (8KHz Mono 8-bit)
     let write stream (data:byte[]) =
@@ -54,4 +68,5 @@ module main =
     // printfn "Data: %A" data
     let stream = File.Create(@"test.wav")
     write stream data
+    playSynth.PlaySound "test.wav"
      // return an integer exit code
