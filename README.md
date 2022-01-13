@@ -4,7 +4,7 @@ The aim of this project is to create a sound synthesizer that can be used to cre
 This project was inspired by Sonic Pi (https://sonic-pi.net/) and other live coding music packages. 
 The ultimate aim of this project is to be able to play music from code that looks something like the code given below.
 
-Here is a link to our (trello)[https://trello.com/invite/b/Dlhygf5L/56e58689f9569317c5e523aa5f6a8c66/algosup2022project3d], where you can see all your tasks.
+Here is a link to our [trello](https://trello.com/invite/b/Dlhygf5L/56e58689f9569317c5e523aa5f6a8c66/algosup2022project3d), where you can see all your tasks.
 
 <hr>
 
