@@ -68,5 +68,5 @@ module main =
     // printfn "Data: %A" data
     let stream = File.Create(@"test.wav")
     write stream data
-    playSynth.PlaySound "test.wav"
+    playSynth.PlaySound "test.wav" false 
      // return an integer exit code
