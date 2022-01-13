@@ -10,7 +10,7 @@ Here is a link to our [trello](https://trello.com/invite/b/Dlhygf5L/56e58689f956
 
 Our team consists of 6 people. Clémentine Curel, Laura-Lee Hollande, Salaheddine Namir, Guillaume Rivière, Gaël Lebrun and Victor Leroy.
 
-We chose Clémentine Curel as Project Manager for this project, and Laura-Lee Hollande as Tech Leader.
+We chose Clémentine Curel as Project Manager for this project, and Guillaume Rivière as Tech Leader.
 
 <hr>
 
