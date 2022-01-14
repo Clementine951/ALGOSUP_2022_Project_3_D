@@ -2,7 +2,7 @@
 
 We choose to build our project like a library.
 This library going to be used by calling our function to do what you want.
-Every function are in f#.
+Every function is in f#.
 
 The ALGOSUP_2022_Project_3_D project has two big folders:
 
