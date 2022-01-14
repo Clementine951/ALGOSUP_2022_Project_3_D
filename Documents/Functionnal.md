@@ -1,13 +1,14 @@
+
 # Project scope 
 
 ## Goals
-The goals of this project is to create a sound synthesizer in F#, it will be possible to play music from code.
+The goal of this project is to create a sound synthesizer in F#, it will be possible to play music from code.
 
 We have created this application following the request of Robert Pickering.
 The aim of this project is to create a sound synthesizer with the help of Robert Pickering who initiated the project.
   
 
-Deadline : 11 of February 2022
+Deadline: 11 of February 2022
   
   - All the code will be accessible on GitHub.
 
@@ -65,24 +66,24 @@ Once you have cloned our [project](https://github.com/Clementine951/ALGOSUP_2022
 
 This command puts you in the file AudioSynth.
 
-Then type this commmand to run the project :
+Then type this command to run the project :
 
 ``` dotnet run```
 
-This command run our project.
+This command runs our project.
 
 
 If you want just run our test you can type the ``` dotnet test``` command.
 
 ## Product overview 
 -- the explanation of how the application will solve a specific problem for the target audience.
--- the functional requirements are placed in the context of a user action. This shows what happens from the user perspective.
+-- the functional requirements are placed in the context of a user action. This shows what happens from the user's perspective.
 
-With our sound synthesizer the user will be able to create song with code and save his song, add some filters or echo. We will also offer a conversion to the MP3 format.
+With our sound synthesizer, the user will be able to create a song with code and save his song, add some filters or echo. We will also offer conversion to the MP3 format.
 
 ## Non-functional requirements 
 
 It would be possible to create an application or a user interface where users could create or modify their sound with buttons.
 
 ## Error reporting 
-This programme will have Unit Tests to avoid errors or exceptions. 
+This program will have Unit Tests to avoid errors or exceptions. 
