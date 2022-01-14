@@ -53,20 +53,36 @@ Deadline : 11 of February 2022
 | 2   | Technology risk    | 30%        | Restart the project, waste of time | More search.                                                           |
 | 3   | Communication risk | 5%         | Bad atmosphere, no productivity    | More meeting, motivation, encouragement                                |
 
+
+## Requirements 
+
+To run this project you will need an IDE, we have chosen to use [Visual Studio Code](https://code.visualstudio.com/download). 
+You should also install [dotnet](https://dotnet.microsoft.com/en-us/download)
+
+Once you have cloned our [project](https://github.com/Clementine951/ALGOSUP_2022_Project_3_D) and opened it in the IDE of your choice (we used Visual Studio Code), open the terminal and enter the following commands:
+
+``` cd AudioSynth```
+
+This command puts you in the file AudioSynth.
+
+Then type this commmand to run the project :
+
+``` dotnet run```
+
+This command run our project.
+
+
+If you want just run our test you can type the ``` dotnet test``` command.
+
 ## Product overview 
 -- the explanation of how the application will solve a specific problem for the target audience.
 -- the functional requirements are placed in the context of a user action. This shows what happens from the user perspective.
 
-It would be possible to create an application or website where users could create or modify their sound.
-
-## Requirements 
--- essential features of the product that explain what it does.
-
-echo, save your song, some filters, MP3 compression
+With our sound synthesizer the user will be able to create song with code and save his song, add some filters or echo. We will also offer a conversion to the MP3 format.
 
 ## Non-functional requirements 
 
-We can make a user interface if we have time.
+It would be possible to create an application or a user interface where users could create or modify their sound with buttons.
 
 ## Error reporting 
 This programme will have Unit Tests to avoid errors or exceptions. 
