@@ -4,7 +4,7 @@ namespace test
 open System
 open System.Threading
 
-module noteToHz = 
+module NoteToHz = 
     let convert note octave = // Convert a Note as string into the frequency related
         let noteHz =
             match note with

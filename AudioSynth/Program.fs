@@ -10,10 +10,10 @@ open System.IO
 open System.Threading
 
 open WaveGen
-open playSynth
-open noteToHz
+open PlaySynth
+open NoteToHz
 
-module main =
+module Main =
     // let normalWave = WaveGen.calcSin SampleRate Time Frequency Amplitude
     //                                     Float   Float   Float   Float
 
@@ -69,5 +69,5 @@ module main =
     // printfn "Data: %A" data
     let stream = File.Create(@"test.wav")
     write stream data
-    playSynth.PlaySound ("test.wav" ,false ,float32(2.0))
+    PlaySynth.playSound ("test.wav" ,false ,float32(2.0))
      // return an integer exit code
