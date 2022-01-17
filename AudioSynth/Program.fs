@@ -3,7 +3,7 @@
 // y = amplitude height of the function
 // g = Multiplier of Period
 // Period = g x 2 pi
-namespace test
+namespace synthesizer
 
 open System
 open System.IO

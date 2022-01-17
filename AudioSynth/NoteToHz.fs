@@ -1,4 +1,4 @@
-namespace test
+namespace synthesizer
 
 
 open System
