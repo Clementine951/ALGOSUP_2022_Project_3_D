@@ -61,17 +61,17 @@ module Main =
 
         
 
-    let listNormalWave = [
-        for i = 0 to inputNote.Length-1 do
-            let tmp = WaveGen.calcSin 44100. 1. (NoteToHz.convert (fst inputNote[i]) (snd inputNote[i])) 0.9
-            printfn "%O" (NoteToHz.convert (fst inputNote[i]) (snd inputNote[i]))
-            yield tmp
-    ]
-    printfn "%O" listNormalWave.Length
-    let normalWave = List.concat listNormalWave
+    // let listNormalWave = [
+    //     for i = 0 to inputNote.Length-1 do
+    //         let tmp = WaveGen.calcSin 44100. 1. (NoteToHz.convert (fst inputNote[i]) (snd inputNote[i])) 0.9
+    //         printfn "%O" (NoteToHz.convert (fst inputNote[i]) (snd inputNote[i]))
+    //         yield tmp
+    // ]
+    // printfn "%O" listNormalWave.Length
+    // let normalWave = List.concat listNormalWave
 
     // let test = NoteToHz.convert "A" 6
-    // let normalWave = WaveGen.calcSin 44100. 1. 40000.  0.6
+    let normalWave = Filter.sinFlange 44100. 10. 40000.  1.
 
     /// Write WAVE PCM soundfile (8KHz Mono 8-bit)
     let write stream (data:byte[]) =
@@ -100,5 +100,8 @@ module Main =
     // printfn "Data: %A" data
     let stream = File.Create(@"test.wav")
     write stream data
+
+
+
     PlaySynth.playSound ("test.wav" ,true ,float32(2.0))
      // return an integer exit code

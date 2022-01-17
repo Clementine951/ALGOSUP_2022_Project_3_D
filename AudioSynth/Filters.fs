@@ -3,11 +3,19 @@ namespace synthesizer
 
 open System
 open System.IO
-open SFML.Audio //Allow to use SFML library
 open System.Threading
-open SFML.System
+
+open WaveGen
+open NoteToHz
+
+
 
 module Filter =
-    let waveModify  =
+    let waveAmp =
         let a = 1+1
         a
+    let sinFlange sampleRate time freq amp =
+        let wave = WaveGen.calcSin sampleRate time freq amp
+        let flange = WaveGen.calcSinFlange sampleRate time freq amp
+        let sumList = List.map2 (fun x y -> (x + y)/2.) wave flange
+        sumList
