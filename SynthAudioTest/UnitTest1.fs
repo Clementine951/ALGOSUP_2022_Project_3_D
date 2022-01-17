@@ -2,7 +2,7 @@
 module SynthAudioTest
 
 open NUnit.Framework
-open test.WaveGen
+open synthesizer.WaveGen
 
 [<SetUp>]
 let Setup () =

@@ -3,7 +3,7 @@
 // y = amplitude height of the function
 // g = Multiplier of Period
 // Period = g x 2 pi
-namespace test
+namespace synthesizer
 
 open System
 open System.IO
@@ -24,23 +24,54 @@ module Main =
     //---------------------------------
     // Sound like 'Au clair de la lune'
     //---------------------------------
-    let normalWave = WaveGen.calcSin 44100. 0.0 523.3 0.
-                    // |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-                    |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-                    |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
-                    |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-                    |> List.append(WaveGen.calcSin 44100. 0.3 587. 0.6)
-                    |> List.append(WaveGen.calcSin 44100. 0.3 659. 0.6)
-                    |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-                    |> List.append(WaveGen.calcSin 44100. 0.6 659. 0.6)
-                    |> List.append(WaveGen.calcSin 44100. 0.4 587. 0.6)
-                    |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-                    |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
-                    |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-                    |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
-                    |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-    
-    // let normalWave = WaveGen.calcSin 44100. 1. 40000. 0.6
+    // let normalWave = WaveGen.calcSin 44100. 0.0 523.3 0.
+    //                 // |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 587. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 659. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.6 659. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.4 587. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+    //                 |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
+    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
+
+    let inputNote = [|
+        ("c", 3.)
+        ("D#", 6.)
+        ("C", 4.)
+        ("E", 2.)
+        ("G", 10.)
+        ("F#", 6.)
+        ("C#", 4.)
+        ("D", 2.)
+        ("G#", 9.)
+        ("F", 7.)
+    |]
+
+    // printfn "%O" inputNote.Length
+    // let normalWave3 = List.map(fun x -> WaveGen.calcSin 44100. 1. (NoteToHz.convert (fst inputNote[x]) (snd inputNote[x])) 0.9) inputNote
+    // // let normalWave = Seq.concat normalWave
+    // printfn "%A"normalWave3
+
+
+        
+
+    let listNormalWave = [
+        for i = 0 to inputNote.Length-1 do
+            let tmp = WaveGen.calcSin 44100. 1. (NoteToHz.convert (fst inputNote[i]) (snd inputNote[i])) 0.9
+            printfn "%O" (NoteToHz.convert (fst inputNote[i]) (snd inputNote[i]))
+            yield tmp
+    ]
+    printfn "%O" listNormalWave.Length
+    let normalWave = List.concat listNormalWave
+
+    // let test = NoteToHz.convert "A" 6
+    // let normalWave = WaveGen.calcSin 44100. 1. 40000.  0.6
 
     /// Write WAVE PCM soundfile (8KHz Mono 8-bit)
     let write stream (data:byte[]) =
@@ -69,5 +100,5 @@ module Main =
     // printfn "Data: %A" data
     let stream = File.Create(@"test.wav")
     write stream data
-    PlaySynth.playSound ("test.wav" ,false ,float32(2.0))
+    PlaySynth.playSound ("test.wav" ,true ,float32(2.0))
      // return an integer exit code
