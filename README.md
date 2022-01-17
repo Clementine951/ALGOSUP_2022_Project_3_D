@@ -5,6 +5,7 @@ This project was inspired by Sonic Pi (https://sonic-pi.net/) and other live cod
 The ultimate aim of this project is to be able to play music from code that looks something like the code given below.
 
 Here is a link to our [trello](https://trello.com/invite/b/Dlhygf5L/56e58689f9569317c5e523aa5f6a8c66/algosup2022project3d), where you can see all your tasks.
+Here is a link to our [slack server](https://join.slack.com/t/algosup2022project3d/shared_invite/zt-111zfj7eu-6UUuILikDJtFFbMu5tNqcg), It's the place where you can find all our ressources and questions.
 
 <hr>
 
