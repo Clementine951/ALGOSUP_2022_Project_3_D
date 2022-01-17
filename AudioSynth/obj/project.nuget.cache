@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "TXH8PWma6eAHx8zSOYhXYoLEaU6bFKnSAtVXQ/Zbxuj/tVCiWlQ2Bzt8tlqSLH023RhS4A4jn0EPpTHEmtUCfw==",
+  "dgSpecHash": "dB+/UEPaHZrSL3uuVK5u0ulqqAVxShxoB8oY6aQyY64EkoUflmhb9rskEGZAUaMPw5nHAJh3A3J8GQaAG5lcEA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\GuillaumeRIVIERE\\Documents\\Code\\Synth\\ALGOSUP_2022_Project_3_D\\AudioSynth\\AudioSynth.fsproj",
+  "projectFilePath": "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/AudioSynth.fsproj",
   "expectedPackageFiles": [
-    "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\csfml\\2.5.0\\csfml.2.5.0.nupkg.sha512",
-    "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\fsharp.core\\6.0.1\\fsharp.core.6.0.1.nupkg.sha512",
-    "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\sfml.audio\\2.5.0\\sfml.audio.2.5.0.nupkg.sha512",
-    "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\sfml.graphics\\2.5.0\\sfml.graphics.2.5.0.nupkg.sha512",
-    "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\sfml.net\\2.5.0\\sfml.net.2.5.0.nupkg.sha512",
-    "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\sfml.system\\2.5.0\\sfml.system.2.5.0.nupkg.sha512",
-    "C:\\Users\\GuillaumeRIVIERE\\.nuget\\packages\\sfml.window\\2.5.0\\sfml.window.2.5.0.nupkg.sha512"
+    "/Users/clementine/.nuget/packages/csfml/2.5.0/csfml.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.audio/2.5.0/sfml.audio.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.graphics/2.5.0/sfml.graphics.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.net/2.5.0/sfml.net.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.system/2.5.0/sfml.system.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.window/2.5.0/sfml.window.2.5.0.nupkg.sha512"
   ],
   "logs": []
 }
