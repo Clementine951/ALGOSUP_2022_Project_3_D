@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "dB+/UEPaHZrSL3uuVK5u0ulqqAVxShxoB8oY6aQyY64EkoUflmhb9rskEGZAUaMPw5nHAJh3A3J8GQaAG5lcEA==",
+  "success": true,
+  "projectFilePath": "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/AudioSynth.fsproj",
+  "expectedPackageFiles": [
+    "/Users/clementine/.nuget/packages/csfml/2.5.0/csfml.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.audio/2.5.0/sfml.audio.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.graphics/2.5.0/sfml.graphics.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.net/2.5.0/sfml.net.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.system/2.5.0/sfml.system.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.window/2.5.0/sfml.window.2.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

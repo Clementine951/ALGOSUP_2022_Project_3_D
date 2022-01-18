@@ -3,6 +3,7 @@ namespace synthesizer
 
 open System
 open System.Threading
+open WaveGen
 
 module NoteToHz = 
     let convert note octave = // Convert a Note as string into the frequency related
@@ -23,4 +24,27 @@ module NoteToHz =
             | _ -> 0.
 
         let result = noteHz * (2. ** octave) // Multiply the frequency by the octave
+        let result = float (Math.Round result)
         result
+    
+
+    // Function to access easily more parts of a tuple, do the same as fst and snd
+    let first (a, _, _, _) = a
+    let second (_, b, _, _) = b
+    let third (_, _, c, _) = c
+    let fourth (_, _, _, d) = d
+
+
+    //
+    let noteListToFloatList (inputNote:(string * float * float * float)[]) (sampleRate:float) =
+        let listNormalWave = [
+            for i = 0 to inputNote.Length-1 do
+                let tmp = 
+                    WaveGen.calcSin sampleRate 
+                        (fourth inputNote.[i]) 
+                        (convert (first inputNote.[i]) (second inputNote.[i])) 
+                        (third inputNote.[i])
+                yield tmp
+        ]
+        let normalWave = List.concat listNormalWave
+        normalWave

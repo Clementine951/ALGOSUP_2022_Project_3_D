@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-
+    <Compile Include="noteToHzTest.fs"/>
     <Compile Include="UnitTest1.fs"/>
 
     <Compile Include="Program.fs"/>
