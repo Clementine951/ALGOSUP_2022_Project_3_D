@@ -1,4 +1,10 @@
 ﻿// Learn more about F# at http://docs.microsoft.com/dotnet/fsharp
+
+// y sin (g X )
+// y = amplitude height of the function
+// g = Multiplier of Period
+// Period = g x 2 pi
+
 namespace synthesizer
 
 open System
