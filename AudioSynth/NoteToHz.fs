@@ -39,7 +39,11 @@ module NoteToHz =
     let noteListToFloatList (inputNote:(string * float * float * float)[]) (sampleRate:float) =
         let listNormalWave = [
             for i = 0 to inputNote.Length-1 do
-                let tmp = WaveGen.calcSin sampleRate (fourth inputNote[i]) (convert (first inputNote[i]) (second inputNote[i])) (third inputNote[i])
+                let tmp = 
+                    WaveGen.calcSin sampleRate 
+                        (fourth inputNote.[i]) 
+                        (convert (first inputNote.[i]) (second inputNote.[i])) 
+                        (third inputNote.[i])
                 yield tmp
         ]
         let normalWave = List.concat listNormalWave
