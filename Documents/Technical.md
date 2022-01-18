@@ -2,7 +2,7 @@
 
 ## Team
 
-We have a team of six members  Clémentine Curel, Laura-Lee Hollande, Salahedine Namir, Gaël Lebrun, Guillaume Riviere, Victor Leroy.
+We have a team of six members  Clémentine Curel, Laura-Lee Hollande, Salahedine Namir, Gaël Lebrun, Guillaume Riviere, Victor Leroy (test).
 
 
 

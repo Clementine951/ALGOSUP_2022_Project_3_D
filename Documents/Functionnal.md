@@ -73,7 +73,7 @@ This command runs our project.
 If you want just run our test you can type the ``` dotnet test``` command.
 
 ## User Case
-Anyone with or without knowledge of music or programming can use this project
+Anyone with or without knowledge of music or programming can use this project(test)
 
 ## Product overview 
 -- the explanation of how the application will solve a specific problem for the target audience.
