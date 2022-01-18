@@ -171,7 +171,6 @@ C:/Users/GuillaumeRIVIERE/Documents/Code/Synth/ALGOSUP_2022_Project_3_D/audiosyn
 /Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/obj/Debug/net5.0/AudioSynth.fsproj.AssemblyReference.cache
 /Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/obj/Debug/net5.0/AudioSynth.AssemblyInfoInputs.cache
 /Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/obj/Debug/net5.0/AudioSynth.AssemblyInfo.fs
-/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/obj/Debug/net5.0/AudioSynth.fsproj.CopyComplete
 /Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/obj/Debug/net5.0/AudioSynth.dll
 /Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/obj/Debug/net5.0/AudioSynth.pdb
 /Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/obj/Debug/net5.0/AudioSynth.genruntimeconfig.cache

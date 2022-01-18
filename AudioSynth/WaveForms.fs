@@ -3,7 +3,6 @@ namespace synthesizer
 open System
 
 module WaveGen =
-    module WaveGen =
     let calcSin sampleRate time freq amp =
 
         let t = 1. + (1./sampleRate) // This is the frequency where each point will be created
