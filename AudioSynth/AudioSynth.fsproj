@@ -7,8 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-  <Compile Include="NoteToHz.fs" />
-  <Compile Include="WaveForms.fs" />
+    <Compile Include="WaveForms.fs" />
+    <Compile Include="NoteToHz.fs" />
+    
     <Compile Include="Filters.fs" />
     
     

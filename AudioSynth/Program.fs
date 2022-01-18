@@ -1,8 +1,4 @@
 ﻿// Learn more about F# at http://docs.microsoft.com/dotnet/fsharp
-// y sin (g X )
-// y = amplitude height of the function
-// g = Multiplier of Period
-// Period = g x 2 pi
 namespace synthesizer
 
 open System
@@ -14,64 +10,25 @@ open PlaySynth
 open NoteToHz
 
 module Main =
-    // let normalWave = WaveGen.calcSin SampleRate Time Frequency Amplitude
-    //                                     Float   Float   Float   Float
-
-    // let normalWave = WaveGen.calcSin 44100. 2. 440. 1.
-    // let normalWave = WaveGen.calcSaw 44100. 2. 440. 1.
-    // let normalWave = WaveGen.calcTri 44100. 2. 440. 1.
-
-    //---------------------------------
-    // Sound like 'Au clair de la lune'
-    //---------------------------------
-    // let normalWave = WaveGen.calcSin 44100. 0.0 523.3 0.
-    //                 // |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-    //                 |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
-    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-    //                 |> List.append(WaveGen.calcSin 44100. 0.3 587. 0.6)
-    //                 |> List.append(WaveGen.calcSin 44100. 0.3 659. 0.6)
-    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-    //                 |> List.append(WaveGen.calcSin 44100. 0.6 659. 0.6)
-    //                 |> List.append(WaveGen.calcSin 44100. 0.4 587. 0.6)
-    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-    //                 |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
-    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
-    //                 |> List.append(WaveGen.calcSin 44100. 0. 523. 0.)
-    //                 |> List.append(WaveGen.calcSin 44100. 0.3 523. 0.6)
 
     let inputNote = [|
-        ("c", 3.)
-        ("D#", 6.)
-        ("C", 4.)
-        ("E", 2.)
-        ("G", 10.)
-        ("F#", 6.)
-        ("C#", 4.)
-        ("D", 2.)
-        ("G#", 9.)
-        ("F", 7.)
+        // ( "NOTE":string, OCTAVE:float, PLAYTIME:float, AMPLITUDE:float)
+        ("c", 3., 0.5, 0.9)
+        ("D#", 6., 0.5, 0.9)
+        ("C", 4., 0.5, 0.9)
+        ("E", 2., 0.5, 0.9)
+        ("G", 10., 0.5, 0.9)
+        ("F#", 6., 0.5, 0.9)
+        ("C#", 4., 0.5, 0.9)
+        ("D", 2., 0.5, 0.9)
+        ("G#", 9., 0.5, 0.9)
+        ("F", 7., 0.5, 0.9)
     |]
-
-    // printfn "%O" inputNote.Length
-    // let normalWave3 = List.map(fun x -> WaveGen.calcSin 44100. 1. (NoteToHz.convert (fst inputNote[x]) (snd inputNote[x])) 0.9) inputNote
-    // // let normalWave = Seq.concat normalWave
-    // printfn "%A"normalWave3
-
-
-        
-
-    // let listNormalWave = [
-    //     for i = 0 to inputNote.Length-1 do
-    //         let tmp = WaveGen.calcSin 44100. 1. (NoteToHz.convert (fst inputNote[i]) (snd inputNote[i])) 0.9
-    //         printfn "%O" (NoteToHz.convert (fst inputNote[i]) (snd inputNote[i]))
-    //         yield tmp
-    // ]
-    // printfn "%O" listNormalWave.Length
-    // let normalWave = List.concat listNormalWave
+//                                    List of notes  Samplerate
+    let normalWave = noteListToFloatList inputNote 44100.
 
     // let test = NoteToHz.convert "A" 6
-    let normalWave = Filter.sinFlange 44100. 10. 40000.  1.
+    //let normalWave = Filter.sinFlange 44100. 10. 40000.  1.
 
     /// Write WAVE PCM soundfile (8KHz Mono 8-bit)
     let write stream (data:byte[]) =
