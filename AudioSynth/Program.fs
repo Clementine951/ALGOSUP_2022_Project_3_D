@@ -12,20 +12,23 @@ open NoteToHz
 module Main =
 
     let inputNote = [|
-        // ( "NOTE":string, OCTAVE:float, PLAYTIME:float, AMPLITUDE:float)
-        ("c", 3., 0.5, 0.9)
-        ("D#", 6., 0.5, 0.9)
-        ("C", 4., 0.5, 0.9)
-        ("E", 2., 0.5, 0.9)
-        ("G", 10., 0.5, 0.9)
-        ("F#", 6., 0.5, 0.9)
-        ("C#", 4., 0.5, 0.9)
-        ("D", 2., 0.5, 0.9)
-        ("G#", 9., 0.5, 0.9)
-        ("F", 7., 0.5, 0.9)
+        // ( "NOTE":string, OCTAVE:float, AMPLITUDE:float PLAYTIME:float,)
+        ("G", 3., 0.9, 0.9)
+        ("G#", 3., 0.9, 0.9)
+        ("G", 3., 0.9, 0.9)
+        ("A", 3., 0.9, 0.9)
+        ("B", 3., 0.9, 0.9)
+        ("A", 3., 0.9, 0.9)
+        ("G", 3., 0.9, 0.9)
+        ("B", 3., 0.9, 0.9)
+        ("A", 3., 0.9, 0.9)
+        ("C", 3., 0.9, 0.9)
+        ("G", 3., 0.9, 0.9)
     |]
 //                                    List of notes  Samplerate
     let normalWave = noteListToFloatList inputNote 44100.
+
+    // let normalWave = calcSin 44100. 1. 130.9 0.9
 
     // let test = NoteToHz.convert "A" 6
     //let normalWave = Filter.sinFlange 44100. 10. 40000.  1.

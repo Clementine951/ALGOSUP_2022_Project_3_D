@@ -24,6 +24,7 @@ module NoteToHz =
             | _ -> 0.
 
         let result = noteHz * (2. ** octave) // Multiply the frequency by the octave
+        let result = float (Math.Round result)
         result
     
 
