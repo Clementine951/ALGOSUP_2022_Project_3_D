@@ -1,15 +1,13 @@
 
-# Project scope 
+# Functionnal Specification
 
 ## Goals
-The goal of this project is to create a sound synthesizer in F#, it will be possible to play music from code.
 
-We have created this application following the request of Robert Pickering.
-The aim of this project is to create a sound synthesizer with the help of Robert Pickering who initiated the project.
-  
+For this project we have to create a programmable synthesizer in F#, it is basically an electronic musical instrument that generates audio signals. With our programmable synthesizer, the user will be able to create sounds by generating waveforms from f# code.
 
 Deadline: 11 of February 2022
-  
+
+  - We have created this application following the request of Robert Pickering.
   - All the code will be accessible on GitHub.
 
   The project is developed with F#.
