@@ -6,7 +6,7 @@ module Amplitude =
     
     let Amp (points:float list,a:float, t:float,N:float,freq:float,omega:float, trig:int) =
        
-      
+      // generete float list with a arg to compare with float list with amp arg
        let ampList = [(0.)..t..N]
 
        let ampList1 = ampList |> List.map(fun x -> a * sin(omega*x) )
@@ -19,12 +19,13 @@ module Amplitude =
            
       
        let lenght = points.Length
+       // for loop to align the height of amplitude of ampList 
        let check1 =[for i in 0..lenght-1 do if points.[i]>= ampList1.[i] then ampList1.[i] else points.[i]]
        let check2 =[for i in 0..lenght-1 do if points.[i]>= ampList2.[i] then ampList2.[i] else points.[i]]
        let check3 =[for i in 0..lenght-1 do if points.[i]>= ampList3.[i] then ampList3.[i] else points.[i]]
        let check4 =[for i in 0..lenght-1 do if points.[i]>= ampList4.[i] then ampList4.[i] else points.[i]]
        let check5 =[for i in 0..lenght-1 do if points.[i]>= ampList5.[i] then ampList5.[i] else points.[i]]
-      
+      //return function depende of fuction who call this
        if trig = 1 then
           check1
           (*printfn"check1 %A" check1.[0..5]*)
