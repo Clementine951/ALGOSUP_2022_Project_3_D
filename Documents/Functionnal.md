@@ -2,7 +2,6 @@
 # Functionnal Specification
 
 ## Goals
-
 For this project we have to create a programmable synthesizer in F#, it is basically an electronic musical instrument that generates audio signals. With our programmable synthesizer, the user will be able to create sounds by generating waveforms from f# code.
 
 Deadline: 11 of February 2022
@@ -54,7 +53,6 @@ Deadline: 11 of February 2022
 
 
 ## Requirements 
-
 To run this project you will need an IDE, we have chosen to use [Visual Studio Code](https://code.visualstudio.com/download). 
 You should also install [dotnet](https://dotnet.microsoft.com/en-us/download)
 
@@ -72,18 +70,13 @@ This command runs our project.
 
 If you want just run our test you can type the ``` dotnet test``` command.
 
-## User Case
-Anyone with or without knowledge of music or programming can use this project(test)
-
 ## Product overview 
--- the explanation of how the application will solve a specific problem for the target audience.
--- the functional requirements are placed in the context of a user action. This shows what happens from the user's perspective.
+This project is for anyone with or without knowledge of music or programming.
 
-With our sound synthesizer, the user will be able to create a song with code and save his song, add some filters or echo. We will also offer conversion to the MP3 format.
+With our synthesizer, the user will be able to create a song with code and save his song, add some filters like echo with code. We will also offer conversion to the MP3 format.
 
 ## Non-functional requirements 
-
 It would be possible to create an application or a user interface where users could create or modify their sound with buttons.
 
 ## Error reporting 
-This program will have Unit Tests to avoid errors or exceptions. 
+This program will have UnitTest to avoid errors or exceptions. 
