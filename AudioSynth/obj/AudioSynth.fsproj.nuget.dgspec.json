@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/AudioSynth.fsproj": {}
+    "C:\\Users\\Victorleroy\\Synth\\AudioSynth\\AudioSynth.fsproj": {}
   },
   "projects": {
-    "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/AudioSynth.fsproj": {
+    "C:\\Users\\Victorleroy\\Synth\\AudioSynth\\AudioSynth.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/AudioSynth.fsproj",
+        "projectUniqueName": "C:\\Users\\Victorleroy\\Synth\\AudioSynth\\AudioSynth.fsproj",
         "projectName": "AudioSynth",
-        "projectPath": "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/AudioSynth.fsproj",
-        "packagesPath": "/Users/clementine/.nuget/packages/",
-        "outputPath": "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/obj/",
+        "projectPath": "C:\\Users\\Victorleroy\\Synth\\AudioSynth\\AudioSynth.fsproj",
+        "packagesPath": "C:\\Users\\Victorleroy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Victorleroy\\Synth\\AudioSynth\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/clementine/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Victorleroy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -36,7 +38,7 @@
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[5.0.0, )",
+              "version": "[6.0.1, )",
               "generatePathProperty": true
             },
             "SFML.Net": {
@@ -60,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
