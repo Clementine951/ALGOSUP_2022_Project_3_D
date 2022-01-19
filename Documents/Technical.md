@@ -25,5 +25,5 @@ We have a team of six members, Clémentine Curel, Laura-Lee Hollande, Salahedine
 ## Compatibility
 | Name | Use|
 |-|-|
-|MacOS|Our project is compatible with MacOS|
-|Windows| Our project is compatible with Windows|
+|MacOS|Our project is compatible with MacOS. There is only the PlaySynth module which is unavailable for MacOs.|
+|Windows| Our project is compatible with Windows. All modules are available on Windows.|
