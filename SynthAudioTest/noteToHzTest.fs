@@ -9,9 +9,9 @@ open synthesizer.NoteToHz
 let Setup () =
     ()
 
-[<TestCase("C",3.,130.8)>]
-[<TestCase("c",3.,130.8)>]
-[<TestCase("D#",6.,1244.8)>]
+[<TestCase("C",3.,131.)>]
+[<TestCase("c",3.,131.)>]
+[<TestCase("D#",6.,1245.)>]
 [<TestCase("U",6.,0.)>]
     let testCaseTest(note:string, octave:float, expected:float) =
         let result = convert note octave
