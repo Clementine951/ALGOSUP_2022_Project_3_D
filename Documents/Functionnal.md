@@ -47,7 +47,7 @@ Deadline: 11 of February 2022
 
 | Ref | Description        | Likelihood | Impact                             | Mitigation Strategy                                                    |
 | --- | ------------------ | ---------- | ---------------------------------- | ---------------------------------------------------------------------- |
-| 1   | Delay              | 25%        | Delay on the other parts.          | More work at home, ask some advices to other teams or Robert Pickering |
+| 1   | Delay              | 45%        | Delay on the other parts.          | More work at home, ask some advices to other teams or Robert Pickering |
 | 2   | Technology risk    | 30%        | Restart the project, waste of time | More search.                                                           |
 | 3   | Communication risk | 5%         | Bad atmosphere, no productivity    | More meeting, motivation, encouragement                                |
 
