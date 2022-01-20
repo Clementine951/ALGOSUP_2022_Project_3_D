@@ -166,12 +166,16 @@ We have a team of six members, Clémentine Curel, Laura-Lee Hollande, Salahedine
 
   ##### Amplitude
 
-    You can change the amplitude of your wave by using this function :
     ```
-    let amplitude (initialList:list<float>) (amp:float) =
+      let amplitude (initialList:list<float>) (amp:float) =
+          let returnList = List.map (fun x -> x*amp) initialList
+          returnList
     ```
-    initialList is the wave generated earlier as a List of float
-    amplitude mean the mutiplier of the amplitude the wave already have, going over 1 will make the amplitude higher and under 1 will reduce the amplitude
+    This function take a representation of a wave as a list of Float and a multiplier as a Float.
+    It output a list of float after being changed by the multiplier.
+
+    It just multiply all value of the list by the multiplier, It can reduce values if multiplier is lower than 1, and higher value when the multiplier is higher than 1.
+    Be carefull to not make value go over 1 after the multiply, other the wave outputed will be totally different than expected.
 
 
   ##### Overdriven
