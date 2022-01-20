@@ -72,26 +72,10 @@ We have a team of six members, Clémentine Curel, Laura-Lee Hollande, Salahedine
 
   #### NoteToHz
 
-    Playing with frequency and other parameter from wavegen function is a little bit hard,
-    so we implemented a more user friendly way to play sound correctly.
-
-    We added a way to input notes and octaves instead of frequency. 
-
-    You can call the function with notes as input that way
-    ``` let noteListToFloatList (inputNote:(string * float * float * float)[]) (sampleRate:float) = ```
-
-    Your input of notes need to be that way, 
-    ```
-    let inputNote = [|
-        // ( "NOTE":string, OCTAVE:float, AMPLITUDE:float PLAYTIME:float,)
-         ("G", 3., 0.9, 0.9)
-         ("G#", 3., 0.9, 0.9)
-     |]
-    ```
-    First argument is a String as the note
-    Second argument is the octave of the note
-    Third is the amplitude of the note
-    And fourth is the time the note will be played
+   NoteToHz module is composed of 3 main parts, 
+    - First the part to convert Note and Octave to a specific Hz
+    - Second, Since we have Tuple in the third part, we have a way to acess tuples specific part
+    - Third and last, a way to convert a list of notes to a list of float making a list of waves
 
 
   #### Filters
