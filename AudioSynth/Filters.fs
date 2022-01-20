@@ -30,6 +30,7 @@ module Filter =
         //for i = 1 to repeat do
         let delaySample = delay * repeat
         let tmpList = WaveGen.calcSin 44100 delay 0. 0.
+        let baseList = initialList @ tmpList
         let newList = amplitude (tmpList @ initialList) amp
         // ADD FUNCTION TO REDUCE VOLUME / AMPLITUDE
         let interate = newList.Length
@@ -40,10 +41,10 @@ module Filter =
         let returnList = [
             for i = 0 to interate-1 do
                 // printfn "%O" i
-                if newList.Item(i) = 0. then yield initialList.Item(i)
+                if newList.Item(i) = 0. then yield baseList.Item(i)
                 elif i >= initialList.Length then yield newList.Item(i)
                 else 
-                    yield ((newList.Item(i) + initialList.Item(i))/2.)
+                    yield ((newList.Item(i) + baseList.Item(i))/2.)
         ]
         returnList
 
