@@ -2,7 +2,6 @@
 # Functionnal Specification
 
 ## Goals
-
 For this project we have to create a programmable synthesizer in F#, it is basically an electronic musical instrument that generates audio signals. With our programmable synthesizer, the user will be able to create sounds by generating waveforms from f# code.
 
 Deadline: 11 of February 2022
@@ -13,48 +12,7 @@ Deadline: 11 of February 2022
   The project is developed with F#.
 
   
-
-## Deliverables
-
-| Ref | Description                                                                                   | Required By Date |
-| --- | --------------------------------------------------------------------------------------------- | ---------------- |
-| 1   | Function specification                                                                        | 20 January 2022  |
-| 2   | Technical specification                                                                       | 20 January 2022  |
-| 3   | Software architecture design choices                                                          | 20 January 2022  |
-| 4   | Project execution plan                                                                        | 20 January 2022  |
-| 5   | Unit tests that will automatically show that the logic implemented by the API works correctly | 11 February 2022 |
-
-
-## Tasks
-
-
-| Ref | Description                                                                                         | Required By Date | Dependency |
-| --- | --------------------------------------------------------------------------------------------------- | ---------------- | ---------- |
-| 1   | The four basic wave forms are sine, square, triangle and sawtooth.                                  | 14 January 2022  | /          |
-| 2   | A function to save waveform to disk, so it can be played back through a standard audio application. | 14 January 2022  | 1          |
-| 3   | A function to read a section of an audio file from disk.                                            | 14 January 2022  | 2          |
-| 4   | A function to play the waveform directly without saving it to disk.                                 | 14 January 2022  | 3          |
-| 5   | Modify the wave’s amplitude by a fixed amount                                                       | 21 January 2022  | 4          |
-| 6   | Cut off the wave at specific amplitude to given the “overdriven” often used in rock songs           | 21 January 2022  | 5          |
-| 7   | Add echo to the sound                                                                               | 21 January 2022  | 6          |
-| 8   | A flange effect filter                                                                              | 21 January 2022  | 7          |
-| 9   | A reverb effect filter                                                                              | 21 January 2022  | 8          |
-| 10  | Frequency Analysis and Advanced filters                                                             | 28 January 2022  | 9          |
-| 11  | MP3 Compression                                                                                     | 11 February 2022 | 10         |
-
-
-
-## Risks and assumptions 
-
-| Ref | Description        | Likelihood | Impact                             | Mitigation Strategy                                                    |
-| --- | ------------------ | ---------- | ---------------------------------- | ---------------------------------------------------------------------- |
-| 1   | Delay              | 25%        | Delay on the other parts.          | More work at home, ask some advices to other teams or Robert Pickering |
-| 2   | Technology risk    | 30%        | Restart the project, waste of time | More search.                                                           |
-| 3   | Communication risk | 5%         | Bad atmosphere, no productivity    | More meeting, motivation, encouragement                                |
-
-
 ## Requirements 
-
 To run this project you will need an IDE, we have chosen to use [Visual Studio Code](https://code.visualstudio.com/download). 
 You should also install [dotnet](https://dotnet.microsoft.com/en-us/download)
 
@@ -70,18 +28,127 @@ Then type this command to run the project :
 
 This command runs our project.
 
-
 If you want just run our test you can type the ``` dotnet test``` command.
 
 ## Product overview 
--- the explanation of how the application will solve a specific problem for the target audience.
--- the functional requirements are placed in the context of a user action. This shows what happens from the user's perspective.
+This project is for anyone with or without knowledge of music or programming.
 
-With our sound synthesizer, the user will be able to create a song with code and save his song, add some filters or echo. We will also offer conversion to the MP3 format.
-
-## Non-functional requirements 
-
-It would be possible to create an application or a user interface where users could create or modify their sound with buttons.
+With our synthesizer, the user will be able to create a song with code and save his song, add some filters like echo only with code.
 
 ## Error reporting 
-This program will have Unit Tests to avoid errors or exceptions. 
+This program will have UnitTest to avoid errors or exceptions. 
+
+
+## Functionnals
+
+For a good understanding of the code, we have chosen to put in place some formatting rules.The name of files and names of the namespace must be in CamelCase.For the functions and variables, they must be in pascalCase.
+
+### Generate Wave
+
+  #### Wavegen
+    This module is here in order to create a wave who will be related to a sound later.
+        ``` let calcSin sampleRate time freq amp= ``` 
+        - sampleRate *(Float)* correspond to the sample rate you want for your sound to be
+        - time *(Float)* correspond to the duration the wave will last
+        - freq *(Float)* relate to the frequency of the sound generated by the wave
+        - amp *(Float)* is the amplitude of the wave (from 0 = silence to 1 = max sound)
+      
+      This parameters will be the same for each waves forms
+
+      The functions available to generate wave are :
+      ```let calcSin sampleRate time freq amp=``` generate a Sine wave
+      ```let calcSquare sampleRate time freq amp =``` generate a Square wave
+      ```let calcTri sampleRate time freq amp =``` generate a Triangle wave
+      ```let calcSaw sampleRate time freq amp =``` generate a Sawtooth wave
+
+      In order to call this function, you will have some imports to do:
+
+      ```
+
+        open System
+        open WaveGen
+
+        let normalWave = calcSin 44100. 1. 130. 0.9
+      ```
+
+  #### NoteToHz
+
+    Playing with frequency and other parameter from wavegen function is a little bit hard,
+    so we implemented a more user friendly way to play sound correctly.
+
+    We added a way to input notes and octaves instead of frequency. 
+
+    You can call the function with notes as input that way
+    ``` let noteListToFloatList (inputNote:(string * float * float * float)[]) (sampleRate:float) = ```
+
+    Your input of notes need to be that way, 
+    ```
+    let inputNote = [|
+        // ( "NOTE":string, OCTAVE:float, AMPLITUDE:float PLAYTIME:float,)
+         ("G", 3., 0.9, 0.9)
+         ("G#", 3., 0.9, 0.9)
+     |]
+    ```
+    First argument is a String as the note
+    Second argument is the octave of the note
+    Third is the amplitude of the note
+    And fourth is the time the note will be played
+
+
+  #### Filters
+
+    Filters are here to add some modifications on the wave.
+
+  ##### Amplitude
+
+    You can change the amplitude of your wave by using this function :
+    ```
+    let amplitude (initialList:list<float>) (amp:float) =
+    ```
+    initialList is the wave generated earlier as a List of float
+    amplitude mean the mutiplier of the amplitude the wave already have, going over 1 will make the amplitude higher and under 1 will reduce the amplitude
+
+
+  ##### Overdriven
+  ##### Echo
+  ##### Reverb
+  ##### Flange
+
+
+
+  #### Save
+
+    ``` save.write stream Wave = ```
+
+    This is the way of calling the function to save a file.
+      - stream is the parameter with the file name, it's an object ( See below )
+      - Wave is the list offloat who have been fully proceed with various filters
+
+    ``` let stream = File.Create(@"test.wav") ```
+    This is the way of declaring the stream parameter seen above. 
+    The name of the file is define as a string.
+
+
+  #### Play
+
+    They are two ways to play a wave. 
+    The first one is to save the sound before playing it.
+    ```
+    let playSound (name:string,save:bool,time:float32) =
+    ```
+    The first argument is a string as the name of the file
+    The second is a bool as the save
+    And the third one is a float32 as the starting time
+      You can start the sound at where you want by changing the arguments of time.
+
+    The second way to play a wave is to save it, play it and then delete it.
+    This way is here to not use too much local storage.
+    To play this way, it's like the first way but you define save as false.
+
+
+
+
+
+
+
+
