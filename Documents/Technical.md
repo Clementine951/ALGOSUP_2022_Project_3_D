@@ -78,6 +78,88 @@ We have a team of six members, Clémentine Curel, Laura-Lee Hollande, Salahedine
     - Third and last, a way to convert a list of notes to a list of float making a list of waves
 
 
+  ```
+    let inputNote = [|
+         // ( "NOTE":string, OCTAVE:float, AMPLITUDE:float PLAYTIME:float,)
+         ("G", 3., 0.9, 0.9)
+         ("G#", 3., 0.9, 0.9)
+         ("G", 3., 0.9, 0.9)
+     |]
+  ```
+  Here is an example of the format of how to input notes:
+  First part of the Tuple is the note as a String
+  Second is the Octave as a Float
+  Third is the amplitude of the note
+  Fourth is the lenght of the note as Float in seconds
+
+  ##### Convert
+  ```let convert note octave = ```
+  Firstly, Function Convert is made to convert a note and an Octave to the frequency in hertz corresponding to it.
+
+  Available notes are : C, D, E, F, G, A, B and C#, D#, F#, G#, A#
+
+  They are first matched with they own frequency without appliing the octave
+  If the note doesn't correspond to a real note, it's considered as 0, it's also used to do silence
+  ``` 
+    let noteHz =
+            match note with
+            | "C" | "c" -> 16.35
+            | "C#" | "c#" -> 17.32
+            | "D" | "d" -> 18.35
+            | "D#" | "d#" -> 19.45
+            | "E" | "e" -> 20.60
+            | "F" | "f" -> 21.83
+            | "F#" | "f#" -> 23.12
+            | "G" | "g" -> 24.5
+            | "G#" | "g#" -> 25.96
+            | "A" | "a" -> 27.5
+            | "A#" | "a#" -> 29.14
+            | "B" | "b" -> 30.87
+            | _ -> 0.
+  ```
+
+  Then it's multiplied by the octave set in the function.
+  Instead of using a recursive to multiply it X time (Octave) by 2, we multiply it by 2^Octave
+  Wich does exactly the same.
+  ``` 
+    let result = noteHz * (2. ** octave) 
+    let result = float (Math.Round result)
+  ```
+
+  We have face an issue with the result, if it's not rounded it can be result like 1396.4, and produce a wave sound higher than we should have, rounding it fix the problem but loose a small prescision.
+
+  ##### Tuple accessing
+
+  ```
+    let first (a, _, _, _) = a
+    let second (_, b, _, _) = b
+    let third (_, _, c, _) = c
+    let fourth (_, _, _, d) = d
+  ```
+  Since we have a list of tuple who are notes, we need to access each part of the tuple individually.
+
+  ##### noteListToFloatList
+
+  ```
+    let noteListToFloatList (inputNote:(string * float * float * float)[]) (sampleRate:float) =
+          let listNormalWave = [
+              for i = 0 to inputNote.Length-1 do
+                  let tmp = 
+                      WaveGen.calcSin sampleRate 
+                          (fourth inputNote.[i]) 
+                          (convert (first inputNote.[i]) (second inputNote.[i])) 
+                          (third inputNote.[i])
+                  yield tmp
+          ]
+          let normalWave = List.concat listNormalWave
+          normalWave
+  ```
+
+  This function takes the list of notes as input and the sampleRate (usually 44100. wich is DVD rate)
+
+  It output a list of float using the WaveGen.calcSin function to generate Sine waves from notes
+
+
   #### Filters
 
     Filters are here to add some modifications on the wave.
