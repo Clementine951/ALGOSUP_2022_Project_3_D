@@ -41,6 +41,8 @@ This program will have UnitTest to avoid errors or exceptions.
 
 ## Functionnals
 
+For a good understanding of the code, we have chosen to put in place some formatting rules.The name of files and names of the namespace must be in CamelCase.For the functions and variables, they must be in pascalCase.
+
 ### Generate Wave
 
   #### Wavegen
