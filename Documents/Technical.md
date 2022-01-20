@@ -9,7 +9,7 @@ Our project is available on [Github](https://github.com/Clementine951/ALGOSUP_20
 
 ## Team
 We have a team of six members, Clémentine Curel, Laura-Lee Hollande, Salahedine Namir, Gaël Le Brun, Guillaume Rivière, Victor Leroy.
-
+To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56e58689f9569317c5e523aa5f6a8c66/algosup2022project3d) as a management tool to describe, check, and see all our tasks.We also create a [Slack server](https://join.slack.com/t/algosupstudents/shared_invite/zt-121i5fkhh-A8xHt0dh7M~HSdQsQ151Cw) to communicate between the members of the team. 
 
 ## Technologies and library used
 | Name | Use|
