@@ -1,12 +1,12 @@
 namespace synthesizer
 
 open System
-open Amplitude 
+
 
 
 module WaveGen =
     let calcSin sampleRate time freq amp=
-        let trig = 1
+        
         let t = 1. + (1./sampleRate) // This is the frequency where each point will be created
         let N = sampleRate * time // This is the number of points created
         let omega = 2. * System.Math.PI * freq // We calculate the period
@@ -18,7 +18,7 @@ module WaveGen =
         points
 
     let calcSquare sampleRate time freq amp =
-        let trig = 2
+        
         let t = 1. + (1./sampleRate)
         let N = sampleRate * time
         let omega = 2. * System.Math.PI * freq
@@ -29,7 +29,7 @@ module WaveGen =
 
 
     let calcTri sampleRate time freq amp =
-        let trig = 3
+        
         let t = 1. + (1./sampleRate) // This is the frequency where each point will be created
         let N = sampleRate * time  // This is the number of points created
         let omega = 2. * System.Math.PI * freq // We calculate the period
@@ -42,7 +42,7 @@ module WaveGen =
 
 
     let calcSaw sampleRate time freq amp bol=
-        let trig = 4
+        
         let t = 1. + (1./sampleRate) // This is the frequency where each point will be created
         let N = sampleRate * time // This is the number of points created
         let omega = 2. * System.Math.PI * freq // We calculate the period
@@ -56,7 +56,7 @@ module WaveGen =
 
 
     let calcSinFlange sampleRate time freq amp bol=
-        let trig = 5
+        
         let t = 1. + (1./sampleRate)            // Calculate the incrementation for the list based on the sampleRate
         let N = sampleRate * time               // Define how much Samples we need for the sound
         let omega = 2. * System.Math.PI+0.2 * freq  // Omega is a part of the Calculation of the Equation
