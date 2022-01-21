@@ -26,8 +26,30 @@ module Filters =
         let lenght = list.Length
         let returnList = [for i in 0..lenght-1 do if list.[i]>= amp then amp else list.[i]]
         returnList
-      
-
+      // creat some list who begin in different place and amplitude and return in list of averge of list
+    let Rev (list:float list) =
+        let lenght = list.Length       
+        let rev = [for i in 0..lenght-1 do list.[i]]       
+        let rev1 = [for i in 0..lenght-1 do if i >= (lenght-1)/6 then  list.[i]/2. else 0.]       
+        let rev2 = [for i in 0..lenght-1 do if i >= (lenght-1)/5 then  list.[i]/3. else 0.]       
+        let rev3 = [for i in 0..lenght-1 do if i >= (lenght-1)/4 then  list.[i]/4. else 0.]       
+        let rev4 = [for i in 0..lenght-1 do if i >=(lenght-1)/3 then  list.[i]/5. else 0.]       
+        let rev5 = [for i in 0..lenght-1 do if i >=(lenght-1)/2  then  list.[i]/6. else 0.]       
+        let mergeRev = [for i in 0..lenght-1 do (rev.[i]+rev1.[i]+rev2.[i]+rev3.[i]+rev4.[i]+rev5.[i])/6.]
+        mergeRev
+         
+        // reverse list
+    let Reverse list=
+        let rec loop acc = function
+        | [] -> acc
+        | head :: tail -> loop(head::acc) tail
+        loop[] list
+        // return reverb list
+    let Reverb list =
+       let init =  Rev list
+       let reverse = Reverse init
+       reverse
+                
        
 
     // let flange wave (t:float, N:float)=
