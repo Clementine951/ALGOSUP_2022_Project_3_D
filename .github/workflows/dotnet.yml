@@ -19,5 +19,7 @@ jobs:
         dotnet-version: 5.0.x
     - name: Change file
       run: cd AudioSynth
+    - name: Change file
+      run: cd AudioSynth
     - name: Run
       run: dotnet run
