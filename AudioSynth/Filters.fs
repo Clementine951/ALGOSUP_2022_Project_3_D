@@ -15,6 +15,18 @@ module Filters =
        // let wave = WaveGen.calcSin sampleRate time freq amp
        // let flange = WaveGen.calcSinFlange sampleRate time freq amp
         //let sumList = List.map2 (fun x y -> (x + y)/2.) wave flange
+    
+
+    // let flange (wave:list<float>) time=
+    //     let mutable second = wave 
+
+    //     while (second.[time] <> 0.) do
+    //         printfn "hey"
+    //         second |> List.append [0.]
+    //         printfn "hello"
+        
+    //     let sumList = List.map2 (fun x y -> (x + y)/2.) wave second
+    //     sumList
 
     let amplitude (initialList:list<float>) (amp:float) =
         let returnList = List.map (fun x -> x*amp) initialList
@@ -27,7 +39,7 @@ module Filters =
         let returnList = [for i in 0..lenght-1 do if list.[i]>= amp then amp else list.[i]]
         returnList
       // creat some list who begin in different place and amplitude and return in list of averge of list
-    let Rev (list:float list) =
+    let Rev(list:float list) =
         let lenght = list.Length       
         let rev = [for i in 0..lenght-1 do list.[i]]       
         let rev1 = [for i in 0..lenght-1 do if i >= (lenght-1)/6 then  list.[i]/2. else 0.]       
