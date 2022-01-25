@@ -17,9 +17,15 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
+    - name: change file and restore
+      run: |
+        cd AudioSynth
+        dotnet restore
+    - name: change file and build
+      run: |
+        cd AudioSynth
+        dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: |
+        cd SynthAudioTest
+        dotnet test --no-build --verbosity normal
