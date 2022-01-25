@@ -14,6 +14,8 @@ open System.Threading
 open WaveGen
 open PlaySynth
 open NoteToHz
+open Filters
+open save
 
 module Main =
 
@@ -34,7 +36,7 @@ module Main =
 //                                    List of notes  Samplerate
     let normalWave2 = noteListToFloatList inputNote 44100.
 
-    let normalWave = Filter.echo normalWave2 2.05 0.5 1.
+    let normalWave = Filters.echo normalWave2 2.05 0.5 1.
 
 
 
@@ -44,10 +46,10 @@ module Main =
     //let normalWave = Filter.sinFlange 44100. 10. 40000.  1.
 
     /// Write WAVE PCM soundfile (8KHz Mono 8-bit)
-   let stream = File.Create(@"test.wav")
-   save.write stream normalWave
+    let stream = File.Create(@"test.wav")
+    save.write stream normalWave
 
 
 
-   PlaySynth.playSound ("test.wav" ,true ,float32(0.))
-     // return an integer exit code
+    PlaySynth.playSound ("test.wav" ,true ,float32(0.))
+      // return an integer exit code
