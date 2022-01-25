@@ -44,10 +44,10 @@ module Main =
     //let normalWave = Filter.sinFlange 44100. 10. 40000.  1.
 
     /// Write WAVE PCM soundfile (8KHz Mono 8-bit)
-    let stream = File.Create(@"test.wav")
-    save.write stream normalWave
+   let stream = File.Create(@"test.wav")
+   save.write stream normalWave
 
 
 
-    PlaySynth.playSound ("test.wav" ,true ,float32(0.))
+   PlaySynth.playSound ("test.wav" ,true ,float32(0.))
      // return an integer exit code
