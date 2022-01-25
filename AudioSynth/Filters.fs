@@ -66,7 +66,7 @@ module Filters =
     let echo (initialList:list<float>) (delay:float) (amp:float) (repeat:float) =
 
         let repeat = int repeat
-        let tmpList = WaveGen.calcSin 44100 delay 0. 0. // Define the silence time based on delay
+        let tmpList = WaveGen.calcSin 44100. delay 0. 0. // Define the silence time based on delay
 
         let returnFullList = [
             yield initialList // Start by returning the base sound
