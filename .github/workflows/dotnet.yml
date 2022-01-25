@@ -26,4 +26,6 @@ jobs:
         cd AudioSynth
         dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: |
+        cd SynthAudioTest
+        dotnet test --no-build --verbosity normal
