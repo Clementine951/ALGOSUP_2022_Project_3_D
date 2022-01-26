@@ -41,7 +41,7 @@ module WaveGen =
         points
 
 
-    let calcSaw sampleRate time freq amp bol=
+    let calcSaw sampleRate time freq amp=
         
         let t = 1. + (1./sampleRate) // This is the frequency where each point will be created
         let N = sampleRate * time // This is the number of points created
@@ -55,7 +55,7 @@ module WaveGen =
 
 
 
-    let calcSinFlange sampleRate time freq amp bol=
+    let calcSinFlange sampleRate time freq amp=
         
         let t = 1. + (1./sampleRate)            // Calculate the incrementation for the list based on the sampleRate
         let N = sampleRate * time               // Define how much Samples we need for the sound

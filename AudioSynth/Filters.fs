@@ -34,7 +34,7 @@ module Filters =
     
     
     // Stay the list below or equal to the amp value and return a new list
-    let Overdriven (list:float list,amp:float) =
+    let Overdriven (list:float list) (amp:float) =
         let lenght = list.Length
         let returnList = [for i in 0..lenght-1 do if list.[i]>= amp then amp else list.[i]]
         returnList
