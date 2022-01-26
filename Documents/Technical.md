@@ -213,5 +213,6 @@ To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56
     The second way to play a wave is to save it, play it and then delete it.
     This way is here to not use too much local storage.
     To play this way, it's like the first way but you define save as false.
+    
 
 
