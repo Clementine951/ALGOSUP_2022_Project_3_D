@@ -10,8 +10,8 @@ Table of Contents
   - [A. Waves](#a-waves)
     - [a. Sine wave](#a-sine-wave)
     - [b. Square wave](#b-square-wave)
-    - [c. Triangle wave](#c-triangle-wave)
-    - [d. Sawtooth wave](#d-sawtooth-wave)
+    - [c. Sawtooth wave](#c-sawtooth-wave)
+    - [d. Triangle wave](#d-triangle-wave)
   - [B. Basic Filters](#b-basic-filters)
     - [a. Amplitude modification](#a-amplitude-modification)
     - [b. Overdriven](#b-overdriven)
@@ -80,15 +80,44 @@ Any sounds correspond to a wave. A wave that make fluid (Mainly Air for sound) v
 It exist 4 type of waves, Sine, Square, Triangle, Sawtooth.
 Each wave produce a different type of sound.
 
+For all waves, a few technicals terms come along: 
+  - Frequency = The pitch of a sound
+  - Period = Time needed to reproduce the same pattern in a wave
+  - Fundamental = Main note of a sound, a Sine is special as it's only the fundamental note
+  - Harmonics = Fundamental or main pitch or note, plus they have higher pitches that are voiced above the fundamental.
+
 ### a. Sine wave
 
 ![Sine wave](https://www.thedawstudio.com/wp-content/uploads/2016/08/Sine-Wave_1000-300x195.jpg)
-500 MHz Wave sound
-![Sound player](https://www.thedawstudio.com/wp-content/uploads/2016/05/Sine_Wave-500hz.mp3)
+
+
+The most basic and simple waveform, a sine wave has a simple hollow sound. It does not exist in nature, but is the simplest sound to reproduce with electronics.
+
+The sine wave have a well know formula: 
+  **y(x)=A * sin(2π * f)**
+  Where A = amplitude of the sound, How high the curve will go
+  Where f = Frequency of the sound, How high the sound will be
+  Where 2π = Constant for the Period, modified directly because of the frequency
 
 ### b. Square wave
-### c. Triangle wave
-### d. Sawtooth wave
+
+![Square Wave](https://www.thedawstudio.com/wp-content/uploads/2016/08/Square-Wave_1000-300x195.jpg)
+
+The square wave has only odd harmonics. This harmonic structure gives the square wave a little more bite to the sound. It kind of has a buzzing sound, but is not as intense as the sawtooth.
+
+### c. Sawtooth wave
+
+![Sawtooth wave](https://www.thedawstudio.com/wp-content/uploads/2016/08/Sawtooth-Wave_1000-300x195.jpg)
+
+The sawtooth produces a lot of harmonic content and therefore a full buzzing sound. Notice how the wave looks like the teeth of a saw, hence the name.
+
+### d. Triangle wave
+
+![Triangle Wave](https://www.thedawstudio.com/wp-content/uploads/2016/08/Triangle-Wave_1000-300x195.jpg)
+
+A triangle wave have the property of a sine wave and a square wave combined. 
+It still a little bit buzzy because of the square wave property, and at the same time still clear and constant sound because of sine properties
+
 
 ## B. Basic Filters
 ### a. Amplitude modification
