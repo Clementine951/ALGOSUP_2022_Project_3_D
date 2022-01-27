@@ -5,10 +5,8 @@ Table of Contents
 - [1. Introduction](#1-introduction)
   - [A. Project description](#a-project-description)
   - [B. How it should be](#b-how-it-should-be)
-- [2. What's needed](#2-whats-needed)
-  - [A. Compatibility Cross-platform](#a-compatibility-cross-platform)
-  - [B. Format](#b-format)
-- [3. Definitions of terms](#3-definitions-of-terms)
+  - [C. Compatibility Cross-platform](#c-compatibility-cross-platform)
+- [2. Definitions of terms](#2-definitions-of-terms)
   - [A. Waves](#a-waves)
     - [a. Sine wave](#a-sine-wave)
     - [b. Square wave](#b-square-wave)
@@ -29,16 +27,16 @@ Table of Contents
     - [b. Decay](#b-decay)
     - [c. Sustain](#c-sustain)
     - [d. Release](#d-release)
-- [4. Users](#4-users)
+- [3. Users](#3-users)
   - [A. Who](#a-who)
   - [B. Why](#b-why)
-- [5. Userflow](#5-userflow)
+- [4. Userflow](#4-userflow)
   - [A. How to use it](#a-how-to-use-it)
   - [B. Generic Code example](#b-generic-code-example)
     - [a. Generate a simple note](#a-generate-a-simple-note)
     - [b. Apply an echo to the previous note](#b-apply-an-echo-to-the-previous-note)
     - [c. Remove low frequency from a sound](#c-remove-low-frequency-from-a-sound)
-- [6. Out of Scope](#6-out-of-scope)
+- [5. Out of Scope](#5-out-of-scope)
   - [A. Interface](#a-interface)
   - [B. Android Compatibility](#b-android-compatibility)
   - [C. IOS Compatibility](#c-ios-compatibility)
@@ -53,16 +51,29 @@ Table of Contents
 # 1. Introduction
 
 ## A. Project description
+
+The aim of this project is to create a sound synthesizer that can be used to create
+programmable music. This project was inspired by [Sonic Pi](https://sonic-pi.net/) and other live
+coding music packages. The ultimate aim of this project is to be able to play music from code.
+
+&nbsp
+
 ## B. How it should be
 
+As it should be able to be used in another program, it should be an API, a Librairy or a Package.
+It should have basic functions to generate sound based on differents options, like possibility to use note or pur frequency to generate a sound.
 
-# 2. What's needed
+&nbsp
 
-## A. Compatibility Cross-platform
-## B. Format
+## C. Compatibility Cross-platform
+
+The program have to be available and usable on MacOS and Windows.
+
+&nbsp
 
 
-# 3. Definitions of terms
+
+# 2. Definitions of terms
 ## A. Waves
 ### a. Sine wave
 ### b. Square wave
@@ -89,13 +100,13 @@ Table of Contents
 ### d. Release
 
 
-# 4. Users
+# 3. Users
 
 ## A. Who
 ## B. Why
 
 
-# 5. Userflow
+# 4. Userflow
 
 ## A. How to use it
 
@@ -105,7 +116,7 @@ Table of Contents
 ### c. Remove low frequency from a sound
 
 
-# 6. Out of Scope
+# 5. Out of Scope
 
 ## A. Interface
 ## B. Android Compatibility
