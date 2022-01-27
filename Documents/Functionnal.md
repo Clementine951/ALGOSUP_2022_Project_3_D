@@ -75,7 +75,17 @@ The program have to be available and usable on MacOS and Windows.
 
 # 2. Definitions of terms
 ## A. Waves
+
+Any sounds correspond to a wave. A wave that make fluid (Mainly Air for sound) vibrate and produce earable sound.
+It exist 4 type of waves, Sine, Square, Triangle, Sawtooth.
+Each wave produce a different type of sound.
+
 ### a. Sine wave
+
+![Sine wave](https://www.thedawstudio.com/wp-content/uploads/2016/08/Sine-Wave_1000-300x195.jpg)
+500 MHz Wave sound
+![Sound player](https://www.thedawstudio.com/wp-content/uploads/2016/05/Sine_Wave-500hz.mp3)
+
 ### b. Square wave
 ### c. Triangle wave
 ### d. Sawtooth wave
