@@ -93,11 +93,13 @@ For all waves, a few technicals terms come along:
 
 The most basic and simple waveform, a sine wave has a simple hollow sound. It does not exist in nature, but is the simplest sound to reproduce with electronics.
 
-The sine wave have a well know formula: &nbsp;
-  **y(x)=A * sin(2π * f)** &nbsp;
-  Where A = amplitude of the sound, How high the curve will go &nbsp;
-  Where f = Frequency of the sound, How high the sound will be &nbsp;
-  Where 2π = Constant for the Period, modified directly because of the frequency &nbsp;
+The sine wave have a well know formula:
+
+`y(x)=A * sin(2π * f)`
+
+Where A = amplitude of the sound, How high the curve will go
+Where f = Frequency of the sound, How high the sound will be
+Where 2π = Constant for the Period, modified directly because of the frequency
 
 &nbsp;
 &nbsp;
@@ -121,7 +123,7 @@ The sawtooth produces a lot of harmonic content and therefore a full buzzing sou
 
 ![Triangle Wave](https://www.thedawstudio.com/wp-content/uploads/2016/08/Triangle-Wave_1000-300x195.jpg)
 
-A triangle wave have the property of a sine wave and a square wave combined. &nbsp;
+A triangle wave have the property of a sine wave and a square wave combined.
 It still a little bit buzzy because of the square wave property, and at the same time still clear and constant sound because of sine properties
 
 &nbsp;
