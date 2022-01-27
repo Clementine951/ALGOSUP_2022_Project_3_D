@@ -56,20 +56,20 @@ The aim of this project is to create a sound synthesizer that can be used to cre
 programmable music. This project was inspired by [Sonic Pi](https://sonic-pi.net/) and other live
 coding music packages. The ultimate aim of this project is to be able to play music from code.
 
-&nbsp
+&nbsp;
 
 ## B. How it should be
 
-As it should be able to be used in another program, it should be an API, a Librairy or a Package.
+As it should be able to be used in another program, it should be an API, a Librairy or a Package.&nbsp;
 It should have basic functions to generate sound based on differents options, like possibility to use note or pur frequency to generate a sound.
 
-&nbsp
+&nbsp;
 
 ## C. Compatibility Cross-platform
 
 The program have to be available and usable on MacOS and Windows.
 
-&nbsp
+&nbsp;
 
 
 
@@ -77,7 +77,7 @@ The program have to be available and usable on MacOS and Windows.
 ## A. Waves
 
 Any sounds correspond to a wave. A wave that make fluid (Mainly Air for sound) vibrate and produce earable sound.
-It exist 4 type of waves, Sine, Square, Triangle, Sawtooth.
+It exist 4 type of waves, Sine, Square, Triangle, Sawtooth. &nbsp;
 Each wave produce a different type of sound.
 
 For all waves, a few technicals terms come along: 
@@ -93,17 +93,23 @@ For all waves, a few technicals terms come along:
 
 The most basic and simple waveform, a sine wave has a simple hollow sound. It does not exist in nature, but is the simplest sound to reproduce with electronics.
 
-The sine wave have a well know formula: 
-  **y(x)=A * sin(2π * f)**
-  Where A = amplitude of the sound, How high the curve will go
-  Where f = Frequency of the sound, How high the sound will be
-  Where 2π = Constant for the Period, modified directly because of the frequency
+The sine wave have a well know formula: &nbsp;
+  **y(x)=A * sin(2π * f)** &nbsp;
+  Where A = amplitude of the sound, How high the curve will go &nbsp;
+  Where f = Frequency of the sound, How high the sound will be &nbsp;
+  Where 2π = Constant for the Period, modified directly because of the frequency &nbsp;
+
+&nbsp;
+&nbsp;
 
 ### b. Square wave
 
 ![Square Wave](https://www.thedawstudio.com/wp-content/uploads/2016/08/Square-Wave_1000-300x195.jpg)
 
 The square wave has only odd harmonics. This harmonic structure gives the square wave a little more bite to the sound. It kind of has a buzzing sound, but is not as intense as the sawtooth.
+
+&nbsp;
+&nbsp;
 
 ### c. Sawtooth wave
 
@@ -115,8 +121,11 @@ The sawtooth produces a lot of harmonic content and therefore a full buzzing sou
 
 ![Triangle Wave](https://www.thedawstudio.com/wp-content/uploads/2016/08/Triangle-Wave_1000-300x195.jpg)
 
-A triangle wave have the property of a sine wave and a square wave combined. 
+A triangle wave have the property of a sine wave and a square wave combined. &nbsp;
 It still a little bit buzzy because of the square wave property, and at the same time still clear and constant sound because of sine properties
+
+&nbsp;
+&nbsp;
 
 
 ## B. Basic Filters
