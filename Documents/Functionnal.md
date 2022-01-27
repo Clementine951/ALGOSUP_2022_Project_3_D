@@ -155,12 +155,22 @@ It still a little bit buzzy because of the square wave property, and at the same
 # 3. Users
 
 ## A. Who
+
+The program will be designed to be used by devellopers or Sound artist with some knowledge of code.
+
+&nbsp;
 ## B. Why
+
+It's a librairy / API so a basic fan of sound won't be able to use that.
+You will need to first learn coding before being able to use this program.
+It doesn't have have UI so it won't be casual user friendly.
 
 
 # 4. Userflow
 
 ## A. How to use it
+
+You should be able a create a sound using Notes
 
 ## B. Generic Code example
 ### a. Generate a simple note
