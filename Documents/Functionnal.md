@@ -60,7 +60,8 @@ coding music packages. The ultimate aim of this project is to be able to play mu
 
 ## B. How it should be
 
-As it should be able to be used in another program, it should be an API, a Librairy or a Package.&nbsp;
+As it should be able to be used in another program, it should be an API, a Librairy or a Package.
+
 It should have basic functions to generate sound based on differents options, like possibility to use note or pur frequency to generate a sound.
 
 &nbsp;
@@ -77,7 +78,8 @@ The program have to be available and usable on MacOS and Windows.
 ## A. Waves
 
 Any sounds correspond to a wave. A wave that make fluid (Mainly Air for sound) vibrate and produce earable sound.
-It exist 4 type of waves, Sine, Square, Triangle, Sawtooth. &nbsp;
+It exist 4 type of waves, Sine, Square, Triangle, Sawtooth.
+
 Each wave produce a different type of sound.
 
 For all waves, a few technicals terms come along: 
@@ -97,9 +99,9 @@ The sine wave have a well know formula:
 
 `y(x)=A * sin(2π * f)`
 
-Where A = amplitude of the sound, How high the curve will go
-Where f = Frequency of the sound, How high the sound will be
-Where 2π = Constant for the Period, modified directly because of the frequency
+- Where A = amplitude of the sound, How high the curve will go
+- Where f = Frequency of the sound, How high the sound will be
+- Where 2π = Constant for the Period, modified directly because of the frequency
 
 &nbsp;
 &nbsp;
