@@ -46,7 +46,7 @@ Table of Contents
 
 		- [c. low Frequency Oscillator](#c-low-frequency-oscillator)
 
-	- [D. Envellope](#g-envellope)
+	- [D. Envelope](#g-envelope)
 
 		- [a. Attack](#a-attack)
 
@@ -315,15 +315,29 @@ A Low Frequency Oscillator (or LFO) is an oscillator that produces the four wave
 
   
 
-## D. Envellope
+## D. Envelope
+
+An envelope describes how a sound changes over time. It allow to module the sound of each note.
+The user will be able to control the form of the envelope with 4 parameters: Attack, Decay, Sustain and Release.
+
+<img  src="images/adsr.png"  alt="Parameters envelope"  height="200"/>
+  
 
 ### a. Attack
 
+The attack describes the time it takes to reach the maximum level, after the start of the note.
+
 ### b. Decay
+
+The decay indicates the time required to descend to the maintenance phase.
 
 ### c. Sustain
 
+The sustain describes the stable level, maintained as long as the key is held down.
+
 ### d. Release
+
+The release indicates the duration necessary for the level to decrease until returning to the initial zero, starting from the end of the note.
 
   
   
