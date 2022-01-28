@@ -305,10 +305,13 @@ The user will can choose the delay.
 
 
 ### a. Low-Pass Filter
+A low-pass filter is a filter that lets through signals with a lower frequency than the one selected by the user. It will therefore attenuate signals with a higher frequency than the one selected.
 
 ### b. High-Pass Filter
+A high-pass filter is a filter that lets through signals with a higher frequency than the one selected by the user. It therefore attenuates signals with a lower frequency than the one selected.
 
-### c. low Frequency Oscillator
+### c. Low Frequency Oscillator
+A Low Frequency Oscillator (or LFO) is an oscillator that produces the four waveforms at a very low frequency or pitch. The interest of having slow vibrations (0 to 20 Hz approximately) is to modulate a parameter in a synth in order to create audio effects like vibrato (musical effect consisting of a regular, pulsating change of pitch) or tremolo (is a trembling effect).
 
   
 
