@@ -263,35 +263,35 @@ It still a little bit buzzy because of the square wave property, and at the same
 
 The amplitude of a wave is the high of the curve will be.
 
-![Amplitude](images/amp.png)
+<img src="images/amp.png" alt="amplitude" height="200"/>
 
 The modification of the wave's amplitude will modify the power of the sound.
+On the image below the blue wave has an amplitude of 1 and the red one has an amplitude of 0,5.
 
-![Amplitude modification](images/modifyamp.png)
+<img src="images/modifyamp.png" alt="Amplitude modification" height="200"/>
 
 ### b. Overdriven
 
 The overdriven effect is to cut off the wave at specific amplitude.
 
-![Overdriven](images/overdriven.jpeg)
-
+<img src="images/overdriven.jpeg" alt="overdriven wave" height="200"/>
 
 ### c. Echo
 
 The echo effect return the same wave with a different amplitude and with a delay that the user will choose.
 
-![Echo effect](images/echo.png)
+<img src="images/echo.png" alt="echo wave" height="100"/>
 
 
 ### d. Reverb
 
 The reverb effect will be applied to a sound to simulate reverberation. 
 
-![Reverb wave](images/reverb.png)
+<img src="images/reverb.png" alt="Reverb wave" height="200"/>
 
 Reverberation is a persistence of sound, or echo after a sound is produced.
 
-![Reverb look](images/reverb2.png)
+<img src="images/reverb2.png" alt="Reverb look" height="200"/>
 
 
 
