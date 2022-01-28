@@ -1,3 +1,4 @@
+
 ---
 
   
@@ -46,7 +47,7 @@ Table of Contents
 
 		- [c. low Frequency Oscillator](#c-low-frequency-oscillator)
 
-	- [G. Envellope](#g-envellope)
+	- [D. Envellope](#g-envellope)
 
 		- [a. Attack](#a-attack)
 
@@ -54,7 +55,7 @@ Table of Contents
 
 		- [c. Sustain](#c-sustain)
 
-	- [d. Release](#d-release)
+		- [d. Release](#d-release)
 
 - [3. Users](#3-users)
 
