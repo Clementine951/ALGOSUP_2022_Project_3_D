@@ -1,4 +1,3 @@
-
 ---
 
   
@@ -262,16 +261,45 @@ It still a little bit buzzy because of the square wave property, and at the same
 
 ### a. Amplitude modification
 
+The amplitude of a wave is the high of the curve will be.
+
+![Amplitude](images/amp.png)
+
+The modification of the wave's amplitude will modify the power of the sound.
+
+![Amplitude modification](images/modifyamp.png)
 
 ### b. Overdriven
 
+The overdriven effect is to cut off the wave at specific amplitude.
+
+![Overdriven](images/overdriven.jpeg)
+
+
 ### c. Echo
+
+The echo effect return the same wave with a different amplitude and with a delay that the user will choose.
+
+![Echo effect](images/echo.png)
+
 
 ### d. Reverb
 
+The reverb effect will be applied to a sound to simulate reverberation. 
+
+![Reverb wave](images/reverb.png)
+
+Reverberation is a persistence of sound, or echo after a sound is produced.
+
+![Reverb look](images/reverb2.png)
+
+
+
 ### e. Flange
 
-  
+Flanging is an audio effect produced by mixing two identical signals together, one signal delayed by a small and gradually changing period, usually smaller than 20 milliseconds.
+The user will can choose the delay.
+
 
 ## C. Advanced Filters
 
