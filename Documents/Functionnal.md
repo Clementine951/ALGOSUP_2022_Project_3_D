@@ -390,8 +390,16 @@ let player = Player.Play(tune, Repeat = true)
 
 ## A. Interface
 
+We wanted to create a graphical interface to make our code more visual and user firendly. We didn't do it because we were asked to create a library and an graphical interface would have been useless.
+
 ## B. Android Compatibility
 
-## C. IOS Compatibility
+An Android compatibility was a part of our out of scope, that could have allowed us to use our code as an application on Android system but we didn't do it because we have to create a library and this would be useless. Also, we don't have enough time to address this issue and we don't have enough capacities too.
+
+## C. iOS Compatibility
+
+An iOS compatibilty could have allowed us to use our code as an application on iPhone or iPad system. We didn't do it because we have to create a library and this would be useless. Also, work on iOS system is hard and we don't have enough capacities and we don't have enough time to address this issue.
 
 ## D. Keyboard in interface to play as a Piano
+
+We thought about create a keyboard in the interface to play as a piano (each key correspond to a note and make a sound) but we didn't do it because we were asked to create a library and this would be useless. Also, we don't have enough time to adress this issue.
