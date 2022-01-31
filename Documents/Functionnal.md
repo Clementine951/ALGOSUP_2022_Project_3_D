@@ -97,18 +97,13 @@ Table of Contents
 
 ## A. Project description
 
-The aim of this project is to create a sound synthesizer that can be used to create
-
-programmable music. This project was inspired by [Sonic Pi](https://sonic-pi.net/) and other live
-
-coding music packages. The ultimate aim of this project is to be able to play music from code.
+The aim of this project is to create a sound synthesizer that can be used to create programmable music. This project was inspired by [Sonic Pi](https://sonic-pi.net/) and other live coding music packages. The ultimate aim of this project is to be able to play music from code.
 
 &nbsp;
 
 ## B. How it should be
 
 As it should be able to be used in another program, it should be an API, a Librairy or a Package.
-
 It should have basic functions to generate sound based on differents options, like possibility to use note or pur frequency to generate a sound.
 
 &nbsp;
@@ -124,11 +119,8 @@ The program have to be available and usable on MacOS and Windows.
 ## A. Waves
 
 Any sounds correspond to a wave. A wave that make fluid (Mainly Air for sound) vibrate and produce earable sound.
-
 It exist 4 type of waves, Sine, Square, Triangle, Sawtooth.
-
 Each wave produce a different type of sound.
-
 For all waves, a few technicals terms come along:
 
 - Frequency = The pitch of a sound
@@ -275,9 +267,7 @@ The program will be designed to be used by devellopers or Sound artist with some
 ## B. Why
 
 It's a librairy / API so a basic fan of sound won't be able to use that.
-
 You will need to first learn coding before being able to use this program.
-
 It doesn't have have UI so it won't be casual user friendly.
 
 # 4. Userflow
