@@ -90,6 +90,13 @@ module Filters =
         ]
         let returnFullList = List.concat returnFullList // Fuse all list returned into only one
         returnFullList
-       
+        
+
+    let freqencyModulation (wave: list<float>) amp highFreq lowFreq itensity =
+        let N = float wave.Length
+        let points = [(0.) .. N-1.]
+        let points = points |> List.map(fun x -> amp * Math.Sin ( 2. * System.Math.PI * highFreq * x + itensity * highFreq * Math.Sin (2. * System.Math.PI * lowFreq * x)))
+        let sumList = List.map2 (fun x y -> (x + y)/2.) wave points
+        sumList
 
 
