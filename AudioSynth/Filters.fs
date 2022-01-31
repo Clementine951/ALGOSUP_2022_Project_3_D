@@ -10,36 +10,23 @@ open NoteToHz
 
 
 module Filters =
+
+    let chords wave1 wave2 =
+        let sumList = List.map2 (fun x y -> (x + y)/2.) wave1 wave2
+        sumList
     
-    //let sinFlange sampleRate time freq amp =
-       // let wave = WaveGen.calcSin sampleRate time freq amp
-       // let flange = WaveGen.calcSinFlange sampleRate time freq amp
-        //let sumList = List.map2 (fun x y -> (x + y)/2.) wave flange
-    
-
-    // let flange (wave:list<float>) time=
-    //     let mutable second = wave 
-
-    //     while (second.[time] <> 0.) do
-    //         printfn "hey"
-    //         second |> List.append [0.]
-    //         printfn "hello"
-        
-    //     let sumList = List.map2 (fun x y -> (x + y)/2.) wave second
-    //     sumList
-
     let amplitude (initialList:list<float>) (amp:float) =
         let returnList = List.map (fun x -> x*amp) initialList
         returnList
     
     
     // Stay the list below or equal to the amp value and return a new list
-    let Overdriven (list:float list) (amp:float) =
+    let overdriven (list:float list) (amp:float) =
         let lenght = list.Length
         let returnList = [for i in 0..lenght-1 do if list.[i]>= amp then amp else list.[i]]
         returnList
       // creat some list who begin in different place and amplitude and return in list of averge of list
-    let Rev(list:float list) =
+    let rev(list:float list) =
         let lenght = list.Length       
         let rev = [for i in 0..lenght-1 do list.[i]]       
         let rev1 = [for i in 0..lenght-1 do if i >= (lenght-1)/6 then  list.[i]/2. else 0.]       
@@ -51,15 +38,15 @@ module Filters =
         mergeRev
          
         // reverse list
-    let Reverse list=
+    let reverse list=
         let rec loop acc = function
         | [] -> acc
         | head :: tail -> loop(head::acc) tail
         loop[] list
         // return reverb list
-    let Reverb list =
-       let init =  Rev list
-       let reverse = Reverse init
+    let reverb list =
+       let init =  rev list
+       let reverse = reverse init
        reverse
     
     // Create a flange effect
