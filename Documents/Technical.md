@@ -73,22 +73,84 @@ Table of Contents
 # 1. Introduction
 
 ## A. Project description
+
+The aim of this project is to create a sound synthesizer that can be used to create programmable music. This project was inspired by [Sonic Pi](https://sonic-pi.net/) and other live coding music packages. The ultimate aim of this project is to be able to play music from code.
+By synthesizer it means a simple library who could be used by other programs. 
+This isn't a program specially designed to be used for a traditional piano keyboard.
+
+
 ## B. How it should be
+
+Need to be a library with all function callable from another program. 
 
 # 2. Development rules
 
+
 ## A. Technologies used
 ### a. Type of needs
+| What ?  | Which ? | Why ? |
+| :--------------- |:---------------:|---------------:|
+| Code editor      | Any ( Visual Studio Code adviced) | / |
+| Sound Playing | [SMFL Library](https://www.sfml-dev.org/) | MacOS + Windows Compatibility |
+| Waves display  | [xPlot](https://github.com/fslaborg/XPlot) | Used by Google Chart |
+| Math calculation | [Math net](https://numerics.mathdotnet.com/) | Support Linear Algebra |
+| Github | [Repository](https://github.com/Clementine951/ALGOSUP_2022_Project_3_D) | Code |
+
+
 ### b. Language used
+
+Although F# is great for specialist areas such as scientific or data analysis, it is also an excellent choice for enterprise development. 
+Since we need to process lot of data with lot of list of Float ( Result of Sin(x) ), F# seems to be a good choice for that task.
+It's also a Dotnet language, so it is available on Mac and Windows. 
+And have a lot of library available because of Dotnet.
+
 ## B. Formating
+
+| Type  | Format |
+| :--------------- |:---------------:|
+| Namespace | Camelcase |
+| Module | Camelcase |
+| Function  | Pascalcase |
+| Variable | Pascalcase |
+
+
 ## C. Compatibility
+
+SFML, Visual Studio, xPlot, Math.Net are compatible on Windows and MacOS.
+
 
 # 3. Possible issues
 ## A. Compatibility
+
+For the moment, all library used are compatible on Windows, Linux and MacOS.
+We shouldn't have issue on those plateform, but most of them aren't compatible on Android and IOS.
+
 ## B. Team Leaving
+
+If we have someone leaving the team, someone else will be able to take his work. 
+In order to do that, there will be at least 2 people on each parts. 
+Also we ask everyone to push they're work everyday so we don't loose any work done.
+
 ## C. Knowledge
 
+Nobody in the team knows about FSharp, that's why it's the main problem.
+Here is an exhaustive list of website to use: 
+
+- [Stack Overflow](https://stackoverflow.com/)
+- [FSharp Documentation](https://docs.microsoft.com/en-us/dotnet/fsharp/)
+- [Dotnet Documentation](https://docs.microsoft.com/en-us/dotnet/)
+
+
 # 4. Team
+
+We are currently a team of 6.
+
+- **Clémentine Curel** Team Lead
+- **Guillaume Rivière** Tech Lead
+- **Laura-Lee Hollande** Contributor
+- **Salaheddine Namir** Contributor
+- **Gaël Le Brun** Contributor
+- **Victor Leroy** Contributor
 
 # 5. Regroup
 ## A. Namespaces

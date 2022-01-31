@@ -103,7 +103,7 @@ The aim of this project is to create a sound synthesizer that can be used to cre
 
 ## B. How it should be
 
-As it should be able to be used in another program, it should be an API, a Librairy or a Package.
+As it should be able to be used in another program, it should be an API, a Library or a Package.
 It should have basic functions to generate sound based on differents options, like possibility to use note or pur frequency to generate a sound.
 
 &nbsp;
