@@ -378,6 +378,36 @@ It doesn't have have UI so it won't be casual user friendly.
   
 
 You should be able a create a sound using Notes
+Here is a simple example on how the program should be used
+
+```FSHARP
+let note length note octave =
+	Creation.makeNote Creation.sine length note octave
+	|> Envelope.apply 0.9 0.5 0.1 0.4
+	|> Filter.echo 0.4
+
+let halfNote = note 0.5
+let quaterNote = note 0.25
+let eightNote = note 0.125
+
+let tune =
+	seq { quaterNote Note.B 4
+			quaterNote Note.B 4
+			eightNote Note.B 4
+			eightNote Note.B 4
+			eightNote Note.C 4
+			eightNote Note.D 4
+			halfNote Note.D 4
+			quaterNote Note.D 4
+			eightNote Note.D 4
+			eightNote Note.C 4
+			eightNote Note.C 4
+			eightNote Note.B 4 }
+		|> Filter.applyFunction (Filter.lfo 0.6)
+
+// play the tune
+let player = Player.Play(tune, Repeat = true)
+```
 
   
 
@@ -385,9 +415,71 @@ You should be able a create a sound using Notes
 
 ### a. Generate a simple note
 
+Here is a example of a simple note generation 
+
+```FSHARP
+let note length note octave =
+	Creation.makeNote Creation.sine length note octave
+
+let halfNote = note 0.5
+let quaterNote = note 0.25
+let eightNote = note 0.125
+
+let tune =
+	seq { quaterNote Note.B 4 }
+
+// play the tune
+let player = Player.Play(tune, Repeat = true)
+```
+
+It simply create a sound with note B at octave 4 and play it. No filters are apply in any form, and the sound generated correspond to a Sine.
+
+&nbsp;
+
 ### b. Apply an echo to the previous note
 
+Now let's apply a filter to our previous note.
+
+```FSHARP
+let note length note octave =
+	Creation.makeNote Creation.sine length note octave
+	|> Filter.echo 0.4
+
+let halfNote = note 0.5
+let quaterNote = note 0.25
+let eightNote = note 0.125
+
+let tune =
+	seq { quaterNote Note.B 4 }
+
+// play the tune
+let player = Player.Play(tune, Repeat = true)
+```
+
+We have the same way to create a note, but we add the fact that this note is going to have a little bit of echo, others filters (See previously) are available the same way.
+
+
+&nbsp;
 ### c. Remove low frequency from a sound
+
+And last part, we need to be able to apply a filter ( LFO ) to the whole sound instead of only 1 note.
+
+```FSHARP
+let note length note octave =
+	Creation.makeNote Creation.sine length note octave
+	|> Filter.echo 0.4
+
+let halfNote = note 0.5
+let quaterNote = note 0.25
+let eightNote = note 0.125
+
+let tune =
+	seq { quaterNote Note.B 4 }
+		|> Filter.applyFunction (Filter.lfo 0.6)
+
+// play the tune
+let player = Player.Play(tune, Repeat = true)
+```
 
   
   
