@@ -1,17 +1,294 @@
+---
+
+  
+
+Table of Contents
+
+- [1. Introduction](#1-introduction)
+  - [A. Project description](#a-project-description)
+  - [B. How it should be](#b-how-it-should-be)
+- [2. Development rules](#2-development-rules)
+  - [A. Technologies used](#a-technologies-used)
+    - [a. Type of needs](#a-type-of-needs)
+    - [b. Language used](#b-language-used)
+  - [B. Formating](#b-formating)
+  - [C. Compatibility](#c-compatibility)
+- [3. Possible issues](#3-possible-issues)
+  - [A. Compatibility](#a-compatibility)
+  - [B. Team Leaving](#b-team-leaving)
+  - [C. Knowledge](#c-knowledge)
+- [4. Team](#4-team)
+- [5. Regroup](#5-regroup)
+  - [A. Namespaces](#a-namespaces)
+  - [B. Modules](#b-modules)
+    - [1. NoteToHz](#1-notetohz)
+    - [2. WaveGen](#2-wavegen)
+    - [3. Filters](#3-filters)
+    - [4. save](#4-save)
+    - [5. PlaySynth](#5-playsynth)
+- [6. Functions](#6-functions)
+  - [A. NoteToHz](#a-notetohz)
+    - [a. convert](#a-convert)
+    - [b. noteListToFloatList](#b-notelisttofloatlist)
+  - [B. WaveGen](#b-wavegen)
+    - [a. calcSin](#a-calcsin)
+    - [b. calcSquare](#b-calcsquare)
+    - [c. calc Tri](#c-calc-tri)
+    - [d. calcSaw](#d-calcsaw)
+  - [C. Filters](#c-filters)
+    - [a. amplitude](#a-amplitude)
+    - [b. overdriven](#b-overdriven)
+    - [c. flange](#c-flange)
+    - [d. echo](#d-echo)
+  - [D. save](#d-save)
+    - [a. sample](#a-sample)
+    - [b. floatToByte](#b-floattobyte)
+    - [c. write](#c-write)
+  - [E. PlaySynth](#e-playsynth)
+    - [a. playSound](#a-playsound)
+- [Technical specification](#technical-specification)
+  - [Context](#context)
+  - [Team](#team)
+  - [Technologies and library used](#technologies-and-library-used)
+  - [Compatibility](#compatibility)
+  - [Technical](#technical)
+    - [Generate Wave](#generate-wave)
+      - [Wavegen](#wavegen)
+      - [NoteToHz](#notetohz)
+        - [Convert](#convert)
+        - [Tuple accessing](#tuple-accessing)
+        - [noteListToFloatList](#notelisttofloatlist)
+      - [Filters](#filters)
+        - [Amplitude](#amplitude)
+        - [Overdriven](#overdriven)
+        - [Echo](#echo)
+        - [Reverb](#reverb)
+        - [Flange](#flange)
+      - [Save](#save)
+      - [Play](#play)
+
+---
+
+
+# 1. Introduction
+
+## A. Project description
+## B. How it should be
+
+# 2. Development rules
+
+## A. Technologies used
+### a. Type of needs
+### b. Language used
+## B. Formating
+## C. Compatibility
+
+# 3. Possible issues
+## A. Compatibility
+## B. Team Leaving
+## C. Knowledge
+
+# 4. Team
+
+# 5. Regroup
+## A. Namespaces
+## B. Modules
+### 1. NoteToHz
+### 2. WaveGen
+### 3. Filters
+### 4. save
+### 5. PlaySynth
+
+# 6. Functions
+## A. NoteToHz
+### a. convert
+### b. noteListToFloatList
+## B. WaveGen
+### a. calcSin
+### b. calcSquare
+### c. calc Tri
+### d. calcSaw
+## C. Filters
+### a. amplitude
+### b. overdriven
+### c. flange
+### d. echo
+## D. save
+### a. sample
+### b. floatToByte
+### c. write
+## E. PlaySynth
+### a. playSound
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Technical specification
 
+## Context
 
-## Context 
 Robert Pieckering asked us to create a library that can be used to create, modify, play and listen a sound. The user will also be able to choose whether or not to save the sound.
 
 Our project is available on [Github](https://github.com/Clementine951/ALGOSUP_2022_Project_3_D). You can clone it and test it if you have an IDE (We use [visual studio community](https://visualstudio.microsoft.com/fr/vs/community/)) and [Dotnet](https://dotnet.microsoft.com/en-us/download).
 
-
 ## Team
+
 We have a team of six members, Clémentine Curel, Laura-Lee Hollande, Salahedine Namir, Gaël Le Brun, Guillaume Rivière, Victor Leroy.
-To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56e58689f9569317c5e523aa5f6a8c66/algosup2022project3d) as a management tool to describe, check, and see all our tasks.We also create a [Slack server](https://join.slack.com/t/algosupstudents/shared_invite/zt-121i5fkhh-A8xHt0dh7M~HSdQsQ151Cw) to communicate between the members of the team. 
+To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56e58689f9569317c5e523aa5f6a8c66/algosup2022project3d) as a management tool to describe, check, and see all our tasks.We also create a [Slack server](https://join.slack.com/t/algosupstudents/shared_invite/zt-121i5fkhh-A8xHt0dh7M~HSdQsQ151Cw) to communicate between the members of the team.
 
 ## Technologies and library used
+
 | Name | Use|
 |-|-|
 |F#|This programming language is an exigence for this project. |
@@ -21,20 +298,19 @@ To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56
 |SFML|We use this library to help use for save and play waveforms. |
 |Dotnet (dotnet 5.0)| We use dotnet to use F#.|
 
-
 ## Compatibility
+
 | Name | Use|
 |-|-|
 |MacOS|Our project is compatible with MacOS. There is only the PlaySynth module which is unavailable for MacOs.|
 |Windows| Our project is compatible with Windows. All modules are available on Windows.|
 
-
-
 ## Technical
 
 ### Generate Wave
 
-  #### Wavegen
+#### Wavegen
+
     This module is here in order to create a wave who will be related to a sound later.
         ``` let calcSin sampleRate time freq amp= ``` 
         - sampleRate *(Float)* correspond to the sample rate you want for your sound to be
@@ -69,14 +345,12 @@ To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56
       ```let calcTri sampleRate time freq amp =``` generate a Triangle wave
       ```let calcSaw sampleRate time freq amp =``` generate a Sawtooth wave
 
+#### NoteToHz
 
-  #### NoteToHz
-
-   NoteToHz module is composed of 3 main parts, 
+   NoteToHz module is composed of 3 main parts,
     - First the part to convert Note and Octave to a specific Hz
     - Second, Since we have Tuple in the third part, we have a way to acess tuples specific part
     - Third and last, a way to convert a list of notes to a list of float making a list of waves
-
 
   ```
     let inputNote = [|
@@ -86,21 +360,24 @@ To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56
          ("G", 3., 0.9, 0.9)
      |]
   ```
+
   Here is an example of the format of how to input notes:
   First part of the Tuple is the note as a String
   Second is the Octave as a Float
   Third is the amplitude of the note
   Fourth is the lenght of the note as Float in seconds
 
-  ##### Convert
-  ```let convert note octave = ```
+##### Convert
+
+  ```let convert note octave =```
   Firstly, Function Convert is made to convert a note and an Octave to the frequency in hertz corresponding to it.
 
   Available notes are : C, D, E, F, G, A, B and C#, D#, F#, G#, A#
 
   They are first matched with they own frequency without appliing the octave
   If the note doesn't correspond to a real note, it's considered as 0, it's also used to do silence
-  ``` 
+
+  ```
     let noteHz =
             match note with
             | "C" | "c" -> 16.35
@@ -121,14 +398,15 @@ To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56
   Then it's multiplied by the octave set in the function.
   Instead of using a recursive to multiply it X time (Octave) by 2, we multiply it by 2^Octave
   Wich does exactly the same.
-  ``` 
+
+  ```
     let result = noteHz * (2. ** octave) 
     let result = float (Math.Round result)
   ```
 
   We have face an issue with the result, if it's not rounded it can be result like 1396.4, and produce a wave sound higher than we should have, rounding it fix the problem but loose a small prescision.
 
-  ##### Tuple accessing
+##### Tuple accessing
 
   ```
     let first (a, _, _, _) = a
@@ -136,9 +414,10 @@ To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56
     let third (_, _, c, _) = c
     let fourth (_, _, _, d) = d
   ```
+
   Since we have a list of tuple who are notes, we need to access each part of the tuple individually.
 
-  ##### noteListToFloatList
+##### noteListToFloatList
 
   ```
     let noteListToFloatList (inputNote:(string * float * float * float)[]) (sampleRate:float) =
@@ -159,12 +438,11 @@ To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56
 
   It output a list of float using the WaveGen.calcSin function to generate Sine waves from notes
 
-
-  #### Filters
+#### Filters
 
     Filters are here to add some modifications on the wave.
 
-  ##### Amplitude
+##### Amplitude
 
     ```
       let amplitude (initialList:list<float>) (amp:float) =
@@ -177,15 +455,15 @@ To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56
     It just multiply all value of the list by the multiplier, It can reduce values if multiplier is lower than 1, and higher value when the multiplier is higher than 1.
     Be carefull to not make value go over 1 after the multiply, other the wave outputed will be totally different than expected.
 
+##### Overdriven
 
-  ##### Overdriven
-  ##### Echo
-  ##### Reverb
-  ##### Flange
+##### Echo
 
+##### Reverb
 
+##### Flange
 
-  #### Save
+#### Save
 
     ``` save.write stream Wave = ```
 
@@ -197,8 +475,7 @@ To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56
     This is the way of declaring the stream parameter seen above. 
     The name of the file is define as a string.
 
-
-  #### Play
+#### Play
 
     They are two ways to play a wave. 
     The first one is to save the sound before playing it.
@@ -213,6 +490,3 @@ To achieve this project, we use [Trello](https://trello.com/invite/b/Dlhygf5L/56
     The second way to play a wave is to save it, play it and then delete it.
     This way is here to not use too much local storage.
     To play this way, it's like the first way but you define save as false.
-    
-
-
