@@ -4,9 +4,11 @@ namespace synthesizer
 open System
 open System.IO
 open System.Threading
+open MathNet.Filtering
 
 open WaveGen
 open NoteToHz
+open Spectroscope
 
 
 module Filters =
@@ -61,7 +63,15 @@ module Filters =
        let init =  Rev list
        let reverse = Reverse init
        reverse
-                
+    let LowPass (list: float list, fcut: float, order: int) = // return list with Lowpass Filter
+        let fs = spectroscope(list)
+        let lowPass =  OnlineFilter.CreateLowpass(ImpulseResponse.Finite,fs,fcut,order)
+        let array = list |> List.toArray
+        let filtered = array |> lowPass.ProcessSamples
+        let reList = filtered |> Array.toList
+       // printfn"list %A" list
+       // printf"lowPass %A" reList
+        reList            
        
 
     // let flange wave (t:float, N:float)=
