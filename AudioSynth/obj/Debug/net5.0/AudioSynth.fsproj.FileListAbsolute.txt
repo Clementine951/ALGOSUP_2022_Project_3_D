@@ -266,3 +266,5 @@ C:/Users/Victorleroy/Synth/AudioSynth/obj/Debug/net5.0/AudioSynth.genruntimeconf
 /Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/bin/Debug/net5.0/DynamicObj.dll
 /Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/bin/Debug/net5.0/Newtonsoft.Json.dll
 /Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/bin/Debug/net5.0/Plotly.NET.dll
+/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/bin/Debug/net5.0/MathNet.Filtering.dll
+/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/bin/Debug/net5.0/MathNet.Numerics.dll

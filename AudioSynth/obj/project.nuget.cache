@@ -1,19 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "EJqbPOmkTk+kBa+fmuboy37zh6NIGRELavOo999Cs5gTruJLEE3ymvgdN/GvXZcNy39uYWwYemVyBI4aq2VD2g==",
+  "dgSpecHash": "JH4XlmxKuHA1u0rrc6TOo2lngi5H0N/GhnCEaZdVfLmAfZ8XCa3OEVX05nPeCjSlUE2IgUcXJTVIiqcFyLD2kw==",
   "success": true,
   "projectFilePath": "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/AudioSynth.fsproj",
   "expectedPackageFiles": [
     "/Users/clementine/.nuget/packages/csfml/2.5.0/csfml.2.5.0.nupkg.sha512",
     "/Users/clementine/.nuget/packages/dynamicobj/0.2.0/dynamicobj.0.2.0.nupkg.sha512",
     "/Users/clementine/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/mathnet.filtering/0.7.0/mathnet.filtering.0.7.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/mathnet.numerics/4.9.1/mathnet.numerics.4.9.1.nupkg.sha512",
     "/Users/clementine/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/clementine/.nuget/packages/plotly.net/2.0.0-preview.16/plotly.net.2.0.0-preview.16.nupkg.sha512",
     "/Users/clementine/.nuget/packages/sfml.audio/2.5.0/sfml.audio.2.5.0.nupkg.sha512",
     "/Users/clementine/.nuget/packages/sfml.graphics/2.5.0/sfml.graphics.2.5.0.nupkg.sha512",
     "/Users/clementine/.nuget/packages/sfml.net/2.5.0/sfml.net.2.5.0.nupkg.sha512",
     "/Users/clementine/.nuget/packages/sfml.system/2.5.0/sfml.system.2.5.0.nupkg.sha512",
-    "/Users/clementine/.nuget/packages/sfml.window/2.5.0/sfml.window.2.5.0.nupkg.sha512"
+    "/Users/clementine/.nuget/packages/sfml.window/2.5.0/sfml.window.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/system.valuetuple/4.5.0/system.valuetuple.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }
