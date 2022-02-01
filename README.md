@@ -39,21 +39,27 @@ We chose Clémentine Curel as Project Manager for this project, and Laura-Lee Ho
 - [x] Modify the wave’s amplitude by a fixed amount
 - [x] Cut off the wave at specific amplitude to given the “overdriven” often used in rock songs
 - [x] Add echo to the sound
-- [ ] A flange effect filter
-- [ ] A reverb effect filter
+- [x] A flange effect filter
+- [x] A reverb effect filter
 
 ### Week 4 - 01/24/2022
 
-- [ ] Frequency Analysis 
-- [ ] Advanced filters
+- [x] Frequency modulation
+- [x] Amplitude modulation
+- [x] Low pass filter
+- [x] High pass filter
+- [x] Create new documents 
+- [ ] Finish Function specification
 
 ### Week 5 - 01/31/2022
 
 - [ ] MP3 compression
+- [ ] Finish Technical specification
+- [ ] Enveloppe filter
 
 ### Week 6 - 02/07/2022
 
 - [ ] MP3 compression
-- [ ] End of the last part
+- [ ] Finish Software Architecture Design Choices
 - [ ] Oral presentation
 
