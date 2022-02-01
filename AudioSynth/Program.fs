@@ -36,7 +36,7 @@ module Main =
 //                                    List of notes  Samplerate
     let normalWave2 = noteListToFloatList inputNote 44100.
 
-    let normalWave = Filters.amplitudeModulation normalWave2 0.8 400. 0.75
+    let normalWave = Filters.amplitudeModulation normalWave2 0.8 400. 
 
 
 

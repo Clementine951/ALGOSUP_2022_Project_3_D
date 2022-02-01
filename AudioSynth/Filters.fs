@@ -79,32 +79,35 @@ module Filters =
         returnFullList
         
 
-    let bothModulation (wave: list<float>) amp highFreq lowFreq itensity =
+    let bothModulation (wave: list<float>) amp highFreq lowFreq =
         let N = float wave.Length
-        let points = [(0.) .. N-1.]
+        let t = 1. + (1./44100.)
+        let points = [(0.) .. t .. N+1.]
         let transform x =
             amp * 
-            Math.Sin ( 2. * System.Math.PI * highFreq * x + itensity * highFreq * Math.Sin (2. * System.Math.PI * lowFreq * x))
+            Math.Sin ( 2. * System.Math.PI * highFreq * x * highFreq * Math.Cos (2. * System.Math.PI * lowFreq * x))
         let points = points |> List.map transform
         let sumList = List.map2 (fun x y -> x * y) wave points
         sumList
 
-    let amplitudeModulation (wave: list<float>) amp freq itensity =
+    let amplitudeModulation (wave: list<float>) amp freq =
         let N = float wave.Length
-        let points = [(0.) .. N-1.]
+        let t = 1. + (1./44100.)
+        let points = [(0.) .. t .. N+1.]
         let omega = 2. * System.Math.PI * freq
         let transform x =
-            amp * Math.Sin ( omega * x + itensity ) * Math.Sin (omega * x)
+            amp * (Math.Sin ( omega * x  ) * Math.Sin (omega * x))
         let points = points |> List.map transform
         List.map (fun x -> printfn "%O" x) points |> ignore
         let sumList = List.map2 (fun x y -> x * y) wave points
         sumList
 
-    let frequencyModulation (wave: list<float>) amp highFreq lowFreq itensity =
+    let frequencyModulation (wave: list<float>) highFreq lowFreq =
         let N = float wave.Length
-        let points = [(0.) .. N-1.]
+        let t = 1. + (1./44100.)
+        let points = [(0.) .. t .. N+1.]
         let transform x =
-            Math.Sin ( 2. * System.Math.PI * highFreq * x + itensity * highFreq * Math.Sin (2. * System.Math.PI * lowFreq * x))
+            Math.Sin ( 2. * System.Math.PI * highFreq * x  * highFreq * Math.Cos (2. * System.Math.PI * lowFreq * x))
         let points = points |> List.map transform
         let sumList = List.map2 (fun x y -> x * y) wave points
         sumList
