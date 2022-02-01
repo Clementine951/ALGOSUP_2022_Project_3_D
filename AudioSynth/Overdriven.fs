@@ -1,4 +1,4 @@
-﻿namespace synthesizer
+namespace synthesizer
 
 open System
 

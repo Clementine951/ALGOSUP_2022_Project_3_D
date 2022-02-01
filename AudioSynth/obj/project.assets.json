@@ -239,61 +239,90 @@
           }
         }
       },
-      "FSharp.Core/6.0.1": {
+      "DynamicObj/0.2.0": {
         "type": "package",
+        "dependencies": {
+          "FSharp.Core": "5.0.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
         "compile": {
-          "lib/netstandard2.1/FSharp.Core.dll": {}
+          "lib/net5.0/DynamicObj.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/FSharp.Core.dll": {}
+          "lib/net5.0/DynamicObj.dll": {}
+        }
+      },
+      "FSharp.Core/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FSharp.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.Core.dll": {}
         },
         "resource": {
-          "lib/netstandard2.1/cs/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/cs/FSharp.Core.resources.dll": {
             "locale": "cs"
           },
-          "lib/netstandard2.1/de/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/de/FSharp.Core.resources.dll": {
             "locale": "de"
           },
-          "lib/netstandard2.1/es/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/es/FSharp.Core.resources.dll": {
             "locale": "es"
           },
-          "lib/netstandard2.1/fr/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/fr/FSharp.Core.resources.dll": {
             "locale": "fr"
           },
-          "lib/netstandard2.1/it/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/it/FSharp.Core.resources.dll": {
             "locale": "it"
           },
-          "lib/netstandard2.1/ja/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/ja/FSharp.Core.resources.dll": {
             "locale": "ja"
           },
-          "lib/netstandard2.1/ko/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/ko/FSharp.Core.resources.dll": {
             "locale": "ko"
           },
-          "lib/netstandard2.1/pl/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/pl/FSharp.Core.resources.dll": {
             "locale": "pl"
           },
-          "lib/netstandard2.1/pt-BR/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/pt-BR/FSharp.Core.resources.dll": {
             "locale": "pt-BR"
           },
-          "lib/netstandard2.1/ru/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/ru/FSharp.Core.resources.dll": {
             "locale": "ru"
           },
-          "lib/netstandard2.1/tr/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/tr/FSharp.Core.resources.dll": {
             "locale": "tr"
           },
-          "lib/netstandard2.1/zh-Hans/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/zh-Hans/FSharp.Core.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/netstandard2.1/zh-Hant/FSharp.Core.resources.dll": {
+          "lib/netstandard2.0/zh-Hant/FSharp.Core.resources.dll": {
             "locale": "zh-Hant"
           }
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
-        "contentFiles": {
-          "contentFiles/any/any/_._": {
-            "buildAction": "None",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          }
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Plotly.NET/2.0.0-preview.16": {
+        "type": "package",
+        "dependencies": {
+          "DynamicObj": "0.2.0",
+          "FSharp.Core": "5.0.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/net5.0/Plotly.NET.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Plotly.NET.dll": {}
         }
       },
       "SFML.Audio/2.5.0": {
@@ -431,17 +460,30 @@
         "runtimes/win-x86/native/openal32.dll"
       ]
     },
-    "FSharp.Core/6.0.1": {
-      "sha512": "VrFAiW8dEEekk+0aqlbvMNZzDvYXmgWZwAt68AUBqaWK8RnoEVUNglj66bZzhs4/U63q0EfXlhcEKnH1sTYLjw==",
+    "DynamicObj/0.2.0": {
+      "sha512": "Da7aMgSFV+SjqxIoEs7pmlir5RR68Q2NZl7HnMQzFBd1+W0lLxJMMRpZUMmY4y1OZH+JCPqhc8d/vheLKYZ0PQ==",
       "type": "package",
-      "path": "fsharp.core/6.0.1",
+      "path": "dynamicobj/0.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dynamicobj.0.2.0.nupkg.sha512",
+        "dynamicobj.nuspec",
+        "lib/net5.0/DynamicObj.dll",
+        "lib/net5.0/DynamicObj.xml",
+        "lib/netstandard2.0/DynamicObj.dll",
+        "lib/netstandard2.0/DynamicObj.xml"
+      ]
+    },
+    "FSharp.Core/5.0.0": {
+      "sha512": "iHoYXA0VaSQUONGENB1aVafjDDZDZpwu39MtaRCTrmwFW/cTcK0b2yKNVYneFHJMc3ChtsSoM9lNtJ1dYXkHfA==",
+      "type": "package",
+      "path": "fsharp.core/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "contentFiles/any/netstandard2.0/FSharp.Core.xml",
-        "contentFiles/any/netstandard2.1/FSharp.Core.xml",
-        "fsharp.core.6.0.1.nupkg.sha512",
+        "fsharp.core.5.0.0.nupkg.sha512",
         "fsharp.core.nuspec",
         "lib/netstandard2.0/FSharp.Core.dll",
         "lib/netstandard2.0/FSharp.Core.xml",
@@ -457,22 +499,52 @@
         "lib/netstandard2.0/ru/FSharp.Core.resources.dll",
         "lib/netstandard2.0/tr/FSharp.Core.resources.dll",
         "lib/netstandard2.0/zh-Hans/FSharp.Core.resources.dll",
-        "lib/netstandard2.0/zh-Hant/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/FSharp.Core.dll",
-        "lib/netstandard2.1/FSharp.Core.xml",
-        "lib/netstandard2.1/cs/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/de/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/es/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/fr/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/it/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/ja/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/ko/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/pl/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/pt-BR/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/ru/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/tr/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/zh-Hans/FSharp.Core.resources.dll",
-        "lib/netstandard2.1/zh-Hant/FSharp.Core.resources.dll"
+        "lib/netstandard2.0/zh-Hant/FSharp.Core.resources.dll"
+      ]
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "Newtonsoft.Json.nuspec",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "packageIcon.png"
+      ]
+    },
+    "Plotly.NET/2.0.0-preview.16": {
+      "sha512": "Nlo6fR1WNoodVbD1EsyKGjipsPakipr4n1c9hOifx2daRTzWdrBUlE28em2Nmf7gA/aoD9rAfU0jh+MGSdaXZg==",
+      "type": "package",
+      "path": "plotly.net/2.0.0-preview.16",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/Plotly.NET.dll",
+        "lib/net5.0/Plotly.NET.pdb",
+        "lib/net5.0/Plotly.NET.xml",
+        "lib/netstandard2.0/Plotly.NET.dll",
+        "lib/netstandard2.0/Plotly.NET.pdb",
+        "lib/netstandard2.0/Plotly.NET.xml",
+        "logo.png",
+        "plotly.net.2.0.0-preview.16.nupkg.sha512",
+        "plotly.net.nuspec"
       ]
     },
     "SFML.Audio/2.5.0": {
@@ -541,31 +613,30 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "FSharp.Core >= 6.0.1",
+      "FSharp.Core >= 5.0.0",
+      "Plotly.NET >= 2.0.0-preview.16",
       "SFML.Net >= 2.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Victorleroy\\.nuget\\packages\\": {}
+    "/Users/clementine/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Victorleroy\\Synth\\AudioSynth\\AudioSynth.fsproj",
+      "projectUniqueName": "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/AudioSynth.fsproj",
       "projectName": "AudioSynth",
-      "projectPath": "C:\\Users\\Victorleroy\\Synth\\AudioSynth\\AudioSynth.fsproj",
-      "packagesPath": "C:\\Users\\Victorleroy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Victorleroy\\Synth\\AudioSynth\\obj\\",
+      "projectPath": "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/AudioSynth.fsproj",
+      "packagesPath": "/Users/clementine/.nuget/packages/",
+      "outputPath": "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Victorleroy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/clementine/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -582,7 +653,12 @@
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
-            "version": "[6.0.1, )",
+            "version": "[5.0.0, )",
+            "generatePathProperty": true
+          },
+          "Plotly.NET": {
+            "target": "Package",
+            "version": "[2.0.0-preview.16, )",
             "generatePathProperty": true
           },
           "SFML.Net": {
@@ -606,7 +682,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
       }
     }
   }

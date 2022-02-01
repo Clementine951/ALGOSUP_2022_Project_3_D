@@ -1,16 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "fgrb3m31bRbUR74BvNH6gz4sTBN92DwAXkS2rx5FQjyxqw//+O9fPismvAtn2phHDYp8KXZ9dcwqv0oUrLZzPg==",
+  "dgSpecHash": "EJqbPOmkTk+kBa+fmuboy37zh6NIGRELavOo999Cs5gTruJLEE3ymvgdN/GvXZcNy39uYWwYemVyBI4aq2VD2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Victorleroy\\Synth\\AudioSynth\\AudioSynth.fsproj",
+  "projectFilePath": "/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/AudioSynth.fsproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Victorleroy\\.nuget\\packages\\csfml\\2.5.0\\csfml.2.5.0.nupkg.sha512",
-    "C:\\Users\\Victorleroy\\.nuget\\packages\\fsharp.core\\6.0.1\\fsharp.core.6.0.1.nupkg.sha512",
-    "C:\\Users\\Victorleroy\\.nuget\\packages\\sfml.audio\\2.5.0\\sfml.audio.2.5.0.nupkg.sha512",
-    "C:\\Users\\Victorleroy\\.nuget\\packages\\sfml.graphics\\2.5.0\\sfml.graphics.2.5.0.nupkg.sha512",
-    "C:\\Users\\Victorleroy\\.nuget\\packages\\sfml.net\\2.5.0\\sfml.net.2.5.0.nupkg.sha512",
-    "C:\\Users\\Victorleroy\\.nuget\\packages\\sfml.system\\2.5.0\\sfml.system.2.5.0.nupkg.sha512",
-    "C:\\Users\\Victorleroy\\.nuget\\packages\\sfml.window\\2.5.0\\sfml.window.2.5.0.nupkg.sha512"
+    "/Users/clementine/.nuget/packages/csfml/2.5.0/csfml.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/dynamicobj/0.2.0/dynamicobj.0.2.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/plotly.net/2.0.0-preview.16/plotly.net.2.0.0-preview.16.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.audio/2.5.0/sfml.audio.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.graphics/2.5.0/sfml.graphics.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.net/2.5.0/sfml.net.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.system/2.5.0/sfml.system.2.5.0.nupkg.sha512",
+    "/Users/clementine/.nuget/packages/sfml.window/2.5.0/sfml.window.2.5.0.nupkg.sha512"
   ],
   "logs": []
 }

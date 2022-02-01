@@ -8,7 +8,22 @@ The ultimate aim of this project is to be able to play music from code that look
 
 Our team consists of 6 people. Clémentine Curel, Laura-Lee Hollande, Salaheddine Namir, Guillaume Rivière, Gaël Lebrun and Victor Leroy.
 
-We chose Clémentine Curel as Project Manager for this project, and Laura-Lee Hollande as Tech Leader.
+We chose Clémentine Curel as Project Manager for this project, and Guillaume Rivière as Tech Leader.
+
+
+
+## Documents
+
+[Functionnal Specification](https://github.com/Clementine951/ALGOSUP_2022_Project_3_D/blob/main/Documents/Functionnal.md)
+
+[Technical Specification](https://github.com/Clementine951/ALGOSUP_2022_Project_3_D/blob/main/Documents/Technical.md)
+
+[Software Architecture Design Choices](https://github.com/Clementine951/ALGOSUP_2022_Project_3_D/blob/main/Documents/SADC.md)
+
+[Project Execution Plan (Trello)](https://trello.com/invite/b/Dlhygf5L/56e58689f9569317c5e523aa5f6a8c66/algosup2022project3d)
+
+[Communication tool (Slack)](https://join.slack.com/t/algosup2022project3d/shared_invite/zt-111zfj7eu-6UUuILikDJtFFbMu5tNqcg)
+
 
 <hr>
 
@@ -39,21 +54,27 @@ We chose Clémentine Curel as Project Manager for this project, and Laura-Lee Ho
 - [x] Modify the wave’s amplitude by a fixed amount
 - [x] Cut off the wave at specific amplitude to given the “overdriven” often used in rock songs
 - [x] Add echo to the sound
-- [ ] A flange effect filter
-- [ ] A reverb effect filter
+- [x] A flange effect filter
+- [x] A reverb effect filter
 
 ### Week 4 - 01/24/2022
 
-- [ ] Frequency Analysis 
-- [ ] Advanced filters
+- [x] Frequency modulation
+- [x] Amplitude modulation
+- [x] Low pass filter
+- [x] High pass filter
+- [x] Create new documents 
+- [ ] Finish Function specification
 
 ### Week 5 - 01/31/2022
 
 - [ ] MP3 compression
+- [ ] Finish Technical specification
+- [ ] Enveloppe filter
 
 ### Week 6 - 02/07/2022
 
 - [ ] MP3 compression
-- [ ] End of the last part
+- [ ] Finish Software Architecture Design Choices
 - [ ] Oral presentation
 

@@ -14,11 +14,15 @@
     
     <Compile Include="save.fs" />
     <Compile Include="Play.fs" />
+    <Compile Include="Script.fs" />
     <Compile Include="Program.fs" />
+
+
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SFML.Net" Version="2.5.0" />
+     <PackageReference Include="Plotly.NET" Version="2.0.0-preview.16" />
   </ItemGroup>
 
 </Project>

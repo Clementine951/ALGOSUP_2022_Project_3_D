@@ -60,4 +60,6 @@ The two parameters for this function are the name of a .wav file and when you wa
 Then you have the PlayMult function with three parameters. This function 
 For the first parameter, you have to give the name of the file that you want to play (with the extension).
 The second parameter is if you want to delete or keep your file. If you put true, it going to keep your file and false if you want to delete it.
+
 The last parameter is when you want to start the sound.
+
