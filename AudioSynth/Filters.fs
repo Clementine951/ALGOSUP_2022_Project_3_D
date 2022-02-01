@@ -118,12 +118,15 @@ module Filters =
         let bothPass = HighPass (pass, fcut, order)
         bothPass
 
-        // let lenght = wave.Length // This function check the length of the wave
-        // let subWave = [for i in 0..lenght-1 do wave.[i] * -1.] // This inverts all the values of the wave
-        // // let test =  for i in 0..lenght-1 do
-        // //             printfn"wave %A" wave.[i]
-        // //             printfn"subWave %A" subWave.[i]
-        // subWave
+    // Create a flange effect
+    let flange (wave: float list)=
+
+        let lenght = wave.Length // This function check the length of the wave
+        let subWave = [for i in 0..lenght-1 do wave.[i] * -1.] // This inverts all the values of the wave
+        // let test =  for i in 0..lenght-1 do
+        //             printfn"wave %A" wave.[i]
+        //             printfn"subWave %A" subWave.[i]
+        subWave
         
         
         
