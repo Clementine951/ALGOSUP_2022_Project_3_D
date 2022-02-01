@@ -154,22 +154,141 @@ We are currently a team of 6.
 
 # 5. Regroup
 ## A. Namespaces
+
+`namespace synthesizer` Since the project doesn't seems to be a large thing, it got decided to use only 1 namespace for the whole project.
+
 ## B. Modules
 ### 1. NoteToHz
+
+`module NoteToHz =` will handle the conversion from readable notes ( A, B, Etc) to actual Frequency.
+
+
 ### 2. WaveGen
+
+`module WaveGen =` will handle the creation of the base of a sound, with Sine, Square, Triangle and Saw waves.
+
 ### 3. Filters
+
+`module Filters =` will handle the filters like Echo, Flange, LFO, etc.
+
 ### 4. save
+
+`module Save =` will have all functions for saving to **.wav** and **.mp3**.
+
 ### 5. PlaySynth
+
+`module PlaySynth =` will have the sound player ( using SFML library ).
 
 # 6. Functions
 ## A. NoteToHz
 ### a. convert
+```FSHARP
+let convert note octave = 
+        let noteHz =
+            match note with
+            | "C" -> 16.35
+            | "C#" -> 17.32
+            | "D" -> 18.35
+            | "D#" -> 19.45
+            | "E" -> 20.60
+            | "F" -> 21.83
+            | "F#" -> 23.12
+            | "G" -> 24.5
+            | "G#" -> 25.96
+            | "A" -> 27.5
+            | "A#" -> 29.14
+            | "B" -> 30.87
+            | _ -> 0.
+
+        let result = noteHz * (2. ** octave)
+        result
+```
+
+We first do a list of all notes, and match the given notes with existing ones. Then we multiply by the octave. 
+The formula pour the octave is `x * (2^octave)`, for example, a **C4** Wich is note C on octave 4 is, `16.35 *2 *2 *2 *2` that can also be writen `16.35 * 2^4`.
+
 ### b. noteListToFloatList
+
+```FSHARP
+let noteListToFloatList (inputNote:(NOTE * OCTAVE * AMPLITUDE * PLAYTIME)[]) (sampleRate:float) =
+        let listNormalWave = [
+            for i = 0 to inputNote.Length-1 do
+                let tmp = 
+                    WaveGen.calcSin sampleRate PLAYTIME (convert NOTE OCTAVE) AMPLITUDE
+                yield tmp
+        ]
+        let normalWave = List.concat listNormalWave
+        normalWave
+```
+If you want to play mutiple notes in a row, you need something to do that.
+So this function take a list of notes as input in addition to the samplerate, and output a list of float, with multiple notes.
+
 ## B. WaveGen
 ### a. calcSin
+`let calcSin sampleRate time freq amp=`
+
+In order to calculate a wave designed for the sound you need at least 4 values.
+  sampleRate = the quality of the sound
+        time = how long the wave have to be
+        freq = the pitch of the note, or commonly called Frequency
+         amp = amplitude, of the volume, how high the wave will go
+
+Based on that we can have to formula for a Sine wave:
+`f(y) = amp * sin(2 * pi * freq * x) `
+
 ### b. calcSquare
+
+`let calcSquare sampleRate time freq amp=`
+
+In order to calculate a wave designed for the sound you need at least 4 values.
+  sampleRate = the quality of the sound
+        time = how long the wave have to be
+        freq = the pitch of the note, or commonly called Frequency
+         amp = amplitude, of the volume, how high the wave will go
+
+Based on that we can have to formula for a Square wave:
+`f(y) = amp *  sign( sin (2 * pi * freq * x))  `
+
+sign() is a function that set a value to 1 if it's over 0 and set the value to -1 if it's under 0.
+So we need to generate a sine and apply a sign to it in order to have a square.
+
 ### c. calc Tri
+
+`let calcTri sampleRate time freq amp=`
+
+In order to calculate a wave designed for the sound you need at least 4 values.
+  sampleRate = the quality of the sound
+        time = how long the wave have to be
+        freq = the pitch of the note, or commonly called Frequency
+         amp = amplitude, of the volume, how high the wave will go
+
+Based on that we can have to formula for a Square wave:
+`f(y) = amp * 2. * asin (sin (2. * PI * freq * x)) / PI )  `
+
+asin(sin(x)) is used to generate triangle. and then we apply other parameters in order to be able to change the shape of the wave.
+We also have to mutiply the amp by 2 because we no longer have 1 trigonometrical call, but 2 ( asin and sin).
+
 ### d. calcSaw
+
+`let calcSaw sampleRate time freq amp=`
+
+In order to calculate a wave designed for the sound you need at least 4 values.
+  sampleRate = the quality of the sound
+        time = how long the wave have to be
+        freq = the pitch of the note, or commonly called Frequency
+         amp = amplitude, of the volume, how high the wave will go
+
+Based on that we can have to formula for a Square wave:
+`f(y) = amp * 2. * (x * freq - floor(0.5 + x * freq))  `
+
+This one is a bit tricky and use something that is reserved to digital sound.
+All points of the wave have to be between **-1** and **1**.
+When a point is over 1 it automatically go to -1, and so on.
+
+This function use that feature, (See below) to have a clear wave that looks like a saw.
+
+<img src="https://i.gyazo.com/14affe9d7a6115571948d79a6bcc5504.png" alt="Raw SawWave looks" width= "200px">
+
 ## C. Filters
 ### a. amplitude
 ### b. overdriven
