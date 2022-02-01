@@ -125,9 +125,17 @@ module Filters =
        // printfn"list %A" list
        // printf"highPass %A" reList
         reList            
+
+    let BothPass (list: float list, fcut: float, order: int) = // return both filters at the same time
+        let pass = LowPass (list, fcut, order)
+        let bothPass = HighPass (pass, fcut, order)
+        bothPass
+
     // let flange wave (t:float, N:float)=
 
     //     let subWave = [(0.)..t..N]
     
     //     let subWave = subWave |> List.map(fun x -> wave * -1.)
     //     subWave
+
+    
