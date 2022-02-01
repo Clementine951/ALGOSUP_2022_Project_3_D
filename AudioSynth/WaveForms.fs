@@ -35,7 +35,7 @@ module WaveGen =
         let omega = 2. * System.Math.PI * freq // We calculate the period
 
         let points = [(0.)..t..N] // This is where the points are stored
-        let points = points |> List.map(fun x ->  amp * 2. * asin (sin (2. * System.Math.PI * t * freq)) / System.Math.PI ) // This is used to calculate each coordinates of each points
+        let points = points |> List.map(fun x ->  amp * 2. * asin (sin (2. * System.Math.PI * x * freq)) / System.Math.PI ) // This is used to calculate each coordinates of each points
         // printfn "%O" testpoint.Length
 
         points
