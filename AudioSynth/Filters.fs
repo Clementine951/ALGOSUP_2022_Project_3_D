@@ -4,6 +4,8 @@ namespace synthesizer
 open System
 open System.IO
 open System.Threading
+open MathNet.Filtering
+
 
 open WaveGen
 open NoteToHz
@@ -42,13 +44,80 @@ module Filters =
         let rec loop acc = function
         | [] -> acc
         | head :: tail -> loop(head::acc) tail
-        loop[] list
+        loop [] list
         // return reverb list
     let reverb list =
        let init =  rev list
        let reverse = reverse init
        reverse
+    let spectroscope (list:float list) =
+       
+       let lenght = list.Length
+       let mutable trig = 0
+       let mutable t = 0.
+       let mutable check = 0.
+       
+       let periode = // find period of list
+           for i in 0..lenght-1 do
+               
+               
+               
+               if i < lenght-1 && i > 0 then
+                
+                if trig >= 1 && trig <= 2 then
+                    t <- t + 0.0001
+                   
+                if trig = 2 then
+                    
+                    
+                    trig <- trig + 1
+                   
+                  elif list.[i] > list.[i+1] && list.[i] >= list.[i-1] then
+                    
+                    trig <-trig + 1
+                    check <- check + list.[i] - check
+
+                    
+                    
+                    if check > list.[i] then // trig work only  highest value
+                     trig <- trig - 1
+                     
+                     
+                     
+                    
+                    
+           
+           t  
+       let getFrequency =
+       
+        1./ periode
+       getFrequency
     
+    let LowPass (list: float list, fcut: float, order: int) = // return list with Lowpass Filter
+        let fs = spectroscope(list)
+        let lowPass =  OnlineFilter.CreateLowpass(ImpulseResponse.Finite,fs,fcut,order)
+        let array = list |> List.toArray
+        let filtered = array |> lowPass.ProcessSamples
+        let reList = filtered |> Array.toList
+       // printfn"list %A" list
+       // printf"lowPass %A" reList
+        reList            
+       
+    let HighPass (list: float list, fcut: float, order: int) = // return list with Highpass Filter
+        let fs = spectroscope(list)
+        let highPass =  OnlineFilter.CreateHighpass(ImpulseResponse.Finite,fs,fcut,order)
+        let array = list |> List.toArray
+        let filtered = array |> highPass.ProcessSamples
+        let reList = filtered |> Array.toList
+       // printfn"list %A" list
+       // printf"highPass %A" reList
+        reList            
+
+    let BothPass (list: float list, fcut: float, order: int) = // return both filters at the same time
+        let pass = LowPass (list, fcut, order)
+        let bothPass = HighPass (pass, fcut, order)
+        bothPass
+
     // Create a flange effect
     let flange (wave: float list)=
 

@@ -302,6 +302,28 @@
           }
         }
       },
+      "MathNet.Filtering/0.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MathNet.Numerics": "4.9.1",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MathNet.Filtering.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MathNet.Filtering.dll": {}
+        }
+      },
+      "MathNet.Numerics/4.9.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -386,6 +408,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/SFML.Window.dll": {}
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       }
     }
@@ -502,6 +533,46 @@
         "lib/netstandard2.0/zh-Hant/FSharp.Core.resources.dll"
       ]
     },
+    "MathNet.Filtering/0.7.0": {
+      "sha512": "Ghm/RaCS4+29PO1XGn83shZSwDJzAGxys60xh0QZH8Dz3dqxiTIwal8kksU8vcp3GtNVRDtSgM7O3FLuhep9vw==",
+      "type": "package",
+      "path": "mathnet.filtering/0.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net40/MathNet.Filtering.dll",
+        "lib/net40/MathNet.Filtering.xml",
+        "lib/net461/MathNet.Filtering.dll",
+        "lib/net461/MathNet.Filtering.xml",
+        "lib/netstandard1.3/MathNet.Filtering.dll",
+        "lib/netstandard1.3/MathNet.Filtering.xml",
+        "lib/netstandard2.0/MathNet.Filtering.dll",
+        "lib/netstandard2.0/MathNet.Filtering.xml",
+        "mathnet.filtering.0.7.0.nupkg.sha512",
+        "mathnet.filtering.nuspec"
+      ]
+    },
+    "MathNet.Numerics/4.9.1": {
+      "sha512": "tLg/nvtdYd830Ee8nWsrsIiBTxeKmUEtsrQIPX4Sn60l7eMmZFIvSaMdG6o08FGsByi0TArJ6tx8LVT4vpWqyQ==",
+      "type": "package",
+      "path": "mathnet.numerics/4.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net40/MathNet.Numerics.dll",
+        "lib/net40/MathNet.Numerics.xml",
+        "lib/net461/MathNet.Numerics.dll",
+        "lib/net461/MathNet.Numerics.xml",
+        "lib/netstandard1.3/MathNet.Numerics.dll",
+        "lib/netstandard1.3/MathNet.Numerics.xml",
+        "lib/netstandard2.0/MathNet.Numerics.dll",
+        "lib/netstandard2.0/MathNet.Numerics.xml",
+        "mathnet.numerics.4.9.1.nupkg.sha512",
+        "mathnet.numerics.nuspec"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -609,11 +680,56 @@
         "sfml.window.2.5.0.nupkg.sha512",
         "sfml.window.nuspec"
       ]
+    },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "System.ValueTuple.nuspec",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "FSharp.Core >= 5.0.0",
+      "MathNet.Filtering >= 0.7.0",
       "Plotly.NET >= 2.0.0-preview.16",
       "SFML.Net >= 2.5.0"
     ]
@@ -654,6 +770,11 @@
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
             "version": "[5.0.0, )",
+            "generatePathProperty": true
+          },
+          "MathNet.Filtering": {
+            "target": "Package",
+            "version": "[0.7.0, )",
             "generatePathProperty": true
           },
           "Plotly.NET": {
