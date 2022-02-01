@@ -64,7 +64,7 @@ We chose Clémentine Curel as Project Manager for this project, and Guillaume Ri
 - [x] Low pass filter
 - [x] High pass filter
 - [x] Create new documents 
-- [ ] Finish Function specification
+- [x] Finish Functionnal specification
 
 ### Week 5 - 01/31/2022
 
