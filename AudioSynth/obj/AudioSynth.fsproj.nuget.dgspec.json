@@ -39,6 +39,11 @@
               "version": "[5.0.0, )",
               "generatePathProperty": true
             },
+            "Plotly.NET": {
+              "target": "Package",
+              "version": "[2.0.0-preview.16, )",
+              "generatePathProperty": true
+            },
             "SFML.Net": {
               "target": "Package",
               "version": "[2.5.0, )",

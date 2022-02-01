@@ -263,3 +263,6 @@ C:/Users/Victorleroy/Synth/AudioSynth/bin/Debug/net5.0/runtimes/win-x86/native/c
 C:/Users/Victorleroy/Synth/AudioSynth/bin/Debug/net5.0/runtimes/win-x86/native/openal32.dll
 C:/Users/Victorleroy/Synth/AudioSynth/obj/Debug/net5.0/AudioSynth.fsproj.CopyComplete
 C:/Users/Victorleroy/Synth/AudioSynth/obj/Debug/net5.0/AudioSynth.genruntimeconfig.cache
+/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/bin/Debug/net5.0/DynamicObj.dll
+/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/bin/Debug/net5.0/Newtonsoft.Json.dll
+/Users/clementine/Documents/Project 3/ALGOSUP_2022_Project_3_D/AudioSynth/bin/Debug/net5.0/Plotly.NET.dll
