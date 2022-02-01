@@ -10,36 +10,23 @@ open NoteToHz
 
 
 module Filters =
+
+    let chords wave1 wave2 =
+        let sumList = List.map2 (fun x y -> (x + y)/2.) wave1 wave2
+        sumList
     
-    //let sinFlange sampleRate time freq amp =
-       // let wave = WaveGen.calcSin sampleRate time freq amp
-       // let flange = WaveGen.calcSinFlange sampleRate time freq amp
-        //let sumList = List.map2 (fun x y -> (x + y)/2.) wave flange
-    
-
-    // let flange (wave:list<float>) time=
-    //     let mutable second = wave 
-
-    //     while (second.[time] <> 0.) do
-    //         printfn "hey"
-    //         second |> List.append [0.]
-    //         printfn "hello"
-        
-    //     let sumList = List.map2 (fun x y -> (x + y)/2.) wave second
-    //     sumList
-
     let amplitude (initialList:list<float>) (amp:float) =
         let returnList = List.map (fun x -> x*amp) initialList
         returnList
     
     
     // Stay the list below or equal to the amp value and return a new list
-    let Overdriven (list:float list) (amp:float) =
+    let overdriven (list:float list) (amp:float) =
         let lenght = list.Length
         let returnList = [for i in 0..lenght-1 do if list.[i]>= amp then amp else list.[i]]
         returnList
       // creat some list who begin in different place and amplitude and return in list of averge of list
-    let Rev(list:float list) =
+    let rev(list:float list) =
         let lenght = list.Length       
         let rev = [for i in 0..lenght-1 do list.[i]]       
         let rev1 = [for i in 0..lenght-1 do if i >= (lenght-1)/6 then  list.[i]/2. else 0.]       
@@ -51,15 +38,15 @@ module Filters =
         mergeRev
          
         // reverse list
-    let Reverse list=
+    let reverse list=
         let rec loop acc = function
         | [] -> acc
         | head :: tail -> loop(head::acc) tail
         loop[] list
         // return reverb list
-    let Reverb list =
-       let init =  Rev list
-       let reverse = Reverse init
+    let reverb list =
+       let init =  rev list
+       let reverse = reverse init
        reverse
     
     // Create a flange effect
@@ -90,6 +77,54 @@ module Filters =
         ]
         let returnFullList = List.concat returnFullList // Fuse all list returned into only one
         returnFullList
-       
+        
 
+    //This function will module the amplitude and the frequence of the wave
+    let bothModulation (wave: list<float>) amp highFreq lowFreq =
+        let N = float wave.Length
+        let t = 1. + (1./44100.)
+        let points = [(0.) .. t .. N+1.]
+        
+        // This is a mathematical formule to module the amplitude and the frequence of the wave
+        let transform x =
+            amp * 
+            Math.Sin ( 2. * System.Math.PI * highFreq * x * highFreq * Math.Cos (2. * System.Math.PI * lowFreq * x))
+        
+        // put all points with there calculation into a new list
+        let points = points |> List.map transform
+        //we mutiply the initial list with the list with calculation
+        let sumList = List.map2 (fun x y -> x * y) wave points
+        sumList
 
+    // This function will module the amplitude of the wave
+    let amplitudeModulation (wave: list<float>) amp freq =
+        let N = float wave.Length
+        let t = 1. + (1./44100.)
+        let points = [(0.) .. t .. N+1.]
+        let omega = 2. * System.Math.PI * freq
+
+        // This is a mathematical formule to module the amplitude of the wave
+        let transform x =
+            amp * (Math.Sin ( omega * x  ) * Math.Sin (omega * x))
+        
+        // put all points with there calculation into a new list
+        let points = points |> List.map transform
+        //we mutiply the initial list with the list with calculation
+        let sumList = List.map2 (fun x y -> x * y) wave points
+        sumList
+
+    // This function will module the frequency of the wave
+    let frequencyModulation (wave: list<float>) highFreq lowFreq =
+        let N = float wave.Length
+        let t = 1. + (1./44100.)
+        let points = [(0.) .. t .. N+1.]
+
+        // This is a mathematical formule to module the frequence of the wave
+        let transform x =
+            Math.Sin ( 2. * System.Math.PI * highFreq * x  * highFreq * Math.Cos (2. * System.Math.PI * lowFreq * x))
+        
+        // put all points with there calculation into a new list
+        let points = points |> List.map transform
+        //we mutiply the initial list with the list with calculation
+        let sumList = List.map2 (fun x y -> x * y) wave points
+        sumList

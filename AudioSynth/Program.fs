@@ -36,7 +36,7 @@ module Main =
 //                                    List of notes  Samplerate
     let normalWave2 = noteListToFloatList inputNote 44100.
 
-    let normalWave = Filters.echo normalWave2 2.05 0.5 1.
+    let normalWave = Filters.amplitudeModulation normalWave2 0.8 400. 
 
 
 
@@ -51,5 +51,5 @@ module Main =
 
 
 
-    PlaySynth.playSound ("test.wav" ,true ,float32(0.))
+    // PlaySynth.playSound ("test.wav" ,true ,float32(0.))
       // return an integer exit code
