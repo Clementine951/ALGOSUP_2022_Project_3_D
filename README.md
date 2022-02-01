@@ -8,7 +8,7 @@ The ultimate aim of this project is to be able to play music from code that look
 
 Our team consists of 6 people. Clémentine Curel, Laura-Lee Hollande, Salaheddine Namir, Guillaume Rivière, Gaël Lebrun and Victor Leroy.
 
-We chose Clémentine Curel as Project Manager for this project, and Laura-Lee Hollande as Tech Leader.
+We chose Clémentine Curel as Project Manager for this project, and Guillaume Rivière as Tech Leader.
 
 
 
