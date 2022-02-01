@@ -21,4 +21,4 @@ module PlaySynth =
 
         if (save=false) then System.IO.File.Delete(name) //Save, play and delete the sound
 
-    //let play = PlaySound "test.wav" //Play the file you choose
+    // let play = playSound "test.wav" //Play the file you choose
