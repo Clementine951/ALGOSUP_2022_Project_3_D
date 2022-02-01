@@ -79,35 +79,52 @@ module Filters =
         returnFullList
         
 
+    //This function will module the amplitude and the frequence of the wave
     let bothModulation (wave: list<float>) amp highFreq lowFreq =
         let N = float wave.Length
         let t = 1. + (1./44100.)
         let points = [(0.) .. t .. N+1.]
+        
+        // This is a mathematical formule to module the amplitude and the frequence of the wave
         let transform x =
             amp * 
             Math.Sin ( 2. * System.Math.PI * highFreq * x * highFreq * Math.Cos (2. * System.Math.PI * lowFreq * x))
+        
+        // put all points with there calculation into a new list
         let points = points |> List.map transform
+        //we mutiply the initial list with the list with calculation
         let sumList = List.map2 (fun x y -> x * y) wave points
         sumList
 
+    // This function will module the amplitude of the wave
     let amplitudeModulation (wave: list<float>) amp freq =
         let N = float wave.Length
         let t = 1. + (1./44100.)
         let points = [(0.) .. t .. N+1.]
         let omega = 2. * System.Math.PI * freq
+
+        // This is a mathematical formule to module the amplitude of the wave
         let transform x =
             amp * (Math.Sin ( omega * x  ) * Math.Sin (omega * x))
+        
+        // put all points with there calculation into a new list
         let points = points |> List.map transform
-        List.map (fun x -> printfn "%O" x) points |> ignore
+        //we mutiply the initial list with the list with calculation
         let sumList = List.map2 (fun x y -> x * y) wave points
         sumList
 
+    // This function will module the frequency of the wave
     let frequencyModulation (wave: list<float>) highFreq lowFreq =
         let N = float wave.Length
         let t = 1. + (1./44100.)
         let points = [(0.) .. t .. N+1.]
+
+        // This is a mathematical formule to module the frequence of the wave
         let transform x =
             Math.Sin ( 2. * System.Math.PI * highFreq * x  * highFreq * Math.Cos (2. * System.Math.PI * lowFreq * x))
+        
+        // put all points with there calculation into a new list
         let points = points |> List.map transform
+        //we mutiply the initial list with the list with calculation
         let sumList = List.map2 (fun x y -> x * y) wave points
         sumList
