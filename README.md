@@ -10,6 +10,21 @@ Our team consists of 6 people. Clémentine Curel, Laura-Lee Hollande, Salaheddin
 
 We chose Clémentine Curel as Project Manager for this project, and Laura-Lee Hollande as Tech Leader.
 
+
+
+## Documents
+
+[Functionnal Specification](https://github.com/Clementine951/ALGOSUP_2022_Project_3_D/blob/main/Documents/Functionnal.md)
+
+[Technical Specification](https://github.com/Clementine951/ALGOSUP_2022_Project_3_D/blob/main/Documents/Technical.md)
+
+[Software Architecture Design Choices](https://github.com/Clementine951/ALGOSUP_2022_Project_3_D/blob/main/Documents/SADC.md)
+
+[Project Execution Plan (Trello)](https://trello.com/invite/b/Dlhygf5L/56e58689f9569317c5e523aa5f6a8c66/algosup2022project3d)
+
+[Communication tool (Slack)](https://join.slack.com/t/algosup2022project3d/shared_invite/zt-111zfj7eu-6UUuILikDJtFFbMu5tNqcg)
+
+
 <hr>
 
 ## Retro-planning
