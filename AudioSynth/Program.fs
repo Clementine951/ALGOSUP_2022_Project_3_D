@@ -1,5 +1,4 @@
 ﻿// Learn more about F# at http://docs.microsoft.com/dotnet/fsharp
-
 // y sin (g X )
 // y = amplitude height of the function
 // g = Multiplier of Period
@@ -16,6 +15,8 @@ open PlaySynth
 open NoteToHz
 open Filters
 open save
+open Plotly.NET
+
 
 module Main =
 
@@ -36,9 +37,16 @@ module Main =
 //                                    List of notes  Samplerate
     let normalWave2 = noteListToFloatList inputNote 44100.
 
-    let normalWave = Filters.amplitudeModulation normalWave2 0.8 400. 
+    let normalWave = Filters.frequencyModulation normalWave2 30. 15. 
 
+    // let t = 1. + (1./44100.)
 
+    // let normalChart = Charts.makeCharts normalWave
+    // let transformChart = Charts.makeCharts (List.init 500 (fun x -> Filters.transform 30. 15. (float x * t)))
+
+    // let combined = Chart.combine [normalChart; transformChart]
+
+    // Chart.show combined
 
     // let normalWave = calcSin 44100. 1. 130.9 0.9
 
@@ -46,7 +54,7 @@ module Main =
     //let normalWave = Filter.sinFlange 44100. 10. 40000.  1.
 
     /// Write WAVE PCM soundfile (8KHz Mono 8-bit)
-    let stream = File.Create(@"test.wav")
+    let stream = File.Create(@"frequency.wav")
     save.write stream normalWave
 
 

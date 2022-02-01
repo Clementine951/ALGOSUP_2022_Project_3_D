@@ -18,5 +18,6 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgSFML_Net Condition=" '$(PkgSFML_Net)' == '' ">/Users/clementine/.nuget/packages/sfml.net/2.5.0</PkgSFML_Net>
     <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">/Users/clementine/.nuget/packages/fsharp.core/5.0.0</PkgFSharp_Core>
+    <PkgPlotly_NET Condition=" '$(PkgPlotly_NET)' == '' ">/Users/clementine/.nuget/packages/plotly.net/2.0.0-preview.16</PkgPlotly_NET>
   </PropertyGroup>
 </Project>
