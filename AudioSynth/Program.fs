@@ -39,14 +39,14 @@ module Main =
 
     let normalWave = Filters.frequencyModulation normalWave2 30. 15. 
 
-    let t = 1. + (1./44100.)
+    // let t = 1. + (1./44100.)
 
-    let normalChart = Charts.makeCharts normalWave
-    let transformChart = Charts.makeCharts (List.init 500 (fun x -> Filters.transform 30. 15. (float x * t)))
+    // let normalChart = Charts.makeCharts normalWave
+    // let transformChart = Charts.makeCharts (List.init 500 (fun x -> Filters.transform 30. 15. (float x * t)))
 
-    let combined = Chart.combine [normalChart; transformChart]
+    // let combined = Chart.combine [normalChart; transformChart]
 
-    Chart.show combined
+    // Chart.show combined
 
     // let normalWave = calcSin 44100. 1. 130.9 0.9
 

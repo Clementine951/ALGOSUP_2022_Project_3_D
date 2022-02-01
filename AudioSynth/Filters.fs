@@ -128,5 +128,5 @@ module Filters =
         // put all points with there calculation into a new list
         let points = points |> List.map (transform highFreq lowFreq)
         //we mutiply the initial list with the list with calculation
-        let sumList = List.map2 (fun x y -> x * y) wave points
+        let sumList = List.map2 (fun x y -> (x + y)/2. ) wave points
         sumList
