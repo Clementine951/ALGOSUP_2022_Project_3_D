@@ -1,84 +1,81 @@
----
-
-  
+# Technical
 
 Table of Contents
-
-- [1. Introduction](#1-introduction)
-  - [A. Project description](#a-project-description)
-  - [B. How it should be](#b-how-it-should-be)
-- [2. Development rules](#2-development-rules)
-  - [A. Technologies used](#a-technologies-used)
-    - [a. Type of needs](#a-type-of-needs)
-    - [b. Language used](#b-language-used)
-  - [B. Formating](#b-formating)
-  - [C. Compatibility](#c-compatibility)
-- [3. Possible issues](#3-possible-issues)
-  - [A. Compatibility](#a-compatibility)
-  - [B. Team Leaving](#b-team-leaving)
-  - [C. Knowledge](#c-knowledge)
-- [4. Team](#4-team)
-- [5. Regroup](#5-regroup)
-  - [A. Namespaces](#a-namespaces)
-  - [B. Modules](#b-modules)
-    - [1. NoteToHz](#1-notetohz)
-    - [2. WaveGen](#2-wavegen)
-    - [3. Filters](#3-filters)
-    - [4. save](#4-save)
-    - [5. PlaySynth](#5-playsynth)
-- [6. Functions](#6-functions)
-  - [A. NoteToHz](#a-notetohz)
-    - [a. convert](#a-convert)
-    - [b. noteListToFloatList](#b-notelisttofloatlist)
-  - [B. WaveGen](#b-wavegen)
-    - [a. calcSin](#a-calcsin)
-    - [b. calcSquare](#b-calcsquare)
-    - [c. calc Tri](#c-calc-tri)
-    - [d. calcSaw](#d-calcsaw)
-  - [C. Filters](#c-filters)
-    - [a. amplitude](#a-amplitude)
-    - [b. overdriven](#b-overdriven)
-    - [c. flange](#c-flange)
-    - [d. echo](#d-echo)
-    - [e. reverb](#e-reverb)
-    - [f. chords](#f-chords)
-  - [D.Advanced Filters](#d-advanced-filters)
-    - [a. Spetroscope]
-      - [low pass](#low-pass)
-      - [high pass](#high-pass)
-      - [both pass](#both-pass)
-    - [b. Low Frequency Oscilliator](#b-low-frequency-oscilliator)
-      - [frequency modulation](#frequency-modulation)
-      - [amplitude modulation](#amplitude-modulation)
-      - [both modulation](#both-modulation)
-  - [E. save](#d-save)
-    - [a. sample](#a-sample)
-    - [b. floatToByte](#b-floattobyte)
-    - [c. write](#c-write)
-  - [F. PlaySynth](#e-playsynth)
-    - [a. playSound](#a-playsound)
-
----
+- [Technical](#technical)
+  - [1. Introduction](#1-introduction)
+    - [A. Project description](#a-project-description)
+    - [B. How it should be](#b-how-it-should-be)
+  - [2. Development rules](#2-development-rules)
+    - [A. Technologies used](#a-technologies-used)
+      - [a. Type of needs](#a-type-of-needs)
+      - [b. Language used](#b-language-used)
+    - [B. Formating](#b-formating)
+    - [C. Compatibility](#c-compatibility)
+  - [3. Possible issues](#3-possible-issues)
+    - [A. Compatibility](#a-compatibility)
+    - [B. Team Leaving](#b-team-leaving)
+    - [C. Knowledge](#c-knowledge)
+  - [4. Team](#4-team)
+  - [5. Regroup](#5-regroup)
+    - [A. Namespaces](#a-namespaces)
+    - [B. Modules](#b-modules)
+      - [a. NoteToHz](#a-notetohz)
+      - [b. WaveGen](#b-wavegen)
+      - [c. Filters](#c-filters)
+      - [d. save](#d-save)
+      - [e. PlaySynth](#e-playsynth)
+  - [6. Functions](#6-functions)
+    - [A. NoteToHz](#a-notetohz-1)
+      - [a. convert](#a-convert)
+      - [b. noteListToFloatList](#b-notelisttofloatlist)
+    - [B. WaveGen](#b-wavegen-1)
+      - [a. calcSin](#a-calcsin)
+      - [b. calcSquare](#b-calcsquare)
+      - [c. calc Tri](#c-calc-tri)
+      - [d. calcSaw](#d-calcsaw)
+    - [C. Filters](#c-filters-1)
+      - [a. amplitude](#a-amplitude)
+      - [b. overdriven](#b-overdriven)
+      - [c. flange](#c-flange)
+      - [d. echo](#d-echo)
+      - [e. reverb](#e-reverb)
+      - [f. chords](#f-chords)
+    - [D. Advanced Filters](#d-advanced-filters)
+      - [Spectroscope](#spectroscope)
+      - [Low pass](#low-pass)
+      - [High pass](#high-pass)
+      - [Both pass](#both-pass)
+    - [Low Frequency Oscilliator](#low-frequency-oscilliator)
+      - [Frequency modulation](#frequency-modulation)
+      - [Amplitude modulation](#amplitude-modulation)
+      - [Both modulation](#both-modulation)
+    - [E. save](#e-save)
+      - [a. sample](#a-sample)
+      - [b. floatToByte](#b-floattobyte)
+      - [c. write](#c-write)
+    - [F. PlaySynth](#f-playsynth)
+      - [a. playSound](#a-playsound)
 
 
-# 1. Introduction
+## 1. Introduction
 
-## A. Project description
+### A. Project description
 
 The aim of this project is to create a sound synthesizer that can be used to create programmable music. This project was inspired by [Sonic Pi](https://sonic-pi.net/) and other live coding music packages. The ultimate aim of this project is to be able to play music from code.
 By synthesizer it means a simple library who could be used by other programs. 
 This isn't a program specially designed to be used for a traditional piano keyboard.
 
 
-## B. How it should be
+### B. How it should be
 
 Need to be a library with all function callable from another program. 
 
-# 2. Development rules
+## 2. Development rules
 
 
-## A. Technologies used
-### a. Type of needs
+### A. Technologies used
+#### a. Type of needs
+
 | What ?  | Which ? | Why ? |
 | :--------------- |:---------------:|---------------:|
 | Code editor      | Any ( Visual Studio Code adviced) | / |
@@ -90,14 +87,14 @@ Need to be a library with all function callable from another program.
 | Slack | [Slack](https://join.slack.com/t/algosupstudents/shared_invite/zt-121i5fkhh-A8xHt0dh7M~HSdQsQ151Cw) | Project Communication |
 
 
-### b. Language used
+#### b. Language used
 
 Although F# is great for specialist areas such as scientific or data analysis, it is also an excellent choice for enterprise development. 
 Since we need to process lot of data with lot of list of Float ( Result of Sin(x) ), F# seems to be a good choice for that task.
 It's also a Dotnet language, so it is available on Mac and Windows. 
 And have a lot of library available because of Dotnet.
 
-## B. Formating
+### B. Formating
 
 | Type  | Format |
 | :--------------- |:---------------:|
@@ -107,24 +104,24 @@ And have a lot of library available because of Dotnet.
 | Variable | Pascalcase |
 
 
-## C. Compatibility
+### C. Compatibility
 
 SFML, Visual Studio, xPlot, Math.Net are compatible on Windows and MacOS.
 
 
-# 3. Possible issues
-## A. Compatibility
+## 3. Possible issues
+### A. Compatibility
 
 For the moment, all library used are compatible on Windows, Linux and MacOS.
 We shouldn't have issue on those plateform, but most of them aren't compatible on Android and IOS.
 
-## B. Team Leaving
+### B. Team Leaving
 
 If we have someone leaving the team, someone else will be able to take his work. 
 In order to do that, there will be at least 2 people on each parts. 
 Also we ask everyone to push they're work everyday so we don't loose any work done.
 
-## C. Knowledge
+### C. Knowledge
 
 Nobody in the team knows about FSharp, that's why it's the main problem.
 Here is an exhaustive list of website to use: 
@@ -134,7 +131,7 @@ Here is an exhaustive list of website to use:
 - [Dotnet Documentation](https://docs.microsoft.com/en-us/dotnet/)
 
 
-# 4. Team
+## 4. Team
 
 We are currently a team of 6.
 
@@ -145,36 +142,37 @@ We are currently a team of 6.
 - **Gaël Le Brun** Contributor
 - **Victor Leroy** Contributor
 
-# 5. Regroup
-## A. Namespaces
+## 5. Regroup
+### A. Namespaces
 
 `namespace synthesizer` Since the project doesn't seems to be a large thing, it got decided to use only 1 namespace for the whole project.
 
-## B. Modules
-### 1. NoteToHz
+### B. Modules
+#### a. NoteToHz
 
 `module NoteToHz =` will handle the conversion from readable notes ( A, B, Etc) to actual Frequency.
 
 
-### 2. WaveGen
+#### b. WaveGen
 
 `module WaveGen =` will handle the creation of the base of a sound, with Sine, Square, Triangle and Saw waves.
 
-### 3. Filters
+#### c. Filters
 
 `module Filters =` will handle the filters like Echo, Flange, LFO, etc.
 
-### 4. save
+#### d. save
 
 `module Save =` will have all functions for saving to **.wav** and **.mp3**.
 
-### 5. PlaySynth
+#### e. PlaySynth
 
 `module PlaySynth =` will have the sound player ( using SFML library ).
 
-# 6. Functions
-## A. NoteToHz
-### a. convert
+## 6. Functions
+### A. NoteToHz
+#### a. convert
+
 ```FSHARP
 let convert note octave = 
         let noteHz =
@@ -200,7 +198,7 @@ let convert note octave =
 We first do a list of all notes, and match the given notes with existing ones. Then we multiply by the octave. 
 The formula pour the octave is `x * (2^octave)`, for example, a **C4** Wich is note C on octave 4 is, `16.35 *2 *2 *2 *2` that can also be writen `16.35 * 2^4`.
 
-### b. noteListToFloatList
+#### b. noteListToFloatList
 
 ```FSHARP
 let noteListToFloatList (inputNote:(NOTE * OCTAVE * AMPLITUDE * PLAYTIME)[]) (sampleRate:float) =
@@ -216,8 +214,8 @@ let noteListToFloatList (inputNote:(NOTE * OCTAVE * AMPLITUDE * PLAYTIME)[]) (sa
 If you want to play mutiple notes in a row, you need something to do that.
 So this function take a list of notes as input in addition to the samplerate, and output a list of float, with multiple notes.
 
-## B. WaveGen
-### a. calcSin
+### B. WaveGen
+#### a. calcSin
 `let calcSin sampleRate time freq amp=`
 
 In order to calculate a wave designed for the sound you need at least 4 values.
@@ -229,7 +227,7 @@ In order to calculate a wave designed for the sound you need at least 4 values.
 Based on that we can have to formula for a Sine wave:
 `f(y) = amp * sin(2 * pi * freq * x) `
 
-### b. calcSquare
+#### b. calcSquare
 
 `let calcSquare sampleRate time freq amp=`
 
@@ -245,7 +243,7 @@ Based on that we can have to formula for a Square wave:
 sign() is a function that set a value to 1 if it's over 0 and set the value to -1 if it's under 0.
 So we need to generate a sine and apply a sign to it in order to have a square.
 
-### c. calc Tri
+#### c. calc Tri
 
 `let calcTri sampleRate time freq amp=`
 
@@ -261,7 +259,7 @@ Based on that we can have to formula for a Square wave:
 asin(sin(x)) is used to generate triangle. and then we apply other parameters in order to be able to change the shape of the wave.
 We also have to mutiply the amp by 2 because we no longer have 1 trigonometrical call, but 2 ( asin and sin).
 
-### d. calcSaw
+#### d. calcSaw
 
 `let calcSaw sampleRate time freq amp=`
 
@@ -282,13 +280,13 @@ This function use that feature, (See below) to have a clear wave that looks like
 
 <img src="https://i.gyazo.com/14affe9d7a6115571948d79a6bcc5504.png" alt="Raw SawWave looks" width= "200px">
 
-## C. Filters
+### C. Filters
 
 All filters are here to bring modifications to the base wave generated by functions above.
 Everything that change the shape of the wave is considered as a filter.
 A sound is always only one wave, so even adding 2 sound together is considered as a filter.
 
-### a. amplitude
+#### a. amplitude
 
 ```FSHARP
 let amplitude initialList amp =
@@ -300,7 +298,7 @@ We need a function to change the amplitude without have to re-create a wave.
 It's mainly used by other filter, i think of Echo that will rely on this amplitude modification.
 On so doing that way, values over **1** will make bigger numbers, while value under **1** will lower values. 
 
-### b. overdriven
+#### b. overdriven
 
 <img src="image/../images/overdriven.png" alt="overdriven FIlter explanation" width=200px>
 
@@ -318,7 +316,7 @@ let overdriven list amp =
 
 Pretty simple function just to limit value that are higher than a specified amplitude.
 
-### c. flange
+#### c. flange
 
 ```FSHARP
 let flange wave =
@@ -329,7 +327,7 @@ let flange wave =
 
 A flange effect is that same sound but reverted upside down, so multiplying all value by -1 invert all the wave.
 
-### d. echo
+#### d. echo
 
 ```FSHARP
 let echo initialList delay amp repeat =
@@ -350,8 +348,8 @@ So the way we build echo is like an addition, `Sound + Silence + Reduced sound +
 That is why a for loop based on the number of repeat each iterate is **Silence + Sound**
 
 
-### e. reverb
-### f. chords
+#### e. reverb
+#### f. chords
 
 ```FSHARP
 let chords wave1 wave2 =
@@ -361,9 +359,9 @@ let chords wave1 wave2 =
 
 Chord filter goal is to be able to add two waves together, so it is kinda easy on how it works.
 
-## D. Advanced Filters
+### D. Advanced Filters
 
-### Spectroscope
+#### Spectroscope
 
 ```FSHARP
     let spectroscope (list:float list) =
@@ -412,6 +410,7 @@ pass filters.
 Low pass filter goal is to cut-off all the sounds with a frequecy higher than 5 kHz.
 
 #### High pass
+
 ```FSHARP
 let highPass (list: float list, fcut: float, order: int) = // return list with Highpass Filter
         let fs = spectroscope(list)
@@ -424,7 +423,9 @@ let highPass (list: float list, fcut: float, order: int) = // return list with H
         reList
 ```
 High pass filter goal is to cut-off all the sounds with a frequency lower than 500 Hz.
+
 #### Both pass
+
 ```FSHARP
 let BothPass (list: float list, fcut: float, order: int) = // return both filters at the same time
         let pass = LowPass (list, fcut, order)
@@ -445,11 +446,11 @@ frequency between 500 Hz and 5 kHz.
 
 
 
-## E. save
+### E. save
 
 The save module is made to regroup all saving related function.
 
-### a. sample
+#### a. sample
 
 ```FSHARP
 let sample x = (x + 1.)/2. * 255. |> byte
@@ -459,7 +460,7 @@ This function is quite simple, but achieve a lot of work.
 Since now we were working with list of float **between -1 and 1**, now we need to work with **bytes**.
 Bytes are value from **0 to 255**, and this simple function do the calculation to convert a float between -1 and 1 to a Byte.
 
-### b. floatToByte
+#### b. floatToByte
 
 ```FSHARP
 let floatToByte wave =
@@ -473,7 +474,7 @@ As we can't write a list on a file, we have to convert it to an Array.
 Before converting to an array, it call the function above to convert all data to bytes, then convert the list to an Array.
 And return the array generated.
 
-### c. write
+#### c. write
 
 ```FSHARP
 let write stream data =
@@ -511,6 +512,7 @@ Second, The conversion:
 We just call the function detailed a few lines above
 
 Third, the Header
+
 ```FSHARP
   use writer = new BinaryWriter(stream)
   // RIFF
@@ -533,19 +535,21 @@ Then we write some default value, and then our value.
 By our data, i mean our Header Data, stuff like, Mono/Stereo, Samplerate, bitsPerSample, etc.
 
 And in fourth, we write our actual sound:
+
 ```FSHARP
   writer.Write("data"B)
   writer.Write(data.Length)
   writer.Write(data)
 ```
+
 We first write a default value, then the length, and finally the sound itself.
 
 
-## F. PlaySynth
+### F. PlaySynth
 
 As we are going to use **SFML library** in order to play sound, this part is short, and easy.
 
-### a. playSound
+#### a. playSound
 
 
 
