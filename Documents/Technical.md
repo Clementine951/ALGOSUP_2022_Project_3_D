@@ -365,11 +365,75 @@ Chord filter goal is to be able to add two waves together, so it is kinda easy o
 
 ### Spectroscope
 
+```FSHARP
+    let spectroscope (list:float list) =
+       
+       let lenght = list.Length
+       let mutable trig = 0
+       let mutable t = 0.
+       let mutable check = 0.
+       
+       let periode = // find period of list
+           for i in 0..lenght-1 do
+               if i < lenght-1 && i > 0 then
+                if trig >= 1 && trig <= 2 then
+                    t <- t + 0.0001
+                if trig = 2 then
+                    trig <- trig + 1
+                   
+                  elif list.[i] > list.[i+1] && list.[i] >= list.[i-1] then
+                    
+                    trig <-trig + 1
+                    check <- check + list.[i] - check
+
+                    if check > list.[i] then // trig work only  highest value
+                     trig <- trig - 1
+           t  
+       let getFrequency =
+        1./ periode
+       getFrequency
+```
+Spectroscope goal is to find the frequency of the wave so it can then be used in low pass and high
+pass filters.
+
 #### Low pass 
 
-#### High pass
+```FSHARP
+ let lowPass (list: float list, fcut: float, order: int) = // return list with Lowpass Filter
+        let fs = spectroscope(list)
+        let lowPass =  OnlineFilter.CreateLowpass(ImpulseResponse.Finite,fs,fcut,order)
+        let array = list |> List.toArray
+        let filtered = array |> lowPass.ProcessSamples
+        let reList = filtered |> Array.toList
+       // printfn"list %A" list
+       // printf"lowPass %A" reList
+        reList 
+```
+Low pass filter goal is to cut-off all the sounds with a frequecy higher than 5 kHz.
 
+#### High pass
+```FSHARP
+let highPass (list: float list, fcut: float, order: int) = // return list with Highpass Filter
+        let fs = spectroscope(list)
+        let highPass =  OnlineFilter.CreateHighpass(ImpulseResponse.Finite,fs,fcut,order)
+        let array = list |> List.toArray
+        let filtered = array |> highPass.ProcessSamples
+        let reList = filtered |> Array.toList
+       // printfn"list %A" list
+       // printf"highPass %A" reList
+        reList
+```
+High pass filter goal is to cut-off all the sounds with a frequency lower than 500 Hz.
 #### Both pass
+```FSHARP
+let BothPass (list: float list, fcut: float, order: int) = // return both filters at the same time
+        let pass = LowPass (list, fcut, order)
+        let bothPass = HighPass (pass, fcut, order)
+        bothPass
+```
+
+Both Pass function calls our two filters previously presented, it's goal is to have only sounds with a
+frequency between 500 Hz and 5 kHz.
 
 ### Low Frequency Oscilliator
 
@@ -407,7 +471,7 @@ let floatToByte wave =
 
 As we can't write a list on a file, we have to convert it to an Array. 
 Before converting to an array, it call the function above to convert all data to bytes, then convert the list to an Array.
-And return the array generated
+And return the array generated.
 
 ### c. write
 
@@ -474,7 +538,7 @@ And in fourth, we write our actual sound:
   writer.Write(data.Length)
   writer.Write(data)
 ```
-We first write a default value, then the lenght, and finally the sound itself.
+We first write a default value, then the length, and finally the sound itself.
 
 
 ## F. PlaySynth
