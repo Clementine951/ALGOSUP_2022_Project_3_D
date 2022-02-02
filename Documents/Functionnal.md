@@ -42,7 +42,7 @@
 
 		- [c. low Frequency Oscillator](#c-low-frequency-oscillator)
 
-	- [D. Envelope](#g-envelope)
+	- [D. Envelope](#d-envelope)
 
 		- [a. Attack](#a-attack)
 
@@ -86,14 +86,17 @@
 ## 1. Introduction
 
 ### A. Project description
+
 The aim of this project is to create a sound synthesizer that can be used to create programmable music. This project was inspired by [Sonic Pi](https://sonic-pi.net/) and other live coding music packages. The ultimate aim of this project is to be able to play music from code.
 
 
 ### B. How it should be
-As it should be able to be used in another program, it should be an API, a Library or a Package.
+
+As it should be able to be used in another program, **it should be an API, a Library or a Package**.
 It should have basic functions to generate sound based on differents options, like possibility to use note or pur frequency to generate a sound.
 
 ### C. Compatibility Cross-platform
+
 The program have to be available and usable on MacOS and Windows.
 
 ## 2. Definitions of terms
@@ -105,13 +108,13 @@ It exist 4 type of waves, Sine, Square, Triangle, Sawtooth.
 Each wave produce a different type of sound.
 For all waves, a few technicals terms come along:
 
-- Frequency = The pitch of a sound
+- **Frequency** = The pitch of a sound.
 
-- Period = Time needed to reproduce the same pattern in a wave
+- **Period** = Time needed to reproduce the same pattern in a wave.
 
-- Fundamental = Main note of a sound, a Sine is special as it's only the fundamental note
+- **Fundamental** = Main note of a sound, a Sine is special as it's only the fundamental note.
 
-- Harmonics = Fundamental or main pitch or note, plus they have higher pitches that are voiced above the fundamental.
+- **Harmonics** = Fundamental or main pitch or note, plus they have higher pitches that are voiced above the fundamental.
 
 #### a. Sine wave
 
@@ -121,13 +124,15 @@ The most basic and simple waveform, a sine wave has a simple hollow sound. It do
 
 The sine wave have a well know formula:
 
-`y(x)=A * sin(2π * f)`
+$
+y(x)= A * sin(2π * f)
+$
 
-- Where A = amplitude of the sound, How high the curve will go
+- **Where A** = amplitude of the sound, How high the curve will go.
 
-- Where f = Frequency of the sound, How high the sound will be
+- **Where f** = Frequency of the sound, How high the sound will be.
 
-- Where 2π = Constant for the Period, modified directly because of the frequency
+- **Where 2π** = Constant for the Period, modified directly because of the frequency.
 
 
 #### b. Square wave
@@ -153,6 +158,7 @@ It still a little bit buzzy because of the square wave property, and at the same
 ### B. Basic Filters
 
 #### a. Amplitude modification
+
 The amplitude of a wave is the high of the curve will be.
 
 <img src="images/amp.png" alt="amplitude" height="200"/>
@@ -163,16 +169,19 @@ On the image below the blue wave has an amplitude of 1 and the red one has an am
 <img src="images/modifyamp.png" alt="Amplitude modification" height="200"/>
 
 #### b. Overdriven
+
 The overdriven effect is to cut off the wave at specific amplitude.
 
 <img src="images/overdriven.jpeg" alt="overdriven wave" height="200"/>
 
 #### c. Echo
+
 The echo effect return the same wave with a different amplitude and with a delay that the user will choose.
 
 <img src="images/echo.png" alt="echo wave" height="100"/>
 
 #### d. Reverb
+
 The reverb effect will be applied to a sound to simulate reverberation.
 
 <img src="images/reverb.png" alt="Reverb wave" height="200"/>
