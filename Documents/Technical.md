@@ -40,20 +40,19 @@ Table of Contents
       - [d. echo](#d-echo)
       - [e. reverb](#e-reverb)
       - [f. chords](#f-chords)
-    - [D. Advanced Filters](#d-advanced-filters)
-      - [Spectroscope](#spectroscope)
-      - [Low pass](#low-pass)
-      - [High pass](#high-pass)
-      - [Both pass](#both-pass)
-    - [Low Frequency Oscilliator](#low-frequency-oscilliator)
-      - [Frequency modulation](#frequency-modulation)
-      - [Amplitude modulation](#amplitude-modulation)
-      - [Both modulation](#both-modulation)
-    - [E. save](#e-save)
+    - [D. Spectroscope](#d-spectroscope)
+      - [a. Low pass](#a-low-pass)
+      - [b. High pass](#b-high-pass)
+      - [c. Both pass](#c-both-pass)
+    - [E. Low Frequency Oscilliator](#e-low-frequency-oscilliator)
+      - [a. Frequency modulation](#a-frequency-modulation)
+      - [b. Amplitude modulation](#b-amplitude-modulation)
+      - [c. Both modulation](#c-both-modulation)
+    - [F. save](#f-save)
       - [a. sample](#a-sample)
       - [b. floatToByte](#b-floattobyte)
       - [c. write](#c-write)
-    - [F. PlaySynth](#f-playsynth)
+    - [G. PlaySynth](#g-playsynth)
       - [a. playSound](#a-playsound)
 
 
@@ -225,7 +224,10 @@ In order to calculate a wave designed for the sound you need at least 4 values.
          amp = amplitude, of the volume, how high the wave will go
 
 Based on that we can have to formula for a Sine wave:
-`f(y) = amp * sin(2 * pi * freq * x) `
+
+$
+f(y) = amp * sin(2 * π * freq * x) 
+$
 
 #### b. calcSquare
 
@@ -238,7 +240,10 @@ In order to calculate a wave designed for the sound you need at least 4 values.
          amp = amplitude, of the volume, how high the wave will go
 
 Based on that we can have to formula for a Square wave:
-`f(y) = amp *  sign( sin (2 * pi * freq * x))  `
+
+$
+f(y) = amp *  sign( sin (2 * π * freq * x))
+$
 
 sign() is a function that set a value to 1 if it's over 0 and set the value to -1 if it's under 0.
 So we need to generate a sine and apply a sign to it in order to have a square.
@@ -254,7 +259,10 @@ In order to calculate a wave designed for the sound you need at least 4 values.
          amp = amplitude, of the volume, how high the wave will go
 
 Based on that we can have to formula for a Square wave:
-`f(y) = amp * 2. * asin (sin (2. * PI * freq * x)) / PI )  `
+
+$
+f(y) = amp * 2. * asin (sin (2. * π * freq * x)) / π )
+$
 
 asin(sin(x)) is used to generate triangle. and then we apply other parameters in order to be able to change the shape of the wave.
 We also have to mutiply the amp by 2 because we no longer have 1 trigonometrical call, but 2 ( asin and sin).
@@ -270,7 +278,10 @@ In order to calculate a wave designed for the sound you need at least 4 values.
          amp = amplitude, of the volume, how high the wave will go
 
 Based on that we can have to formula for a Square wave:
-`f(y) = amp * 2. * (x * freq - floor(0.5 + x * freq))  `
+
+$
+f(y) = amp * 2. * (x * freq - floor(0.5 + x * freq))
+$
 
 This one is a bit tricky and use something that is reserved to digital sound.
 All points of the wave have to be between **-1** and **1**.
@@ -359,9 +370,7 @@ let chords wave1 wave2 =
 
 Chord filter goal is to be able to add two waves together, so it is kinda easy on how it works.
 
-### D. Advanced Filters
-
-#### Spectroscope
+### D. Spectroscope
 
 ```FSHARP
     let spectroscope (list:float list) =
@@ -391,10 +400,11 @@ Chord filter goal is to be able to add two waves together, so it is kinda easy o
         1./ periode
        getFrequency
 ```
+
 Spectroscope goal is to find the frequency of the wave so it can then be used in low pass and high
 pass filters.
 
-#### Low pass 
+#### a. Low pass 
 
 ```FSHARP
  let lowPass (list: float list, fcut: float, order: int) = // return list with Lowpass Filter
@@ -407,9 +417,10 @@ pass filters.
        // printf"lowPass %A" reList
         reList 
 ```
+
 Low pass filter goal is to cut-off all the sounds with a frequecy higher than 5 kHz.
 
-#### High pass
+#### b. High pass
 
 ```FSHARP
 let highPass (list: float list, fcut: float, order: int) = // return list with Highpass Filter
@@ -422,9 +433,10 @@ let highPass (list: float list, fcut: float, order: int) = // return list with H
        // printf"highPass %A" reList
         reList
 ```
+
 High pass filter goal is to cut-off all the sounds with a frequency lower than 500 Hz.
 
-#### Both pass
+#### c. Both pass
 
 ```FSHARP
 let BothPass (list: float list, fcut: float, order: int) = // return both filters at the same time
@@ -436,17 +448,17 @@ let BothPass (list: float list, fcut: float, order: int) = // return both filter
 Both Pass function calls our two filters previously presented, it's goal is to have only sounds with a
 frequency between 500 Hz and 5 kHz.
 
-### Low Frequency Oscilliator
+### E. Low Frequency Oscilliator
 
-#### Frequency modulation
+#### a. Frequency modulation
 
-#### Amplitude modulation
+#### b. Amplitude modulation
 
-#### Both modulation
+#### c. Both modulation
 
 
 
-### E. save
+### F. save
 
 The save module is made to regroup all saving related function.
 
@@ -545,7 +557,7 @@ And in fourth, we write our actual sound:
 We first write a default value, then the length, and finally the sound itself.
 
 
-### F. PlaySynth
+### G. PlaySynth
 
 As we are going to use **SFML library** in order to play sound, this part is short, and easy.
 
