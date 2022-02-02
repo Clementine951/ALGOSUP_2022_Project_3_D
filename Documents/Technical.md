@@ -42,11 +42,20 @@ Table of Contents
     - [d. echo](#d-echo)
     - [e. reverb](#e-reverb)
     - [f. chords](#f-chords)
-  - [D. save](#d-save)
+  - [D.Advanced Filters](#d-advanced-filters)
+    - [a. Spetroscope]
+      - [low pass](#low-pass)
+      - [high pass](#high-pass)
+      - [both pass](#both-pass)
+    - [b. Low Frequency Oscilliator](#b-low-frequency-oscilliator)
+      - [frequency modulation](#frequency-modulation)
+      - [amplitude modulation](#amplitude-modulation)
+      - [both modulation](#both-modulation)
+  - [E. save](#d-save)
     - [a. sample](#a-sample)
     - [b. floatToByte](#b-floattobyte)
     - [c. write](#c-write)
-  - [E. PlaySynth](#e-playsynth)
+  - [F. PlaySynth](#e-playsynth)
     - [a. playSound](#a-playsound)
 
 ---
@@ -352,8 +361,27 @@ let chords wave1 wave2 =
 
 Chord filter goal is to be able to add two waves together, so it is kinda easy on how it works.
 
+## D. Advanced Filters
 
-## D. save
+### Spectroscope
+
+#### Low pass 
+
+#### High pass
+
+#### Both pass
+
+### Low Frequency Oscilliator
+
+#### Frequency modulation
+
+#### Amplitude modulation
+
+#### Both modulation
+
+
+
+## E. save
 
 The save module is made to regroup all saving related function.
 
@@ -449,7 +477,7 @@ And in fourth, we write our actual sound:
 We first write a default value, then the lenght, and finally the sound itself.
 
 
-## E. PlaySynth
+## F. PlaySynth
 
 As we are going to use **SFML library** in order to play sound, this part is short, and easy.
 
