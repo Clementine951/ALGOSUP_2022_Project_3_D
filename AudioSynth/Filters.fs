@@ -142,7 +142,7 @@ module Filters =
 
                 else 
                     i <- i+1        // increment anyways so it goes to the next value
-                    yield wave[i]   // Return the base value of the list
+                    yield wave.[i]   // Return the base value of the list
         ]
         
         let returnWave = [
