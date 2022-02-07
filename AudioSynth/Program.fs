@@ -22,7 +22,7 @@ module Main =
 
     let inputNote = [|
         // ( "NOTE":string, OCTAVE:float, AMPLITUDE:float PLAYTIME:float,)
-        ("G", 4., 0.8, 2.)
+        ("G", 4., 0.8, 4.)
       //   ("G#", 3., 0.8, 2.)
         // ("G", 3., 0.5, 1.)
         // ("A", 3., 0.9, 0.9)
@@ -37,7 +37,9 @@ module Main =
 //                                    List of notes  Samplerate
     let normalWave2 = noteListToFloatList inputNote 44100.
 
-    let normalWave = Filters.frequencyModulation normalWave2 30. 15. 
+    let normalWave = Filters.flange normalWave2
+
+    //let normalWave = Filters.frequencyModulation normalWave2 30. 15. 
 
     // let t = 1. + (1./44100.)
 
