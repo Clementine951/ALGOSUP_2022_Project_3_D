@@ -121,12 +121,36 @@ module Filters =
     // Create a flange effect
     let flange (wave: float list)=
 
-        let lenght = wave.Length // This function check the length of the wave
-        let subWave = [for i in 0..lenght-1 do wave.[i] * -1.] // This inverts all the values of the wave
-        // let test =  for i in 0..lenght-1 do
-        //             printfn"wave %A" wave.[i]
-        //             printfn"subWave %A" subWave.[i]
-        subWave
+        let wave2 = [
+            let mutable a = 1 // Numbers of value to be deleted
+            let mutable i = 0 // Increment value
+            let mutable leftRight = 0 // Bool to Remove more or less values
+            while i < wave.Length-1 do
+                
+                // printfn "i= %O   /  mid = %O   /   a= %O" i mid a
+                if i % 10 = 0 then // Check for every 10 values
+                    if a = 10 then  // If the numbers of value to delete is at 10, invert the process to it goes back to 0
+                        leftRight <- 1
+                    elif a = 0 then // If the numbers of value to delete is at 0, invert the process to it goes back to 10
+                        leftRight <- 0
+                    
+                    if leftRight = 0 then a <- a+1 // Watch if you have to remove more or less values
+                    else a <- a-1
+
+                    if a <0 then i <- i+1   // Security for a to never goes under 0
+                    else i <- i+a           // Skip a number of values to return, so it change the frequency
+
+                else 
+                    i <- i+1        // increment anyways so it goes to the next value
+                    yield wave.[i]   // Return the base value of the list
+        ]
+        
+        let returnWave = [
+            for i = 0 to wave2.Length-1 do
+                yield ( (wave.[i]+ wave2.[i]) /2. )
+        ]
+
+        returnWave
         
         
         
