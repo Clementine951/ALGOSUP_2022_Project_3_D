@@ -147,7 +147,7 @@ module Filters =
         
         let returnWave = [
             for i = 0 to wave2.Length-1 do
-                yield ( (wave[i]+ wave2[i]) /2. )
+                yield ( (wave.[i]+ wave2.[i]) /2. )
         ]
 
         returnWave
