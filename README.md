@@ -73,7 +73,7 @@ We chose Clémentine Curel as Project Manager for this project, and Guillaume Ri
 
 ### Week 6 - 02/07/2022
 
-- [ ] Finish Software Architecture Design Choices
-- [ ] Finish Technical specification
-- [ ] Oral presentation
+- [x] Finish Software Architecture Design Choices
+- [x] Finish Technical specification
+- [x] Oral presentation
 
