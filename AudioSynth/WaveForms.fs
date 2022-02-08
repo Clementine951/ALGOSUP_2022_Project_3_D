@@ -52,16 +52,3 @@ module WaveGen =
         
         points
     
-
-
-
-    let calcSinFlange sampleRate time freq amp=
-        
-        let t = 1. + (1./sampleRate)            // Calculate the incrementation for the list based on the sampleRate
-        let N = sampleRate * time               // Define how much Samples we need for the sound
-        let omega = 2. * System.Math.PI+0.2 * freq  // Omega is a part of the Calculation of the Equation
-
-        let points = [(0.)..t..N]               // Create the list with all X axis value
-        let points = points |> List.map(fun x -> amp * sin(omega*x*10.005) )   // Apply the formula to all x value to have Y axis values
-        
-        points
