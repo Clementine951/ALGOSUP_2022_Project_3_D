@@ -450,12 +450,18 @@ frequency between 500 Hz and 5 kHz.
 
 ### E. Low Frequency Oscilliator
 
-#### a. Frequency modulation
+The LFO uses the shape of the waveform assigned to it to create the movement. Changing the type of waveform changes the shape of the movement. 
 
-#### b. Amplitude modulation
+```
+f(x) = A * sin(2 * PI * highFrenquency * x + Intensity * highFrenquency * sin(2 * PI * lowFrequency * x) )
+```
 
-#### c. Both modulation
+A = amplitude
+highFrequency = should be a parameter for the higher frequency
+lowFrequency = should be a parameter for the lower frequency
 
+
+This is a mathematical formule to modulate the frequency and the amplitude of a wave. 
 
 
 ### F. save
