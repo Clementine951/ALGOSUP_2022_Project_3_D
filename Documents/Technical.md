@@ -559,6 +559,12 @@ We first write a default value, then the length, and finally the sound itself.
 
 ### G. PlaySynth
 
+The second way to play a wave is to save it, play it and then delete it.
+This way is here to not use too much local storage.
+To play this way, it's like the first way but you define save as false.
+    
+
+
 As we are going to use **SFML library** in order to play sound, this part is short, and easy.
 
 #### a. playSound

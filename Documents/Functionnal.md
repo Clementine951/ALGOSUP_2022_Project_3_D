@@ -326,7 +326,6 @@ let eightNote = note 0.125
 
 let tune =
  seq { quaterNote Note.B 4 }
-
 // play the tune
 let player = Player.Play(tune, Repeat = true)
 ```
