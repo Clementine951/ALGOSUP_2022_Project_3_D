@@ -68,13 +68,12 @@ We chose Clémentine Curel as Project Manager for this project, and Guillaume Ri
 
 ### Week 5 - 01/31/2022
 
-- [ ] MP3 compression
-- [ ] Finish Technical specification
-- [ ] Enveloppe filter
+- [x] Test and debug
+- [x] Technical specification
 
 ### Week 6 - 02/07/2022
 
-- [ ] MP3 compression
 - [ ] Finish Software Architecture Design Choices
+- [ ] Finish Technical specification
 - [ ] Oral presentation
 
