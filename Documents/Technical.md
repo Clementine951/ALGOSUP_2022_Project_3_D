@@ -360,6 +360,32 @@ That is why a for loop based on the number of repeat each iteration is **Silence
 
 
 #### e. reverb
+```fs
+ // creat some list who begin in different place and amplitude and return in list of averge of list
+    let rev(list:float list) =
+        let lenght = list.Length       
+        let rev = [for i in 0..lenght-1 do list.[i]]       
+        let rev1 = [for i in 0..lenght-1 do if i >= (lenght-1)/6 then  list.[i]/2. else 0.]       
+        let rev2 = [for i in 0..lenght-1 do if i >= (lenght-1)/5 then  list.[i]/3. else 0.]       
+        let rev3 = [for i in 0..lenght-1 do if i >= (lenght-1)/4 then  list.[i]/4. else 0.]       
+        let rev4 = [for i in 0..lenght-1 do if i >=(lenght-1)/3 then  list.[i]/5. else 0.]       
+        let rev5 = [for i in 0..lenght-1 do if i >=(lenght-1)/2  then  list.[i]/6. else 0.]       
+        let mergeRev = [for i in 0..lenght-1 do (rev.[i]+rev1.[i]+rev2.[i]+rev3.[i]+rev4.[i]+rev5.[i])/6.]
+        mergeRev
+         
+        // reverse list
+    let reverse list=
+        let rec loop acc = function
+        | [] -> acc
+        | head :: tail -> loop(head::acc) tail
+        loop [] list
+        // return reverb list
+    let reverb list =
+       let init =  rev list
+       let reverse = reverse init
+       reverse
+ ```             
+   Apply a reverb effect on the wave.           
 #### f. chords
 
 ```FSHARP
@@ -450,11 +476,18 @@ frequency between 500 Hz and 5 kHz.
 
 ### E. Low Frequency Oscilliator
 
-#### a. Frequency modulation
+The LFO uses the shape of the waveform assigned to it to create the movement. Changing the type of waveform changes the shape of the movement.
 
-#### b. Amplitude modulation
+```
+  LFO = A * sin(2 * PI * highFrenquency * x + Intensity * highFrenquency * sin(2 * PI * lowFrequency * x) )
+```
 
-#### c. Both modulation
+
+A = amplitude 
+highFrequency = should be a parameter for the higher frequency 
+lowFrequency = should be a parameter for the lower frequency
+
+This is a mathematical formule to modulate the frequency and the amplitude of a wave.
 
 
 
